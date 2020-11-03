@@ -13,9 +13,9 @@ import "./category.css"
 
 const category = () => (
     
-    <div>
+    <div className="container-fluid">
          
-              <Row className="categoryBox">~
+              <Row className="categoryBox">
                 <Col>
                   <Link to="/category/thanks/">
                     <Card className="card1">
