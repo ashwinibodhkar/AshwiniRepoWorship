@@ -15,7 +15,7 @@ const category = () => (
     
     <div>
          
-              <Row className="categoryBox">
+              <Row className="categoryBox">~
                 <Col>
                   <Link to="/category/thanks/">
                     <Card className="card1">
