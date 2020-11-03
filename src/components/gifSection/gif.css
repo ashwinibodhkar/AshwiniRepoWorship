@@ -1,0 +1,9 @@
+.feature .card{border: none;transition: 0.5s;}
+.feature .card img{width: 100%;position: relative;border: none;}
+.feature{padding: 30px 0 30px 0;}
+.feature h2{font-size: 4em;}
+.feature video{width: 100%;}
+@media (max-width: 648px) { 
+    .feature h2{font-size: 2em;padding: 0.98em 0 0.98em 0;}
+    .feature .card{width: 70%;margin: 0 auto;}
+  }

@@ -1,0 +1,29 @@
+
+.back{background: #000;}
+
+
+.section{position: relative;padding:100px 0 100px 0;}
+.section h1{color: #fff;text-align: center;padding-bottom: 60px;}
+
+.category h1{padding: 100px 0px 60px 0px;}
+
+.songsList{background: #000;padding-top: 100px;}
+.songsList h1{margin-top: 100px;padding: 100px 0 60px 0; color: #fff; text-align: center;}
+.songL .card{border-bottom: 1px solid rgb(139, 139, 139);background-color: rgb(36, 35, 35);margin:0 0 10px 0;border-radius: 0;}
+.songL .card .card-title{color: #ddd;font-weight: bolder;font-size: 14px;}
+.songL .card .card-title:hover{color: rgb(202, 189, 11);}
+.songL .card .card-body a{text-decoration: none;}
+.allLink button{background-color: rgb(122, 122, 121);color: rgb(255, 255, 255);padding: 5px 38px 5px 38px;font-weight: bolder;}
+.allLink button:hover{background-color:rgb(112, 112, 109);}
+
+
+
+@media (max-width: 648px) { 
+  
+  
+  .section h1{font-size: 2.1em;}
+ 
+  
+  .category h1{font-size: 2.1em;padding: 60px 0px 30px 0px;}
+  .songsList h1{font-size: 2.1em;padding: 60px 0 40px 0;}
+}

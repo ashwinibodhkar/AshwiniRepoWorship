@@ -1,0 +1,25 @@
+
+.artBg{position: relative;padding: 20px 0 30px 0;line-height: 1.5;text-align: justify;color: rgb(173, 173, 171);background: url('../images/bgImage.jpg');background-size: cover;background-repeat: no-repeat;}
+.sizeButton{font-weight: lighter;}
+.artDesc{
+    position: relative;
+    text-align: justify;
+}
+.artDesc h2{padding-top: 32px;color: rgb(241, 232, 99);font-family: sans-serif;font-weight: bolder;}
+.artBg p{font-size: 14px;}
+
+.ArtistContent{white-space: pre-line;}
+.artImage{
+    
+    width: 100%;
+    margin: auto;
+    box-shadow: 0px 2px 4px rgba(0,0,0, 0.25);
+
+}
+.artImage img{width: 100%;}
+
+@media (max-width: 648px) { 
+    .artImage{width: 60%;}
+    .artDesc h2{text-align: center;}
+    .artBg p{padding: 32px 20px 30px 20px;}
+}

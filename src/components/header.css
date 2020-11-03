@@ -1,0 +1,27 @@
+
+.headPart{
+    position: relative;
+    padding: 20px 0 20px 0px;
+    background-color: black;
+    border-bottom: 2px solid #969494;
+    box-shadow: 0px 0px 10px 4px rgba(172, 171, 171, 0.75);
+    color: #fff;z-index: 1
+    ;
+}
+
+.navWidth{width: 96%;float: left;}
+.navbar-brand h3{font-size: 32px;}
+.navbar-nav .nav-link{font-size: 18px;}
+nav  svg{width: 0em;}
+.modal-header button span{color: #fff;}
+.modal-content{box-shadow: 0 0 10px 4px #fff;}
+
+@media (max-width: 648px) { 
+    .navbar-nav .nav-link{font-size: 18px;}
+    .navWidth{width: 100%;}
+    .navbar-brand{width: 100%;}
+    .navbar-brand h3{font-size: 20px;}
+    nav  svg{width: 1em;size: 30;}
+    .outside .search_bar svg{width: 0em;}
+
+}

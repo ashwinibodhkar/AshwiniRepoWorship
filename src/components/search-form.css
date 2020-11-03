@@ -1,0 +1,45 @@
+.input-box{   
+  text-align:center;
+  font-size: 16px;
+  max-width: 100%; 
+  position: relative;
+  border: none;   
+}
+.input-box input{ 
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border-radius: 40px;
+  border: 1px solid #fff;
+  padding: 10px;
+
+  color: #000;      
+  box-shadow: 0px 0px 10px 4px rgba(65, 62, 62, 0.75);
+  -moz-box-shadow: 0px 0px 10px 4px rgba(65, 62, 62, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 4px rgba(65, 62, 62, 0.75);
+  transition: 0.4s all;    
+  font-size: 14px;  
+}
+.input-box button{padding-top: 10px;padding-right: 8px;}
+.input-box ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color:#b3b1b1;
+  font-weight: bolder;
+  opacity: 0.8; /* Firefox */
+  border-radius: 40px;
+  
+}
+.search-results{background: #f5f3f3;color: rgb(0 ,4, 8);padding:10px;}
+.search-results h6{color: rgb(80, 79, 78);}
+.ResultsongList li a{font-size: 18px;text-decoration: none;color: rgb(0, 0, 0); text-align: left;font-weight: 600;}
+.ResultsongList h2{padding-left: 20px;font-size: 20px;font-weight: bold;}
+.search_bar button{background: transparent;border: none;padding: 3px 0px 0 10px;border-radius: 0;}
+.search_bar button:hover{background: transparent;border: none;}
+
+@media (max-width: 576px) { 
+  
+  .input-box input{font-size: 12px;height: 40px;}
+  .input-box button{padding-top: 6px;}
+  .ResultsongList li a{font-size: 16px;}
+  .ResultsongList h2{font-size: 18px;}
+
+}
