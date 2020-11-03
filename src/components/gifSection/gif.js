@@ -45,7 +45,7 @@ const gif = () => (
                   >Dance Songs</h2>
               </Col>
               <Col   xs={12} md={6} className="text-center">
-              <Link to="/category/Dance/">
+              <Link to="/category/dance/">
                 <Card 
                 data-aos="fade-down" data-aos-delay="20"
                       data-aos-duration="300"

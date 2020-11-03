@@ -37,6 +37,6 @@
   
 
   @media (max-width: 648px) { 
-    .categoryBox .card{margin-left: 20px;width: 32%;}
+    .categoryBox .card{margin-left: 20px;width: 50%;}
     .artist h2{font-size: 0px;}
   }

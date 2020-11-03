@@ -4,6 +4,6 @@
 .feature h2{font-size: 4em;}
 .feature video{width: 100%;}
 @media (max-width: 648px) { 
-    .feature h2{font-size: 2em;padding: 0.98em 0 0.98em 0;}
-    .feature .card{width: 70%;margin: 0 auto;}
+    .feature h2{font-size: 0em;padding: 0.98em 0 0.98em 0;}
+    .feature .card{width: 80%;margin: 0 auto;}
   }

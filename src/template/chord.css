@@ -1,97 +1,3 @@
-/* @font-face {
-    font-family: 'greenz';
-    src: local('greenz'), url(../fonts/Grenze/ttf/Grenze-BoldItalic.ttf)  format('truetype');
-}
-@font-face {
-    font-family: 'roboto';
-    src: local('greenz'), url(../fonts/Roboto-Light.ttf)  format('truetype');
-}
-
-.container-fluid,.row,.col{padding: 0;margin: 0;}
-.container{
-    max-width: 1360px;
-    margin: 0 auto;
-    
-}
-.wholeBg{background: url('../images/bgImage.jpg');position: relative;background-repeat: no-repeat;background-size: cover;}
-.pageBg{background: transparent;width: 85%;box-shadow: 0 0 10px 4px rgba(135, 136, 129, 0.7);margin: auto;color: #fff;}
-.read{
-    
-    padding-top: 32px;
-    padding-bottom: 32px;
-    color: rgb(145, 144, 144);
-   
- }
- .read h2{font-size: 44px;font-weight: bolder;text-transform: capitalize; }
- .read a{color:rgb(145, 144, 144);text-decoration: none;}
- .read a:hover{color: rgb(90, 245, 84);}
- .read img{width: 100%;}
- .read .d-inline-block{color: rgb(248, 235, 46);}
- .read .d-inline-block:hover{color: rgb(90, 245, 84);}
- 
- .videoPlay{
-    position: relative;
-    animation-name: example;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    
-}
-.transpose{width: 100%;background-color: rgb(70, 70, 68);border: 2px solid rgb(161, 158, 158);color: rgb(241, 238, 238);line-height: 25px;margin: auto; margin-bottom: 10px;}
-
-.fontSizeButton  {background-color: rgb(105, 104, 4); color: thistle;width: 100%;margin: auto;padding: 10px 0 10px 0;}
-
-.song{
-    font-size: 24px;
-    font-family: 'roboto';
-    text-align: center; 
-    color: rgb(207, 204, 204);
-}
-
-.paragraph{text-align: left;padding: 10px 0 10px 0;line-height: 1.1;font-family:'Trebuchet MS'}
-.paragraph .row{margin: 0;padding-bottom: 10px;}
-.paragraph .chord{
-    color:rgb(215, 245, 43);
-    padding: 0;    
-}
-
-.backLink p a{
-    font-size: 14px;
-    text-decoration: none;
-    color: rgb(228, 231, 10);
-}
-
-.FontIcon svg{margin: 0 10px 10px 0px ;border-radius: 10%;}
-
-     
-button{
-    padding: 7px;
-    border: none;
-    border-radius: 3px;
-    background: transparent;
-    color: #fff;    
-    font-size: 16px;    
-}
-
-
-
-
-
-
-@keyframes example {
-    0%   {color: rgb(145, 144, 144);left:0px; top:0px;}
-    50%  { color: rgb(10, 10, 10);left:0px; top:0px;}
-    100% {color:rgb(145, 144, 144);left:0px; top:0px;}
-  }
-
-
-@media (max-width: 648px) { 
-    .pageBg{width: 100%;}
-    .song{font-size: 15px;padding-bottom: 10px;font-weight: 100px;}  
-    .read{padding-top: 0px;text-align: center;}  
-    .read h2{font-size: 38px;}
-    button{padding: 5px; font-size: 16px; }
-    .paragraph .row{padding-bottom: 0;}
-} */
 .container-fluid,.row,.col{padding: 0;margin: 0;}
 .container{max-width: 1360px;}
 .topFeature a{color: #fff;text-decoration: none;}
@@ -109,17 +15,18 @@ button{
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-image: linear-gradient(to bottom, transparent,rgba(21,22,87,.4), rgba(6, 7, 68, 0.9)) ;
+    background-image: linear-gradient(to bottom, transparent,rgba(51, 44, 1, 0.7), rgba(136, 101, 5, 0.9)) ;
    
   }
   .chordImg .imgText h1{font-size: 60px;}
   .chordImg .imgText p{font-size: 30px;color: #fff;}
   .imgText {
     position: absolute;
-    bottom: 3px;
+    bottom: 2px;
     left: 13%;
     color: #fff;
     z-index: 1;
+    
   }
   .topFeature{text-align: left;line-height: 3;}
   .bibleIcon:hover{color: aqua;}
