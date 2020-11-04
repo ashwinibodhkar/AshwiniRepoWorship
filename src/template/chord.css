@@ -18,8 +18,8 @@
     background-image: linear-gradient(to bottom, transparent,rgba(51, 44, 1, 0.7), rgba(136, 101, 5, 0.9)) ;
    
   }
-  .chordImg .imgText h1{font-size: 60px;}
-  .chordImg .imgText p{font-size: 30px;color: #fff;}
+  .chordImg .imgText h1{font-size: 60px;font-family: 'Carter One', cursive;}
+  .chordImg .imgText p{font-size: 30px;color: #fff;font-family: 'Caveat', cursive;}
   .imgText {
     position: absolute;
     bottom: 2px;

@@ -178,7 +178,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Fira Sans Condensed`
+          `Fira Sans Condensed`,`Bowlby One SC`,`Rancho`,`Yesteryear`,`Denk One`,`Fruktur`,`Zhi Mang Xing`,`Bree Serif`,`Caveat`,`Carter One`
            
         ],
         display: 'swap'

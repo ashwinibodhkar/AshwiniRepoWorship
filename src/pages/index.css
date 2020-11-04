@@ -3,12 +3,14 @@
 
 
 .section{position: relative;padding:100px 0 100px 0;}
-.section h1{color: #fff;text-align: center;padding-bottom: 60px;}
+.section h1{color: #fff;text-align: center;padding-bottom: 60px;font-family: 'Denk One', sans-serif;}
 
-.category h1{padding: 100px 0px 60px 0px;}
+.category h1{padding: 100px 0px 60px 0px;font-family: 'Denk One', sans-serif;}
 
 .songsList{background: #000;padding-top: 100px;}
-.songsList h1{margin-top: 100px;padding: 100px 0 60px 0; color: #fff; text-align: center;}
+.songsList h1{font-size: 4em;;margin-top: 100px;padding: 100px 0 60px 0; background: -webkit-linear-gradient(bottom,rgb(248, 248, 246),rgb(245, 245, 135),rgb(235, 231, 29), rgb(182, 150, 10));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; text-align: center;font-family: 'Zhi Mang Xing', cursive;}
 .songL .card{border-bottom: 1px solid rgb(139, 139, 139);background-color: rgb(36, 35, 35);margin:0 0 10px 0;border-radius: 0;}
 .songL .card .card-title{color: #ddd;font-weight: bolder;font-size: 14px;}
 .songL .card .card-title:hover{color: rgb(202, 189, 11);}
@@ -25,5 +27,5 @@
  
   .songsList h1{margin-top: 50px;}
   .category h1{font-size: 2.1em;padding: 34px 0px 30px 0px;}
-  .songsList h1{font-size: 2.1em;padding: 60px 0 40px 0;}
+  .songsList h1{font-size: 3em;padding: 60px 0 40px 0;}
 }
