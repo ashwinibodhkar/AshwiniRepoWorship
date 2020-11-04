@@ -3,7 +3,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    margin: 0 40px 0 40px;
+    
   }
   .categoryBox::-webkit-scrollbar {
     width: 1px;

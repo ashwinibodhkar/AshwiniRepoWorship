@@ -31,7 +31,7 @@
 @media (max-width: 648px) { 
    .topHeadi{top:20%;} 
   .topHeadi h1{font-size: 2em;}
-  .search-box {padding: 30px 0 0px 0;}
+  .search-box {padding: 50px 0 0px 0;}
 }
 @media (min-width: 768px) { 
    .topHeadi{top:20%;} 

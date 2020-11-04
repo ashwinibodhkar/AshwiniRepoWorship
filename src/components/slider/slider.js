@@ -15,7 +15,7 @@ const slider = () => (
             <Col xs={12} className="slider p-0">
               <div>
               <Carousel>
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={2000}>
                   <img
                     className="d-block w-100"
                     src={slide1}
@@ -23,7 +23,7 @@ const slider = () => (
                   />
                   
                 </Carousel.Item>          
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={2000}>
                   <img
                     className="d-block w-100"
                     src={slide2}
