@@ -178,7 +178,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Sansita`,`Fira Sans Condensed`,`Courgette`
+          `Fira Sans Condensed`
            
         ],
         display: 'swap'
