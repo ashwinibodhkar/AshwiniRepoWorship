@@ -24,7 +24,7 @@ var plugins = [{
       options: {"plugins":[],"trackingId":"UA-178217347-1"},
     },{
       plugin: require('C:/Users/ashwi/Desktop/AshwiniRepoWorship/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
-      options: {"plugins":[],"fonts":["Overlock"],"display":"swap"},
+      options: {"plugins":[],"fonts":["Sansita","Fira Sans Condensed","Courgette"],"display":"swap"},
     },{
       plugin: require('C:/Users/ashwi/Desktop/AshwiniRepoWorship/gatsby-ssr'),
       options: {"plugins":[]},
