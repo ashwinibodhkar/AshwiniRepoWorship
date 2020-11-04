@@ -77,7 +77,7 @@ const SearchWidget = () => {
   return (
     <div className="search_bar">
       <button onClick={handleShow} >
-        <FaSearch  color="white" />      
+        <FaSearch  size="25" color="white" />      
       </button>
       <Modal show={show} onHide={handleClose}  size="lg"  backdrop="static" >
         <Modal.Header closeButton>

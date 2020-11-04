@@ -17,19 +17,14 @@ const SearchResults = ({ results }) => (
               </li>
             ))}
           </ul>
-              {/* <p>Your requested song is Not found? 😓 <br></br>
-              Ask and it will be done!👐
-                <br></br>
-                <Link to="/contact">Click to request 😇 </Link>
-              </p> */}
           </div>
       </>
     ) : (
-      <div>
-        <p><span role="img" aria-label="">&#128519;</span>sorry! Your requested song is Not found <br></br>
-           Ask and it will be done! <span role="img" aria-label="">&#128080;</span>
-              <br></br>
-               <Link to="/contact">Click to request <span role="img" aria-label=""> &#128519;</span></Link>
+      <div className="songNotFound">
+        <p><span role="img" aria-label="">&#128531;</span>sorry! requested song is not found <br></br>
+          <Link to="/contact">Click to request <span role="img" aria-label="">&#128072;</span></Link>
+              <br></br>               
+               and it will be done! <span role="img" aria-label="">&#128080;</span>
             </p>
          
       </div>

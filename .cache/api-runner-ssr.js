@@ -23,6 +23,9 @@ var plugins = [{
       plugin: require('C:/Users/ashwi/Desktop/AshwiniRepoWorship/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
       options: {"plugins":[],"trackingId":"UA-178217347-1"},
     },{
+      plugin: require('C:/Users/ashwi/Desktop/AshwiniRepoWorship/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
+      options: {"plugins":[],"fonts":["Overlock"],"display":"swap"},
+    },{
       plugin: require('C:/Users/ashwi/Desktop/AshwiniRepoWorship/gatsby-ssr'),
       options: {"plugins":[]},
     }]

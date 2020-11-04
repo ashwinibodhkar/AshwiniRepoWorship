@@ -15,7 +15,7 @@ import Footer from '../components/footer';
 import Logo from "../images/logo.png"
 import Slider from '../components/slider/slider';
 import Gif from '../components/gifSection/gif';
-import Category from '../components/category/category';
+import Category from '../components/categorySection/category';
 import "animate.css/animate.min.css";
 import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -58,7 +58,7 @@ export default function BlogIndex ({data}){
             <Container>
             <ScrollAnimation animateIn='bounceInRight'
               animateOut='bounceOutLeft'>
-              <h1 >some songs for you</h1>
+              <h1 >some tracks for you</h1>
             </ScrollAnimation>
                           
             <Row  className="songL">

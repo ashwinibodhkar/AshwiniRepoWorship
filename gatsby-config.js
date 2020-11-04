@@ -172,5 +172,17 @@ module.exports = {
         trackingId: "UA-178217347-1",
       },
     },
+
+    //google fonts
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Sansita`,`Fira Sans Condensed`,`Courgette`
+           
+        ],
+        display: 'swap'
+      }
+    }
   ],
 }
