@@ -10,10 +10,10 @@ import { Link } from 'gatsby';
 
 const Header = ({ siteTitle },{subtitle}) => (
   <Container fluid className="headPart py-3">
-  <Container>
+  <Container className="midContainer">
     
     <Row >
-      <Col className="pl-3">
+      <Col>
       
       
       <Navbar  variant="dark" expand="lg" className="navWidth p-0">

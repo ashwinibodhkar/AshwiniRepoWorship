@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container,Row,Col,Carousel } from 'react-bootstrap'
 import slide1 from "../../images/pexels-suvan-chowdhury-144428.jpg"
-import slide2 from "../../images/pexels-caleb-oquendo-5001538.jpg"
+import slide2 from "../../images/pexels-thibault-trillet-167491.jpg"
 import Search from '../search';
 
 import "./slider.css";

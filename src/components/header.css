@@ -9,7 +9,7 @@
 }
 
 .navWidth{width: 96%;float: left;}
-.navbar-brand{font-size: 32px; font-weight: bolder; background: -webkit-linear-gradient(left,rgb(248, 248, 246),rgb(245, 245, 135),rgb(235, 231, 29), rgb(182, 150, 10));
+.navbar-brand{font-size: 1.2em; font-weight: bolder; background: -webkit-linear-gradient(left,rgb(217, 250, 29),rgb(24, 235, 235),rgb(4, 119, 148) );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
 .navbar-nav .nav-link{font-size: 18px;}
@@ -18,10 +18,10 @@ nav  svg{width: 0em;}
 .modal-content{box-shadow: 0 0 10px 4px #fff;}
 
 @media (max-width: 648px) { 
+    .midContainer{padding: 0;}
     .navbar-nav .nav-link{font-size: 18px;}
     .navWidth{width: 100%;}
     .navbar-brand{width: 100%;}
-    .navbar-brand h3{font-size: 20px;}
     nav  svg{width: 2em;}
     .outside .search_bar svg{width: 0em;}
 

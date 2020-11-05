@@ -44,7 +44,7 @@ export default function Template({data,location}){
   const [count, setCount] = useState(0)
 
   //for adjusting font size
-  const [Fsize, SetFsize] = useState(16)
+  const [Fsize, SetFsize] = useState(18)
 
   //const urlValue = typeof window !== 'undefined' ? window.location.href : '';
   const {siteUrl} = useSiteMetadata();

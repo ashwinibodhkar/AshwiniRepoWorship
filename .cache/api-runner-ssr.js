@@ -24,7 +24,7 @@ var plugins = [{
       options: {"plugins":[],"trackingId":"UA-178217347-1"},
     },{
       plugin: require('C:/Users/ashwi/Desktop/AshwiniRepoWorship/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
-      options: {"plugins":[],"fonts":["Fira Sans Condensed","Bowlby One SC","Rancho","Yesteryear","Denk One","Fruktur","Zhi Mang Xing","Bree Serif","Caveat","Carter One"],"display":"swap"},
+      options: {"plugins":[],"fonts":["Fira Sans Condensed","Bowlby One SC","Rancho","Yesteryear","Denk One","Fruktur","Zhi Mang Xing","Bree Serif","Caveat","Carter One","Archivo Black","Bangers"],"display":"swap"},
     },{
       plugin: require('C:/Users/ashwi/Desktop/AshwiniRepoWorship/gatsby-ssr'),
       options: {"plugins":[]},
