@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-import { Row,Col,Card } from 'react-bootstrap'
+import { Row,Col,Card, Container } from 'react-bootstrap'
  import DanceSongs from "../../images/DANCE for the LORD.mp4"
 import chordsClick from "../../images/allSongs.mp4"
 import './gif.css';
@@ -13,11 +13,13 @@ const gif = () => (
 
 
     <div>
-        <Row className="feature py-4" >
+      <Container fluid className="lineD">
+        <Container>
+        <Row className="feature  py-4" >
               <Col  xs={12} md={6} className="text-center">
                 
               <Link to="/artist">
-                <Card  
+                <Card 
                 data-aos="fade-down" data-aos-delay="20"
                       data-aos-duration="300"
                       >
@@ -25,6 +27,7 @@ const gif = () => (
                     <source src={aniVideo} type="video/mp4" />
                   </video>                  
                 </Card>
+               
               </Link>
               
               </Col>
@@ -35,9 +38,11 @@ const gif = () => (
                       > Artist</h2>
               </Col>
             </Row>
-          
-          
-            <Row className="feature py-4  ">
+            </Container>
+    </Container>
+    <Container fluid className="">      
+          <Container>
+            <Row className="feature  py-4  ">
               <Col xs={12} md={6} className="align-self-center text-white text-center">
                 <h2 
                 data-aos="fade-right" data-aos-delay="30"
@@ -57,10 +62,12 @@ const gif = () => (
               </Link>
               </Col>
             </Row>
-           
-           
-            <Row className="feature py-4">
-              <Col   xs={12} md={6} className="text-center">
+            </Container>
+    </Container>       
+       <Container fluid className="lineD ">
+       <Container>    
+            <Row className="feature  py-4">
+              <Col   xs={12} md={6} className="lineS text-center">
               <Link to="/allsongs">
                 <Card 
                 data-aos="fade-down" data-aos-delay="20"
@@ -79,6 +86,8 @@ const gif = () => (
                      >Worship Songs</h2>
               </Col>            
             </Row>
+            </Container>    
+            </Container>    
     </div>
 
 )

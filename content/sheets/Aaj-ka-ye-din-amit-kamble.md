@@ -4,6 +4,7 @@ artist: Amit Kamble
 key: A
 tags: ["Praise", "Thanks", "Hindi"]
 featureImage: ../image/aaj-ka-ye-din-amit-kamble.jpg
+WorshipPad: ../pads/A.wav
 videoSrcURL: https://www.youtube.com/embed/FSsowtqNgno
 videoTitle: "UdharHai"
 verseT: "भजन संहिता 118:24"

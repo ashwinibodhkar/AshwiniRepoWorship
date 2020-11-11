@@ -27,6 +27,7 @@
     color: #fff;
     z-index: 1;
     
+    
   }
   .topFeature{text-align: left;line-height: 3;}
   .bibleIcon:hover{color: aqua;}
@@ -40,10 +41,12 @@
 }
 .transpose{
     width: 85%;
-    background-color: rgb(70, 70, 68);
+    z-index: 1;
+    background-image: linear-gradient(to bottom, rgb(44, 44, 43), rgb(10, 10, 10)) ;
     margin: auto; 
     margin-bottom: 10px;
 }
+.transpose p{color: rgb(179, 178, 178);}
 .song{
     font-size: 24px;
     text-align: center; 
@@ -58,6 +61,10 @@
 .FontIcon svg{margin: 20px 10px 10px 0px ;border-radius: 10%;}
 
   @media (max-width: 648px) { 
+    .stick{position: fixed;bottom: 0;display: flex;float: left;z-index: 1;}
+    .stick .transpose button p{font-size: 10px;margin-bottom: 0;}
+    .transpose{margin-bottom: 0;width: 100%;font-size: 12px;}
+    .transpose p{margin-bottom: 0;}
     .chordImg .imgText h1{font-size: 38px;}
     .chordImg .imgText p{font-size: 20px;}
     .imgText{left: 5%;}

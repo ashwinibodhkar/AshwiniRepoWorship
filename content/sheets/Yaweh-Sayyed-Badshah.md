@@ -49,7 +49,7 @@ VERSE 2
 
 [C]Kya hai hum Tere [Dm]bina
 [G]Sab kuch hai Tune [C]diya
-[Am]Is andheri zind[Dm]agi mein
+[Am]Is adheri zind[Dm]agi mein
 [G]Ujayala tune [C]kiya ...x2
 
 

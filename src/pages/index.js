@@ -39,9 +39,13 @@ export default function BlogIndex ({data}){
            
           <Container className="section">
             <h1>Directly Go with Your Favourites</h1>
-            <Gif />
-            
           </Container>
+          <Container fluid>
+            <Gif />
+          </Container>
+           
+            
+         
         </Container>
         <Container fluid className="category">
             {/* category section */}

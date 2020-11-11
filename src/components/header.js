@@ -3,23 +3,27 @@ import React from "react"
 import "./header.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Nav,Navbar, Container,Row,Col} from 'react-bootstrap';
-import SearchWrapper from '../components/searchwrapper';
+import SearchWrapper from './searchwrapper';
 import { Link } from 'gatsby';
+
+// import logo from "../images/maskable_logo.png";
 // import ExampleCss from "./exampleCss";
 
 
+
 const Header = ({ siteTitle },{subtitle}) => (
+ 
   <Container fluid className="headPart py-3">
   <Container className="midContainer">
     
     <Row >
-      <Col>
-      
-      
+      <Col>   
       <Navbar  variant="dark" expand="lg" className="navWidth p-0">
       <SearchWrapper />
         <Link to="/">
-          <Navbar.Brand href="#home">{siteTitle}</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            
+          </Navbar.Brand>
         </Link> 
                
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -36,6 +40,7 @@ const Header = ({ siteTitle },{subtitle}) => (
       <div className="outside">
       <SearchWrapper  />  
       </div>   
+      
     </Col>
   </Row>
       

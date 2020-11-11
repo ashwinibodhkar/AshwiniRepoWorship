@@ -1,6 +1,6 @@
 ---
 title: Parmeshwar Pitah
-artist: Yeshua Ministries
+artist: Cameron Mendes
 key: E
 tags: ["Love"]
 featureImage: ../image/parmeshwar-pitah.jpg

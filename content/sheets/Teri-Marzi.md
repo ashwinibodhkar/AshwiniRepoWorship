@@ -3,7 +3,7 @@ title: Teri Marzi
 artist: Bridge Music
 key: B
 tags: ["Worship"]
-featureImage: ../image/teri-jai-yeshua-ministries.jpeg
+featureImage: ../image/yeshu-tu-jo-chule.jpg
 videoSrcURL: https://www.youtube.com/embed/gg4yQmmDmj4
 videoTitle: "Teri Marzi by Bridge Music"
 verseT: "भजन संहिता 4:8"

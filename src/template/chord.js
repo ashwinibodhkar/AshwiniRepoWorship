@@ -206,7 +206,7 @@ export default function Template({data,location}){
     <Container fluid className="BgChordPage">
       <div className="chordImg" id="trans">         
         <FeatureImage  fixed={featuredImage} /> 
-        <Container >      
+        <Container className="imgTextStick">      
           <div class="imgText">
             <h1 >{post.frontmatter.title}</h1>
             <p >{post.frontmatter.artist}</p> 
@@ -240,42 +240,38 @@ export default function Template({data,location}){
               </Link>
             </h6>  
           </Col>
-
-          <Col xs={12} md={6} >
-            <Row  className="transpose p-1"  > 
-              <Col xs={4}> 
-                <button>Transpose</button>                                    
-              </Col>
-              <Col xs={8} className="text-right p-0">
-                <button onClick={() => trpUp()} aria-label="Transpose Up"><FaCaretUp size="30"  /></button>
-                <button onClick={() => trpDown()} aria-label="Transpose Down"><FaCaretDown size="30"  /></button>
-                <button onClick={() => FlatOrSharp()}>b/#</button> 
-              </Col>
-            </Row>            
-                      
-            <Row className="transpose p-1">
-              <Col xs={3}>
-                <button id="btnId">
-                  <FaEyeSlash size="25" ></FaEyeSlash> 
-                </button>
-              </Col>
-              <Col xs="9"className="text-right p-0">
-                <button>Hide/Show chords</button>
-              </Col>
-            </Row>
-                 
-            <Row className="fontSizeButton">
-              <Col className="text-center">
-                <button  
-                  onClick={() => SetFsize(Fsize+2)}> <FaSearchPlus size="25"></FaSearchPlus> </button>  
-                <button  
-                  onClick={() => SetFsize(Fsize-2)}> <FaSearchMinus size="25" /> </button> 
-              </Col>
-            </Row>
-
-          </Col>
         </Row>
-        
+        </Container>
+        <Container fluid>
+          <Row>       
+            <Col className="stick">
+              <Row  className="transpose p-1 text-center">               
+                <Col xs={5} className="p-0">
+                  <button onClick={() => trpUp()} aria-label="Transpose Up"><FaCaretUp size="30"  /></button>
+                  <button onClick={() => trpDown()} aria-label="Transpose Down"><FaCaretDown size="30"  /></button>
+                  <button onClick={() => FlatOrSharp()}>b/#</button> 
+                  <p>Transpose</p>
+                </Col>           
+                <Col >
+                  <button id="btnId">
+                    <FaEyeSlash size="25" ></FaEyeSlash> 
+                    <p>chord show/hide</p>
+                  </button>
+                </Col>                        
+                <Col xs={4} className="p-0 text-center">
+                  <button  
+                    onClick={() => SetFsize(Fsize+2)}> <FaSearchPlus size="25"></FaSearchPlus> </button>  
+                  <button  
+                    onClick={() => SetFsize(Fsize-2)}> <FaSearchMinus size="25" /> </button> 
+                    <p>Zoom</p>
+                </Col>
+              </Row>
+              
+            </Col>
+          </Row>
+          
+        </Container>
+        <Container>
         <Row>
           <Col xs={12} md={5}>
             <div style={{textAlign: "center"}}>
