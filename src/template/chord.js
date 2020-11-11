@@ -245,7 +245,7 @@ export default function Template({data,location}){
         <Container fluid>
           <Row>       
             <Col className="stick">
-              <Row  className="transpose p-1 text-center">               
+              <Row  className="transpose  text-center">               
                 <Col xs={5} className="p-0">
                   <button onClick={() => trpUp()} aria-label="Transpose Up"><FaCaretUp size="30"  /></button>
                   <button onClick={() => trpDown()} aria-label="Transpose Down"><FaCaretDown size="30"  /></button>
@@ -254,15 +254,16 @@ export default function Template({data,location}){
                 </Col>           
                 <Col >
                   <button id="btnId">
-                    <FaEyeSlash size="25" ></FaEyeSlash> 
-                    <p>chord show/hide</p>
+                    <FaEyeSlash size="30" ></FaEyeSlash> 
+                    
                   </button>
+                  <p>chord show/hide</p>
                 </Col>                        
                 <Col xs={4} className="p-0 text-center">
                   <button  
-                    onClick={() => SetFsize(Fsize+2)}> <FaSearchPlus size="25"></FaSearchPlus> </button>  
+                    onClick={() => SetFsize(Fsize+2)}> <FaSearchPlus size="25" height="30"></FaSearchPlus> </button>  
                   <button  
-                    onClick={() => SetFsize(Fsize-2)}> <FaSearchMinus size="25" /> </button> 
+                    onClick={() => SetFsize(Fsize-2)}> <FaSearchMinus size="25" height="30" /> </button> 
                     <p>Zoom</p>
                 </Col>
               </Row>

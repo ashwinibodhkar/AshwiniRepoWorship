@@ -2,7 +2,7 @@
 .container{max-width: 1360px;}
 .topFeature a{color: #fff;text-decoration: none;}
 .topFeature a:hover{color: aqua;}
-.BgChordPage{background: #000;position: relative;}
+.BgChordPage{background: #000;}
 .BgContainerChord{position: relative;}
 .chordImg{ height: auto;
     width: 100%;
@@ -36,13 +36,13 @@
     border: none;
     border-radius: 3px;
     background: transparent;
-    color: #fff;    
+    color: #d7d7d4;    
     font-size: 16px;    
 }
 .transpose{
     width: 85%;
     z-index: 1;
-    background-image: linear-gradient(to bottom, rgb(44, 44, 43), rgb(10, 10, 10)) ;
+    background-image: linear-gradient(to bottom, rgb(32, 32, 32), rgb(10, 10, 10)) ;
     margin: auto; 
     margin-bottom: 10px;
 }
@@ -65,7 +65,8 @@
     .stick .transpose button p{font-size: 10px;margin-bottom: 0;}
     .transpose{margin-bottom: 0;width: 100%;font-size: 12px;}
     .transpose p{margin-bottom: 0;}
-    .chordImg .imgText h1{font-size: 38px;}
+    
+    .chordImg .imgText h1{font-size: 38px;position: sticky; top: 0;}
     .chordImg .imgText p{font-size: 20px;}
     .imgText{left: 5%;}
     .topFeature{text-align: center;line-height: 2.5;}
