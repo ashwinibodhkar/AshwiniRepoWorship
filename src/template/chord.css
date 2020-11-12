@@ -59,7 +59,7 @@
 .paragraph .chord{    color:rgb(215, 245, 43);padding: 0;}
 .backPage button{background: rgb(109, 108, 108);padding: 20px;}
 .FontIcon svg{margin: 20px 10px 10px 0px ;border-radius: 10%;}
-
+.button svg{stroke: 0.7;}
   @media (max-width: 648px) { 
     .stick{position: fixed;bottom: 0;display: flex;float: left;z-index: 1;}
     .stick .transpose button p{font-size: 10px;margin-bottom: 0;}

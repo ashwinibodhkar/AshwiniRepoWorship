@@ -247,23 +247,23 @@ export default function Template({data,location}){
             <Col className="stick">
               <Row  className="transpose  text-center">               
                 <Col xs={5} className="p-0">
-                  <button onClick={() => trpUp()} aria-label="Transpose Up"><FaCaretUp size="30"  /></button>
-                  <button onClick={() => trpDown()} aria-label="Transpose Down"><FaCaretDown size="30"  /></button>
+                  <button onClick={() => trpUp()} aria-label="Transpose Up"><FaCaretUp size="25"  /></button>
+                  <button onClick={() => trpDown()} aria-label="Transpose Down"><FaCaretDown size="25"  /></button>
                   <button onClick={() => FlatOrSharp()}>b/#</button> 
                   <p>Transpose</p>
                 </Col>           
                 <Col >
-                  <button id="btnId">
-                    <FaEyeSlash size="30" ></FaEyeSlash> 
+                  <button id="btnId" className="pb-2">
+                    <FaEyeSlash size="22" ></FaEyeSlash> 
                     
                   </button>
                   <p>chord show/hide</p>
                 </Col>                        
                 <Col xs={4} className="p-0 text-center">
                   <button  
-                    onClick={() => SetFsize(Fsize+2)}> <FaSearchPlus size="25" height="30"></FaSearchPlus> </button>  
+                    onClick={() => SetFsize(Fsize+2)}> <FaSearchPlus size="22" height="30"></FaSearchPlus> </button>  
                   <button  
-                    onClick={() => SetFsize(Fsize-2)}> <FaSearchMinus size="25" height="30" /> </button> 
+                    onClick={() => SetFsize(Fsize-2)}> <FaSearchMinus size="22" height="30" /> </button> 
                     <p>Zoom</p>
                 </Col>
               </Row>
