@@ -15,10 +15,10 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-image: linear-gradient(to bottom, transparent,rgba(51, 44, 1, 0.7), rgba(136, 101, 5, 0.9)) ;
+    background-image: linear-gradient(to bottom, transparent,rgba(27, 25, 7, 0.5),rgba(27, 25, 7, 0.8), rgba(255, 57, 57, 0.9)) ;
    
   }
-  .chordImg .imgText h1{font-size: 60px;font-family: 'Carter One', cursive;}
+  .chordImg .imgText h1{font-size: 60px;}
   .chordImg .imgText p{font-size: 30px;color: #fff;font-family: 'Caveat', cursive;}
   .imgText {
     position: absolute;
@@ -45,6 +45,8 @@
     background-image: linear-gradient(to bottom, rgb(32, 32, 32), rgb(10, 10, 10)) ;
     margin: auto; 
     margin-bottom: 10px;
+    padding-bottom: 5px;
+    box-shadow: 0 0 10px 0 rgb(129, 128, 128);
 }
 .transpose p{color: rgb(179, 178, 178);}
 .song{

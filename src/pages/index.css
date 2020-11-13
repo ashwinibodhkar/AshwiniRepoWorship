@@ -16,7 +16,7 @@
 }
 
 .songsList{background: #000;padding-top: 100px;}
-.songsList h1{font-size: 4em;margin-top: 100px;padding: 100px 0 60px 0;
+.songsList h1{font-size: 4em;color: #fff;margin-top: 100px;padding: 100px 0 60px 0;
    /* background: -webkit-linear-gradient(left,rgb(217, 250, 29),rgb(24, 235, 235),rgb(4, 119, 148) );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;text-align: center;font-family: 'Bangers', cursive; */

@@ -10,6 +10,7 @@
   left: 0%;    */
   bottom: 50%;
   text-align: center;
+  min-height: 90vh;
 }
 .topHeadi h1{position: relative;font-size: 6.8em;color: #fff;text-align: center;z-index: 1;font-weight: 500;font-family: 'Archivo Black', sans-serif;}
 .search-box {
@@ -49,7 +50,7 @@
   
 }
 @media (max-width: 648px) { 
-   .topHeadi{top:30%;} 
+   .topHeadi{top:30%;min-height: 100vh;} 
   .topHeadi h1{font-size: 2em;}
   .search-box {padding: 20px 0 0px 0;}
 }

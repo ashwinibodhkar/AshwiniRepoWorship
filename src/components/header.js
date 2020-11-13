@@ -13,7 +13,7 @@ import { Link } from 'gatsby';
 
 const Header = ({ siteTitle },{subtitle}) => (
  
-  <Container fluid className="headPart py-3">
+  <Container fluid className="headPart ">
   <Container className="midContainer">
     
     <Row >
@@ -22,12 +22,12 @@ const Header = ({ siteTitle },{subtitle}) => (
       <SearchWrapper />
         <Link to="/">
           <Navbar.Brand href="#home">
-            
+            <h3>Lets</h3><h4>Worship</h4>
           </Navbar.Brand>
         </Link> 
                
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" className="navBg">
           <Nav className="ml-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/allsongs">All Songs</Nav.Link>   

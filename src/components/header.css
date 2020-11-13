@@ -2,25 +2,34 @@
 .headPart{
     padding: 20px 0 20px 0px;
     background-color: black;
-    box-shadow: 0px 0px 10px 4px rgb(80 ,80, 80 , .75);;
-    z-index: 1
-    ;
+    box-shadow: 0px 0px 10px 4px rgb(80 ,80, 80 , .75);
+    z-index: 1;
+    
 }
-
+.midContainer{padding: 20px 0 20px 0;}
+nav .search_bar svg{width: 0em;}
 .navWidth{width: 96%;float: left;}
 .navbar-brand{width: 10%;}
-.navbar-brand img{width: 100%;}
-.navbar-nav .nav-link{font-size: 18px;}
-nav  svg{width: 0em;}
+.navbar-brand h3{font-size: 30px;float: left;color: rgb(201, 202, 202);font-weight: 400;}
+.navbar-brand h4{font-size: 30px;color: rgb(253, 128, 45);font-weight: 1000;}
+.navbar-nav .nav-link {font-size: 18px;color: rgba(255, 255, 255,1);font-weight: 900;}
+.navBg{text-align: center;}
 .modal-header button span{color: #fff;}
 .modal-content{box-shadow: 0 0 10px 4px #fff;}
 
 @media (max-width: 648px) { 
-    .midContainer{padding: 0;}
+    .midContainer{padding: 20px 0 0px 0;}
     .navbar-nav .nav-link{font-size: 18px;}
     .navWidth{width: 100%;}
-    .navbar-brand{width: 10%;}
-    nav  svg{width: 2em;}
-    .outside .search_bar svg{width: 0em;}
+    
+    .navbar-brand h3{font-size: 20px;}
+    .navbar-brand h4{font-size: 20px;}
 
+    .navbar-brand{width: 10%;}
+    
+}
+@media (max-width: 1024px) { 
+    .navBg{background-image: linear-gradient(157deg, #ff29b9, #de1f1f);}
+    nav .search_bar svg{width: 2em;}
+    .outside .search_bar svg{width: 0em;height: 0em;}
 }

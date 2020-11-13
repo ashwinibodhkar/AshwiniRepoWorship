@@ -52,7 +52,7 @@ export default function BlogIndex ({data}){
            
                <Row >
                 <Col className="text-center">
-                  <h1>Category</h1>
+                  <h1>Category for users</h1>
                 </Col>
               </Row>
               <Category />
@@ -62,7 +62,7 @@ export default function BlogIndex ({data}){
             <Container>
             <ScrollAnimation animateIn='bounceInRight'
               animateOut='bounceOutLeft'>
-              <h1 >some tracks for you</h1>
+              <h1 className="text-white text-center">some tracks for you</h1>
             </ScrollAnimation>
                           
             <Row  className="songL">
