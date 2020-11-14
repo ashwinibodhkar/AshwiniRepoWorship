@@ -17,12 +17,16 @@ import Slider from '../components/slider/slider';
 import Gif from '../components/gifSection/gif';
 import Category from '../components/categorySection/category';
 import "animate.css/animate.min.css";
-import ScrollAnimation from 'react-animate-on-scroll';
 
+import FeatureImage from '../components/FeatureImage';
 
 
 
 export default function BlogIndex ({data}){
+ 
+  // const post = data.allMarkdownRemark;
+  // const featuredImage = post.frontmatter.featureImage.childImageSharp.fixed
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -35,36 +39,33 @@ export default function BlogIndex ({data}){
            image={Logo} />
             <Container fluid className="back p-0">
           
-          <Slider />          
+              <Slider />          
+              
+              {/* category section */}
            
-          <Container className="section">
+               <Row  className="category">
+                <Col className="text-center">
+                  <h1>Category</h1>
+                </Col>
+              </Row>
+              <Category />
+              
+          
+            </Container>
+
+          <Container fluid className="section">
             <h1>Directly Go with Your Favourites</h1>
-          </Container>
-          <Container fluid>
+         
             <Gif />
           </Container>
            
             
          
-        </Container>
-        <Container fluid className="category">
-            {/* category section */}
-           
-               <Row >
-                <Col className="text-center">
-                  <h1>Category for users</h1>
-                </Col>
-              </Row>
-              <Category />
-              
-          </Container>
+        
+        
           <Container fluid className="songsList">
-            <Container>
-            <ScrollAnimation animateIn='bounceInRight'
-              animateOut='bounceOutLeft'>
-              <h1 className="text-white text-center">some tracks for you</h1>
-            </ScrollAnimation>
-                          
+            <Container>        
+              <h1 className="text-white text-center">some tracks for you</h1>                          
             <Row  className="songL">
             <CardDeck>
               {data.allMarkdownRemark.edges.map(({node}) =>(
@@ -73,6 +74,7 @@ export default function BlogIndex ({data}){
                    xs="12" md="3" >
                     <Card  data-aos="fade-up"  data-aos-delay="40"
                     data-aos-duration="700" className="cr">
+                      {/* <Card.Img><FeatureImage  fixed={featuredImage} /></Card.Img> */}
                       <Card.Body>
                         <Link to={node.fields.slug}>
                           <Card.Title><h5>{node.frontmatter.title}</h5></Card.Title>
@@ -118,7 +120,15 @@ export const query = graphql`
             title
             artist
             key
+            featureImage{
+              childImageSharp{
+                fixed{
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
+         
           fields {
             slug
           }

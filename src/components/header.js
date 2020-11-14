@@ -1,5 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
+import ReactDOM from 'react-dom';
+//import {toggleDrawer,Drawer,state,list,Button} from '@material-ui/core';
 import "./header.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Nav,Navbar, Container,Row,Col} from 'react-bootstrap';
@@ -10,7 +12,14 @@ import { Link } from 'gatsby';
 // import ExampleCss from "./exampleCss";
 
 
-
+// {['left', 'right', 'top', 'bottom'].map((anchor) => (
+//   <React.Fragment key={anchor}>
+//     <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+//     <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+//       {list(anchor)}
+//     </Drawer>
+//   </React.Fragment>
+// ))}
 const Header = ({ siteTitle },{subtitle}) => (
  
   <Container fluid className="headPart ">

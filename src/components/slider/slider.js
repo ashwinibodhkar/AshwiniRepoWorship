@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container,Row,Col,Carousel } from 'react-bootstrap'
 import slide1 from "../../images/pexels-suvan-chowdhury-144428.jpg"
-// import slide2 from "../../images/pexels-thibault-trillet-167491.jpg"
+import slide2 from "../../images/pexels-thibault-trillet-167491.jpg"
 import Search from '../search';
 
 import "./slider.css";
@@ -23,7 +23,14 @@ const slider = () => (
                   />
                   
                 </Carousel.Item>          
-               
+                <Carousel.Item interval={2000}>
+                  <img
+                    className="d-block w-100"
+                    src={slide2}
+                    alt="First slide"
+                  />
+                  
+                </Carousel.Item> 
                          
               </Carousel>
               <Row>

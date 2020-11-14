@@ -6,8 +6,8 @@ import { Container,Row,Col } from 'react-bootstrap'
 const footer = () => (
     
     <div>
-        <Container fluid className="">
-            <Row className="row align-items-end footer py-3">
+        <Container fluid className="footer">
+            <Row className="row align-items-end py-3">
                 <Col className="text-center">
                      <p>letsworship.in</p>
                 </Col>

@@ -2,21 +2,26 @@
 .back{background: #000;}
 
 
-.section{position: relative;padding:100px 0 100px 0;}
-.section h1{color: #fff;text-align: center;padding-bottom: 60px;
+.section{position: relative;padding:100px 0 100px 0;background: rgb(46, 46, 46);}
+.section h1{background: -webkit-linear-gradient(157deg, #ff29b9, #de1f1f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;text-align: center;padding: 100px 0 60px 0;font-weight: 1000;
   /* background: -webkit-linear-gradient(left,rgb(217, 250, 29),rgb(24, 235, 235),rgb(4, 119, 148) );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;font-family: 'Denk One', sans-serif; */
 }
 
 .category h1{padding: 100px 0px 60px 0px;
-  background: -webkit-linear-gradient(left,rgb(106, 129, 4),rgb(2, 128, 8),rgb(5, 136, 97) );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;font-family: 'Denk One', sans-serif;
+  background: -webkit-linear-gradient(157deg, #ff29b9, #de1f1f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 1000;
 }
 
 .songsList{background: #000;padding-top: 100px;}
-.songsList h1{font-size: 4em;color: #fff;margin-top: 100px;padding: 100px 0 60px 0;
+.songsList h1{font-size: 4em;padding: 100px 0 60px 0;font-weight: 1000;background: -webkit-linear-gradient(157deg, #ff29b9, #de1f1f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
    /* background: -webkit-linear-gradient(left,rgb(217, 250, 29),rgb(24, 235, 235),rgb(4, 119, 148) );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;text-align: center;font-family: 'Bangers', cursive; */
@@ -25,7 +30,7 @@
 .songL .card .card-title{color: #ddd;font-weight: bolder;font-size: 14px;}
 .songL .card .card-title:hover{color: rgb(202, 189, 11);}
 .songL .card .card-body a{text-decoration: none;}
-.allLink button{background-color: rgb(122, 122, 121);color: rgb(255, 255, 255);padding: 5px 38px 5px 38px;font-weight: bolder;}
+.allLink button{background: linear-gradient(157deg, #ff29b9, #de1f1f);color: rgb(255, 255, 255);padding: 5px 38px 5px 38px;font-weight: bolder;}
 .allLink button:hover{background-color:rgb(112, 112, 109);}
 
 
@@ -33,9 +38,8 @@
 @media (max-width: 648px) { 
   
   .section{padding: 50px 0  0px 0;}
-  .section h1{font-size: 6vw;}
+  .section h1{font-size: 2.1em;padding: 40px 0 30px 0;}
  
-  .songsList h1{margin-top: 5vw;}
   .category h1{font-size: 2.1em;padding: 34px 0px 30px 0px;}
   .songsList h1{font-size: 2em;padding: 60px 0 40px 0;}
 }

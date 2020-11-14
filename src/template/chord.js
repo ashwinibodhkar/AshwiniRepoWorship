@@ -206,11 +206,14 @@ export default function Template({data,location}){
     <Container fluid className="BgChordPage">
       <div className="chordImg" id="trans">         
         <FeatureImage  fixed={featuredImage} /> 
-        <Container className="imgTextStick">      
-          <div class="imgText">
-            <h1 >{post.frontmatter.title}</h1>
-            <p >{post.frontmatter.artist}</p> 
-          </div> 
+        <Container className="imgTextStick">   
+          <Row className="imgText">
+            <Col>
+              <h1 >{post.frontmatter.title}</h1>
+              <p >{post.frontmatter.artist}</p> 
+            </Col>
+          </Row>   
+          
         </Container>    
       </div>
       

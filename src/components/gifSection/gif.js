@@ -20,8 +20,9 @@ const gif = () => (
                 
               <Link to="/artist">
                 <Card 
-                data-aos="fade-down" data-aos-delay="20"
-                      data-aos-duration="300"
+                data-aos="fade-down" data-aos-delay="50"
+                      data-aos-duration="1000"
+                      
                       >
                   <video autoPlay loop muted>
                     <source src={aniVideo} type="video/mp4" />
@@ -33,8 +34,8 @@ const gif = () => (
               </Col>
               <Col xs={12} md={6} className="artist align-self-center text-white text-center">
                 <h2  
-                data-aos="fade-up" data-aos-delay="30"
-                      data-aos-duration="500"
+                data-aos="fade-up" data-aos-delay="50"
+                      data-aos-duration="1000"
                       > Artist</h2>
               </Col>
             </Row>
@@ -45,15 +46,15 @@ const gif = () => (
             <Row className="feature  py-4  ">
               <Col xs={12} md={6} className="align-self-center text-white text-center">
                 <h2 
-                data-aos="fade-right" data-aos-delay="30"
-                      data-aos-duration="500"
+                data-aos="fade-right" data-aos-delay="50"
+                      data-aos-duration="1000"
                   >Dance Songs</h2>
               </Col>
               <Col   xs={12} md={6} className="text-center">
               <Link to="/category/dance/">
                 <Card 
-                data-aos="fade-down" data-aos-delay="20"
-                      data-aos-duration="300"
+                data-aos="fade-down" data-aos-delay="50"
+                      data-aos-duration="1000"
                       >
                  <video autoPlay loop muted>
                     <source src={DanceSongs} type="video/mp4" />
@@ -70,8 +71,8 @@ const gif = () => (
               <Col   xs={12} md={6} className="lineS text-center">
               <Link to="/allsongs">
                 <Card 
-                data-aos="fade-down" data-aos-delay="20"
-                      data-aos-duration="300"
+                data-aos="fade-down" data-aos-delay="50"
+                      data-aos-duration="1000"
                       >
                    <video autoPlay loop muted>
                     <source src={chordsClick} type="video/mp4" />

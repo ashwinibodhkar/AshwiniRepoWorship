@@ -24,7 +24,7 @@ export default function AllSongs({ data }) {
         <Container fluid className="catBg">
         <Container>
             {/* songs list */}
-            <h1 className="text-center text-white pt-5">Song List</h1>
+            <h2 className="text-center text-white pt-5">Song List</h2>
             <Row  
                 className="songL pt-5">
                 {data.allMarkdownRemark.edges.map(({node}) =>(

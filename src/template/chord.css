@@ -4,9 +4,11 @@
 .topFeature a:hover{color: aqua;}
 .BgChordPage{background: #000;}
 .BgContainerChord{position: relative;}
-.chordImg{ height: auto;
+.chordImg{
     width: 100%;
-    position: relative;}
+    height: 100%;
+    position: relative;
+    }
 .chordImg:after {
     position: absolute;
     content: " ";
@@ -15,9 +17,10 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-image: linear-gradient(to bottom, transparent,rgba(27, 25, 7, 0.5),rgba(27, 25, 7, 0.8), rgba(255, 57, 57, 0.9)) ;
+    background-image: linear-gradient(to bottom, transparent,rgba(27, 25, 7, 0.5),rgba(27, 25, 7, 0.8), rgba(255, 41, 41, 0.9)) ;
    
   }
+  .chordImg img{height: 100%;}
   .chordImg .imgText h1{font-size: 60px;}
   .chordImg .imgText p{font-size: 30px;color: #fff;font-family: 'Caveat', cursive;}
   .imgText {
@@ -58,17 +61,18 @@
 
 .paragraph{text-align: left;padding: 10px 0 10px 0;line-height: 1.0;}
 .paragraph .row{margin: 0;padding-bottom: 10px;}
-.paragraph .chord{    color:rgb(215, 245, 43);padding: 0;}
+.paragraph .chord{color: #ebae68;font-weight: 500;padding: 0;}
 .backPage button{background: rgb(109, 108, 108);padding: 20px;}
 .FontIcon svg{margin: 20px 10px 10px 0px ;border-radius: 10%;}
 .button svg{stroke: 0.7;}
   @media (max-width: 648px) { 
-    .stick{position: fixed;bottom: 0;display: flex;float: left;z-index: 1;}
-    .stick .transpose button p{font-size: 10px;margin-bottom: 0;}
-    .transpose{margin-bottom: 0;width: 100%;font-size: 12px;}
-    .transpose p{margin-bottom: 0;}
     
-    .chordImg .imgText h1{font-size: 38px;position: sticky; top: 0;}
+    .stick .transpose button p{font-size: 10px;margin-bottom: 0;}
+    .transpose{margin-bottom: 0;width: 100%;font-size: 12px;position: fixed;bottom: 0;}
+    .transpose p{margin-bottom: 0;}
+   
+    
+    .chordImg .imgText h1{font-size: 38px;}
     .chordImg .imgText p{font-size: 20px;}
     .imgText{left: 5%;}
     .topFeature{text-align: center;line-height: 2.5;}
