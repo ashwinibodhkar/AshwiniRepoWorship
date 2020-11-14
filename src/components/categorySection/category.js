@@ -10,7 +10,7 @@ import freedom from "../../images/bridgeMusic.jpg"
 import bridge from "../../images/bridge.jpg"
 import { FaAngleDoubleDown} from "react-icons/fa"
 import "./category.css"
-import Button from '@material-ui/core/Button';
+
 
 const category = () => (
     
