@@ -4,6 +4,7 @@ artist: Kenneth silway
 key: G
 tags: ["Praise", "Dance"]
 featureImage: ../image/yeshu-tu-hai-sabse-pyara.jpg
+artistImage : ../image/nach.jpg
 videoSrcURL: https://www.youtube.com/embed/57cLI9xJCig
 videoTitle: "Yeshu tu hai sabse pyara"
 verseT: "फिलिप्पियों 4"

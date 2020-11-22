@@ -1,9 +1,10 @@
 ---
 title: Yeshu Tere Kareeb 
-artist: Mark Tribhuvan
+artist: Sheldon Bangera
 key: E
 tags: ["Worship", "Thanks"]
 featureImage: ../image/yeshu-tere-kareeb.jpg
+artistImage: ../image/nach.jpg
 videoSrcURL: https://www.youtube.com/embed/ty2AGJfGUsU
 videoTitle: "Chattan by Bridge Music"
 verseT: "भजन संहिता 118:29"

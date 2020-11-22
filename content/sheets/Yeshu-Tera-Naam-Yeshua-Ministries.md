@@ -4,6 +4,7 @@ artist: Yeshua Ministries
 key: D
 tags: ["Dance"]
 featureImage: ../image/hum-gaye-hossana.jpg
+artistImage: ../image/nach.jpg
 videoSrcURL: https://www.youtube.com/embed/iQ-xgBJvlhE 
 videoTitle: "Sabse Uncha"
 verseT: "फिलिप्पियों 2:9-11"

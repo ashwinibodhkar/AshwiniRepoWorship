@@ -10,8 +10,12 @@ import { Container, Row, Col} from "react-bootstrap"
 import Layout from "../components/layout"
 import "./category.css"
 import { FaArrowUp } from "react-icons/fa"
-import Footer from '../components/footer';
+
 import "../components/FeatureImage"
+import HomeIcon from '@material-ui/icons/Home';
+
+import QueueMusicIcon from '@material-ui/icons/QueueMusic';
+import SearchWrapper from "../components/searchBar/searchwrapper";
 
 const TagsPage = ({
   data: {
@@ -56,9 +60,32 @@ const TagsPage = ({
           </Row>
         </div>      
       </Container>
-      
+      {/* sticky bottom banner */}
+      <Row className="bottomBar">
+              <Col xs={4}>
+                <Link to="/">
+                  <HomeIcon style={{ color: '#fff' }} />
+                  <p>Home</p>
+                </Link>
+              </Col>
+              <Col xs={4}>
+                {/* <Link to={}> */}
+                <SearchWrapper />
+                <p>Search</p>
+                  
+                  
+                {/* </Link> */}
+              </Col>
+              <Col xs={4}>
+              <Link to="/allsongs">
+                <QueueMusicIcon style={{ color: '#fff' }} />
+                <p>All List</p>
+                </Link>
+              </Col>
+            </Row>
+
     </Container>
-    <Footer />
+  
   </div>
 )
 

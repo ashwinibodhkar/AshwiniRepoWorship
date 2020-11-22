@@ -6,7 +6,7 @@ import "./category-tem.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container,Row,Col} from 'react-bootstrap'
 
-import Footer from '../components/footer';
+
 import Layout from "../components/layout";
 
 const Tags = ({ pageContext, data,title }) => {
@@ -48,7 +48,7 @@ const Tags = ({ pageContext, data,title }) => {
       </Container>
       
     </Container>
-    <Footer />
+   
      
     </div>
   )

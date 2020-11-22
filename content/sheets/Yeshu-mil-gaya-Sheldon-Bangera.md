@@ -4,6 +4,7 @@ artist: Sheldon Bangera
 key: D
 tags: ["Worship", "Love"]
 featureImage: ../image/yeshu-mil-gaya.png
+artistImage: ../image/nach.jpg
 videoSrcURL: https://www.youtube.com/embed/j9ZtCVdEExE
 videoTitle: "yeshu mil gaya by sheldon bangera"
 verseT: "रोमियों 5:8"

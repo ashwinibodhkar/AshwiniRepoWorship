@@ -5,12 +5,19 @@ import "./index.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { graphql, Link } from "gatsby"
 import Card from 'react-bootstrap/Card'
-import Footer from '../components/footer';
 import "./category.css";
 import "aos/dist/aos.css";
 import Aos from "aos";
 
+import Img from 'gatsby-image'
+import HomeIcon from '@material-ui/icons/Home';
+import QueueMusicIcon from '@material-ui/icons/QueueMusic';
+import SearchWrapper from "../components/searchBar/searchwrapper";
+
 export default function AllSongs({ data }) {
+  // const { edges: posts } = data.allMarkdownRemark;
+  //const featuredImage = post.frontmatter.featureImage.childImageSharp.fixed
+
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -22,31 +29,55 @@ export default function AllSongs({ data }) {
       <Layout />
       
         <Container fluid className="catBg">
-        <Container>
+          <Container>
             {/* songs list */}
             <h2 className="text-center text-white pt-5">Song List</h2>
-            <Row  
-                className="songL pt-5">
-                {data.allMarkdownRemark.edges.map(({node}) =>(
-                <Col  sm="6" md="3" className="mb-2" >
+            <Row className="songL pt-5">
+              {data.allMarkdownRemark.edges.map(({node}) =>(
+              <Col  xs="12" md="3" className="mb-2" >
                 <Card data-aos="zoom-in" 
                 data-aos-delay="20"
                 data-aos-duration="300"
                 >
-                  <Card.Body>
-                    <Link to={node.fields.slug}>
-                      <Card.Title>{node.frontmatter.title}</Card.Title>
-                    </Link>
-                    <Card.Subtitle className="mb-2 text-muted">{node.frontmatter.artist}</Card.Subtitle>
-                  </Card.Body>
+                  <Row>
+                    <Col xs={5} md={5} className="align-self-center pl-0">
+                    <Img fluid={node.frontmatter.featureImage.childImageSharp.fluid} />
+                    </Col>
+                    <Col xs={7} md={7} className="align-self-center">
+                        <Link to={node.fields.slug}>
+                            <Card.Title>{node.frontmatter.title}</Card.Title>
+                          </Link>
+                          <Card.Subtitle className="mb-2 text-muted">{node.frontmatter.artist}</Card.Subtitle>
+                    </Col>
+                  </Row>                                                     
                 </Card>
-                </Col>
+              </Col>
 
               ))}
             </Row>
-            </Container>
-            </Container>
-            <Footer />
+          </Container>
+          { /* sticky bottom banner */}
+          <Row className="bottomBar">
+            <Col xs={4}>
+              <Link to="/">
+                <HomeIcon style={{ color: '#fff' }} />
+                <p>Home</p>
+              </Link>
+            </Col>
+            <Col xs={4}>
+              {/* <Link to={}> */}
+              <SearchWrapper />
+              <p>Search</p>
+            </Col>
+            <Col xs={4}>
+            <Link to="/allsongs">
+              <QueueMusicIcon style={{ color: '#fff' }} />
+              <p>All List</p>
+              </Link>
+            </Col>
+          </Row>
+        </Container>
+            
     </>
   )
 }
@@ -61,6 +92,14 @@ export const query = graphql`
           frontmatter {
             title
             artist
+            featureImage{
+              childImageSharp{
+                fluid(maxWidth: 500, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluidLimitPresentationSize
+                }
+              }
+            }
           }
           fields {
             slug

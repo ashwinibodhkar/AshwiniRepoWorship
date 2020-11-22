@@ -1,14 +1,14 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
+
 import {Link} from 'gatsby';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Row,Col,Card } from 'react-bootstrap'
+import { Row,Card } from 'react-bootstrap'
 import ThankYou from "../../images/THANK YOU.jpg"
 import dance from "../../images/Dance (1).jpg"
 import easter from "../../images/easter.jpg"
 import freedom from "../../images/bridgeMusic.jpg"
 import bridge from "../../images/bridge.jpg"
-import { FaAngleDoubleDown} from "react-icons/fa"
+import {  FaAngleDoubleRight} from "react-icons/fa"
 import "./category.css"
 
 
@@ -52,21 +52,17 @@ const category = () => (
                        <h3>Bridge<br></br> Music</h3> 
                   </Link>
               </Card>
-              </Row>
-              <Row>
-                <Col className="categoryBtn text-center py-5">
-                
-                  <button >
-                  <Link to="/category">
-                    <p>See More</p>
-                    <FaAngleDoubleDown size={40} ></FaAngleDoubleDown>
-                  </Link>
-                </button>  
-                </Col>
               
-                  
-                
-              </Row> 
+              <button xs={6} className="categoryBtn text-center ">
+                    <Link to="/category">
+                    
+                    <FaAngleDoubleRight size={40} ></FaAngleDoubleRight>
+                    
+                  </Link>
+              </button>
+             
+              </Row>
+              
     </div>
 
 )

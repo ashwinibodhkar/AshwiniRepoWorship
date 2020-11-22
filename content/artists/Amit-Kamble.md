@@ -1,5 +1,5 @@
 ---
-title: Amit Kamble
+title: Amit Kamble 
 excerpt: This page tells you about Amit Kamble
 featureImage: ../image/amit-kamble.jpg
 ---

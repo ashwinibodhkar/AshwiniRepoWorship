@@ -1,17 +1,17 @@
 
-.back{background: #000;}
+/* .back{background: #000;}
 
 
-.section{position: relative;padding:100px 0 100px 0;background: rgb(46, 46, 46);}
+.section{position: relative;padding:100px 0 100px 0;background: rgb(2, 1, 1);}
 .section h1{background: -webkit-linear-gradient(157deg, #ff29b9, #de1f1f);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;text-align: center;padding: 100px 0 60px 0;font-weight: 1000;
+    -webkit-text-fill-color: transparent;text-align: center;padding: 100px 0 60px 0;font-weight: 1000; */
   /* background: -webkit-linear-gradient(left,rgb(217, 250, 29),rgb(24, 235, 235),rgb(4, 119, 148) );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;font-family: 'Denk One', sans-serif; */
-}
+/* }
 
-.category h1{padding: 100px 0px 60px 0px;
+.category h1{padding: 100px 0px 60px 0px;text-align: left;
   background: -webkit-linear-gradient(157deg, #ff29b9, #de1f1f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -21,19 +21,24 @@
 .songsList{background: #000;padding-top: 100px;}
 .songsList h1{font-size: 4em;padding: 100px 0 60px 0;font-weight: 1000;background: -webkit-linear-gradient(157deg, #ff29b9, #de1f1f);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
    /* background: -webkit-linear-gradient(left,rgb(217, 250, 29),rgb(24, 235, 235),rgb(4, 119, 148) );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;text-align: center;font-family: 'Bangers', cursive; */
-}
-.songL .card{border-bottom: 1px solid rgb(139, 139, 139);background-color: rgb(36, 35, 35);margin:0 0 10px 0;border-radius: 0;}
+  .bottomBar{position: fixed;width: 100%;bottom: 0;text-align: center;z-index: 1;padding: 20px 0 20px 0;font-size: .7em;border-top-right-radius: 10px;border-top-left-radius: 10px;color: rgb(187, 187, 187); background-image: linear-gradient(to bottom, rgb(32, 32, 32), rgb(10, 10, 10)) ;box-shadow: 0 0 10px 0 rgb(129, 128, 128);}
+  .bottomBar p{margin-bottom: 0;padding-bottom: 10px;font-size: .9em;color: rgb(179, 178, 178);}
+  .bottomBar svg{margin-top: 5px;width: 1.3em;}
+.songL .card img{width: 100%;}
+.songL{line-height: 1;margin: 0 auto;}
+.songL .card{background-color: transparent;margin:0 0 10px 0;border-radius: 10px;padding: 0 5px 0 5px;}
 .songL .card .card-title{color: #ddd;font-weight: bolder;font-size: 14px;}
 .songL .card .card-title:hover{color: rgb(202, 189, 11);}
 .songL .card .card-body a{text-decoration: none;}
+
 .allLink button{background: linear-gradient(157deg, #ff29b9, #de1f1f);color: rgb(255, 255, 255);padding: 5px 38px 5px 38px;font-weight: bolder;}
 .allLink button:hover{background-color:rgb(112, 112, 109);}
 
-
+/* {
 
 @media (max-width: 648px) { 
   
@@ -42,4 +47,5 @@
  
   .category h1{font-size: 2.1em;padding: 34px 0px 30px 0px;}
   .songsList h1{font-size: 2em;padding: 60px 0 40px 0;}
-}
+} */
+body{background: #000;}

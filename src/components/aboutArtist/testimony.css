@@ -1,0 +1,50 @@
+.testimonyInline{
+    width: 100%;
+    display: inline-block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    
+  }
+  .testimonyInline .card h6{overflow: auto;color: #fff;z-index: 1;font-weight: lighter;font-size: 12px;}
+  
+   .testimonyInline::-webkit-scrollbar {
+    width: 1px;
+    
+   }
+  .testimonyInline::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 2px rgba(22, 21, 21, 0.9); */
+      
+  }
+  .testimonyInline::-webkit-scrollbar-thumb {
+   
+  
+    
+    margin-top: 300px;
+    
+  }
+  .testimonyInline .card1{width: 100%;}
+  .testimonyInline .card{
+    display: inline-block;
+    width:28%; 
+    text-align: center;
+    color: #000;
+    transition: 0.6s;
+    position: relative;  
+    height: auto;  
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px ;
+    background: transparent;
+  
+  }
+  .testimonyInline .card a{text-decoration: none;color: rgb(26, 24, 24);}
+  .testimonyInline .card img{width: 100%;height: 100%;border-radius: 10%;}
+  .testimonyBtn svg{bottom: 200px;color: #fff;}
+  
+  
+  @media (max-width: 648px) { 
+    .testimonyInline .card{width: 30%;height: 100%;}
+    /* .artist h2{font-size: 0px;}
+    .artistInline .card h3{font-size: 20px;} */
+  }

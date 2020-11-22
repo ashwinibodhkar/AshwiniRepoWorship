@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import {useStaticQuery, graphql} from "gatsby"
 import {FeatureImageWrapper} from "./image-elements"
 
+
 const FeatureImage = ({ fixed }) => {
     
     const data = useStaticQuery(graphql`
@@ -20,6 +21,7 @@ const FeatureImage = ({ fixed }) => {
                 position: "relative",
                 width: "100%",
                 display: "flex" ,
+                
                 
                 }} 
             />

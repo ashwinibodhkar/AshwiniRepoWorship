@@ -8,14 +8,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container,Row,Col} from 'react-bootstrap'
 import "./chord.css"
 import "./chord.scss"
-import { FaCaretUp, FaCaretDown, FaBookOpen, FaSearchPlus, FaSearchMinus,FaYoutube } from "react-icons/fa";
-import Footer from '../components/footer';
+import { FaCaretUp, FaCaretDown, FaBookOpen, FaSearchPlus, FaSearchMinus,FaYoutube,FaArrowUp  } from "react-icons/fa";
+import '../components/footerSection/footer.scss';
 //import { MDXRenderer } from "gatsby-plugin-mdx"
 import FeatureImage from '../components/FeatureImage';
-import { FaArrowUp,FaEyeSlash, } from "react-icons/fa"
+
 import { OverlayTrigger,Tooltip,Toast} from 'react-bootstrap'
 //import SearchWrapper from '../components/searchwrapper'
-import Video from "../components/video"
+import Video from "../components/videoSection/video"
 import SEO from "../components/seo"
 import useSiteMetadata from "../hooks/use-site-metadata"
 //import Helmet from 'react-helmet';
@@ -30,6 +30,7 @@ import { FacebookShareButton,FacebookIcon,
 import Aos from "aos";
 import "aos/dist/aos.css";
 
+import ShareIcon from '@material-ui/icons/Share';
 
 export default function Template({data,location}){
  
@@ -53,7 +54,8 @@ export default function Template({data,location}){
 
   //const [pad, setpad] = useState(post.frontmatter.WorshipPad);
 
- 
+  //for changing backround of title
+  const [bgTitle,setBgtitle] = useState(false);
 
 
   // //for setting speed
@@ -136,7 +138,7 @@ export default function Template({data,location}){
     $(document).ready(function(){
       
       //hide show chords
-      $("#btnId").click(function(){
+      $("#bnId").click(function(){
         $(".chord").toggle();
       })
     
@@ -185,6 +187,17 @@ export default function Template({data,location}){
   //convert song to html
   const htmlChordSheet = new ChordSheetJS.HtmlTableFormatter().format(song)
 
+  //change backround of title
+  const changeBackround = () => {
+    if (window.scrollY >= 300) {
+      setBgtitle(true);
+    }else {
+      setBgtitle(false);
+    }
+  };
+  window.addEventListener('scroll',changeBackround);
+
+
   return( 
     <>
      <Layout />  
@@ -207,7 +220,7 @@ export default function Template({data,location}){
       <div className="chordImg" id="trans">         
         <FeatureImage  fixed={featuredImage} /> 
         <Container className="imgTextStick">   
-          <Row className="imgText">
+          <Row className="imgText ">
             <Col>
               <h1 >{post.frontmatter.title}</h1>
               <p >{post.frontmatter.artist}</p> 
@@ -216,9 +229,22 @@ export default function Template({data,location}){
           
         </Container>    
       </div>
+      {/* top title backround change */}
+      <Row className={bgTitle ? 'bgTitle active' : 'bgTitle'} >
+        <Col xs={8} className="pr-0 align-self-center">
+          <h6 className="m-0">{post.frontmatter.title}</h6>
+          <p className="m-0">{post.frontmatter.artist}</p> 
+        </Col>
+        <Col xs={2} className="text-right p-0 align-self-center">
+          <p className="m-0">key {key.toString()}</p>
+        </Col>
+        <Col xs={2} className="align-self-center">
+          <ShareIcon />
+        </Col>
+      </Row>
       
       {/* lyrics Content */}
-      <Container className="BgContainerChord py-5">
+      <Container className="BgContainerChord ">
      
         <Row >
           <Col xs={12} md={6} className="topFeature text-white ">
@@ -246,27 +272,33 @@ export default function Template({data,location}){
         </Row>
         </Container>
         <Container fluid>
+          
           <Row>       
             <Col className="stick">
               <Row  className="transpose  text-center">               
-                <Col xs={5} className="p-0">
-                  <button onClick={() => trpUp()} aria-label="Transpose Up"><FaCaretUp size="25"  /></button>
-                  <button onClick={() => trpDown()} aria-label="Transpose Down"><FaCaretDown size="25"  /></button>
-                  <button onClick={() => FlatOrSharp()}>b/#</button> 
+                <Col xs={3} className="px-0 ">
+                  <FaCaretUp onClick={() => trpUp()} size="25" className="mb-2" />
+                  <FaCaretDown onClick={() => trpDown()} size="25" className="mb-2" />
+                  
                   <p>Transpose</p>
+                </Col>
+                <Col xs={2} className="px-0 pb-1">
+                  <h5 onClick={() => FlatOrSharp()}>b/# </h5>
+                  <p >Flat/Sharp</p>
+                  
                 </Col>           
-                <Col >
-                  <button id="btnId" className="pb-2">
-                    <FaEyeSlash size="22" ></FaEyeSlash> 
-                    
-                  </button>
-                  <p>chord show/hide</p>
+                <Col xs={4} className="text-center p-0">   
+                  
+                    <div class="flip-switch flip-switch-icon"  >
+                      <input type="checkbox" id="c2" />
+                      <label for="c2"  id="bnId"></label>
+                    </div> 
+                    <p>Chords Show/Hide</p>
+                                       
                 </Col>                        
-                <Col xs={4} className="p-0 text-center">
-                  <button  
-                    onClick={() => SetFsize(Fsize+2)}> <FaSearchPlus size="22" height="30"></FaSearchPlus> </button>  
-                  <button  
-                    onClick={() => SetFsize(Fsize-2)}> <FaSearchMinus size="22" height="30" /> </button> 
+                <Col xs={3} className="px-0 text-center">                  
+                    <FaSearchPlus onClick={() => SetFsize(Fsize+2)} size="26" height="30" xs={6} className="my-1 px-1"></FaSearchPlus>  
+                    <FaSearchMinus onClick={() => SetFsize(Fsize-2)} size="26" height="30" xs={6} className="my-1 px-1" /> 
                     <p>Zoom</p>
                 </Col>
               </Row>
@@ -345,7 +377,7 @@ export default function Template({data,location}){
     </Container>  
 
     {/* footer section */}
-    <Footer />
+  
     </>
   )  
 }

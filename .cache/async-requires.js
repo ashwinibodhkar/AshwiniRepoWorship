@@ -2,8 +2,9 @@
 const preferDefault = m => (m && m.default) || m
 
 exports.components = {
-  "component---cache-caches-gatsby-plugin-offline-app-shell-js": () => import("./../../caches/gatsby-plugin-offline/app-shell.js" /* webpackChunkName: "component---cache-caches-gatsby-plugin-offline-app-shell-js" */),
+  "component---cache-dev-404-page-js": () => import("./../../dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
   "component---src-pages-404-js": () => import("./../../../src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
+  "component---src-pages-allartist-js": () => import("./../../../src/pages/allartist.js" /* webpackChunkName: "component---src-pages-allartist-js" */),
   "component---src-pages-allsongs-js": () => import("./../../../src/pages/allsongs.js" /* webpackChunkName: "component---src-pages-allsongs-js" */),
   "component---src-pages-artist-js": () => import("./../../../src/pages/artist.js" /* webpackChunkName: "component---src-pages-artist-js" */),
   "component---src-pages-category-js": () => import("./../../../src/pages/category.js" /* webpackChunkName: "component---src-pages-category-js" */),

@@ -1,9 +1,10 @@
 ---
-title: Yshu teri daya se
+title: Yeshu teri daya se
 artist: Sunny Vishwas
 key: G
 tags: ["Praise", "Thanks"]
 featureImage: ../image/yeshu-teri-daya-se.jpg
+artistImage: ../image/nach.jpg
 videoSrcURL: https://www.youtube.com/embed/UalmfTHwDfE
 videoTitle: "Yeshu teri daya se"
 verseT: "1 कुरिन्थियों 15:57 "

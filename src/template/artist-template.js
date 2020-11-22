@@ -4,7 +4,7 @@ import FeatureImage from '../components/FeatureImage'
 import Layout from "../components/layout"
 import { Container,Row,Col} from 'react-bootstrap'
 import "./artist-tem.css"
-import Footer from "../components/footer"
+
 import {FaSearchPlus, FaSearchMinus} from "react-icons/fa";
 import { FacebookShareButton,FacebookIcon, 
          WhatsappShareButton,  WhatsappIcon, 
@@ -95,7 +95,7 @@ const ArtistTemplate = ({data, location}) => {
                 </Row>
               </Container>
             </Container>
-          <Footer />    
+          
 
         
         </div>

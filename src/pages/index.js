@@ -3,27 +3,32 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container ,Row,Col,CardDeck,Card} from "react-bootstrap";
+import { Container ,Row,Col,Card} from "react-bootstrap";
+// import {Button,Fab } from '@material-ui/core';
+// import AddIcon from '@material-ui/icons/Add';
+// import Button from '@material-ui/core/Button';
 import "./index.css"
 import Aos from "aos"
 import "aos/dist/aos.css"
 
+import Img from 'gatsby-image'
 
-import Footer from '../components/footer';
-
-
+import Slider from '../components/slider/slider'
 import Logo from "../images/logo.png"
-import Slider from '../components/slider/slider';
-import Gif from '../components/gifSection/gif';
-import Category from '../components/categorySection/category';
-import "animate.css/animate.min.css";
+import Trending from '../components/trending/trending'
+// import Gif from '../components/gifSection/gif';
+ import Category from '../components/categorySection/category';
+// import "animate.css/animate.min.css";
+import Artist from '../components/artist/artistName'; 
+import {  FaAngleDoubleRight} from "react-icons/fa"
 
-import FeatureImage from '../components/FeatureImage';
+import HomeIcon from '@material-ui/icons/Home';
 
-
-
+import QueueMusicIcon from '@material-ui/icons/QueueMusic';
+import SearchWrapper from "../components/searchBar/searchwrapper";
+import AboutArtist from "../components/aboutArtist/testimony";
 export default function BlogIndex ({data}){
- 
+
   // const post = data.allMarkdownRemark;
   // const featuredImage = post.frontmatter.featureImage.childImageSharp.fixed
 
@@ -37,72 +42,136 @@ export default function BlogIndex ({data}){
     
       <SEO title="Lets-Worship"
            image={Logo} />
-            <Container fluid className="back p-0">
           
-              <Slider />          
-              
-              {/* category section */}
+          <Container fluid>
            
-               <Row  className="category">
-                <Col className="text-center">
-                  <h1>Category</h1>
+            {/* top slider section */}
+            <Row>
+              <Col >
+                <Slider />            
+              </Col>
+            </Row>
+            {/* category section */}
+            <Container>
+              <Row>
+                <Col className="py-3 text-white">
+                  <h2>Category</h2>
                 </Col>
               </Row>
-              <Category />
-              
-          
             </Container>
-
-          <Container fluid className="section">
-            <h1>Directly Go with Your Favourites</h1>
-         
-            <Gif />
-          </Container>
+            <Row>
+              <Col className="px-0 py-3">
+                <Category />
+              </Col>
+            </Row>
+            {/* trending section */}
+            <Container>
+              <Row>
+                <Col className="py-3 text-white">
+                  <h2>Trending songs</h2>
+                </Col>
+              </Row>
+            </Container>
+            <Row>
+              <Col>
+                <Trending />
+              </Col>
+            </Row>
+            {/* artist testimony section */}
+            <Container>
+              <Row>
+                <Col xs={8} className="py-3 px-0 text-white">
+                  <h2>About Artist</h2>
+                </Col>
+                <Col xs={4} className="text-right align-self-center">
+                  <Link to="/artist">
+                      <FaAngleDoubleRight size={22} color={'#fff'}></FaAngleDoubleRight>
+                  </Link>
+                </Col> 
+              </Row>
+            </Container>
+            <Row>
+              <Col>
+                <AboutArtist />
+              </Col>
+            </Row>
            
+            {/* Artist section */}
+            <Container>
+              <Row>
+                <Col xs={6} className="py-3 px-0 text-white">
+                  <h2>Artist</h2>
+                </Col>
+                <Col xs={6} className="text-right align-self-center">
+                  <Link to="/allartist">
+                      <FaAngleDoubleRight size={22} color={'#fff'}></FaAngleDoubleRight>
+                  </Link>
+                </Col>   
+              </Row>
+              <Row>
+                <Col>
+                  <Artist />
+                </Col>
+              </Row>
             
-         
-        
-        
-          <Container fluid className="songsList">
-            <Container>        
-              <h1 className="text-white text-center">some tracks for you</h1>                          
-            <Row  className="songL">
-            <CardDeck>
-              {data.allMarkdownRemark.edges.map(({node}) =>(
-               
-                  <Col  
-                   xs="12" md="3" >
-                    <Card  data-aos="fade-up"  data-aos-delay="40"
-                    data-aos-duration="700" className="cr">
-                      {/* <Card.Img><FeatureImage  fixed={featuredImage} /></Card.Img> */}
-                      <Card.Body>
-                        <Link to={node.fields.slug}>
-                          <Card.Title><h5>{node.frontmatter.title}</h5></Card.Title>
-                        </Link>
-                        <Card.Subtitle className=" text-muted"><h6>{node.frontmatter.artist}</h6></Card.Subtitle>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-            
+            {/* all songs */}
+            <Row>
+                <Col className="py-3 text-white">
+                  <h2>Some Tracks For You</h2>
+                </Col>
+              </Row>
+              <Row className="songL py-5 ">
+                {data.allMarkdownRemark.edges.map(({node}) =>(
+                  <Col  xs="12" md="3" className="mb-2 " >
+                    <Card data-aos="zoom-in" 
+                    data-aos-delay="20"
+                    data-aos-duration="300"
+                    >
+                    <Row>
+                      <Col xs={5} md={5} className="align-self-center pl-0">
+                      <Img fluid={node.frontmatter.featureImage.childImageSharp.fluid} />
+                      </Col>
+                      <Col xs={7} md={7} className="align-self-center">
+                          <Link to={node.fields.slug}>
+                              <Card.Title>{node.frontmatter.title}</Card.Title>
+                            </Link>
+                            <Card.Subtitle className="mb-2 text-muted">{node.frontmatter.artist}</Card.Subtitle>
+                      </Col>
+                    </Row>                                          
+                </Card>
+                </Col>
 
               ))}
-            </CardDeck>
             </Row>
-            <Row>
-              <Col className="allLink py-5 text-center">                
-                <Link style={{textAlign: "center"}}to="/allsongs">
-                  <button>
-                    Go to all songs
-                  </button>
+            </Container>
+             {/* sticky bottom banner */}
+             <Row className="bottomBar">
+              <Col xs={4}>
+                <Link to="/">
+                  <HomeIcon style={{ color: '#fff' }} />
+                  <p>Home</p>
+                </Link>
+              </Col>
+              <Col xs={4}>
+                {/* <Link to={}> */}
+                <SearchWrapper />
+                <p>Search</p>
+                  
+                  
+                {/* </Link> */}
+              </Col>
+              <Col xs={4}>
+              <Link to="/allsongs">
+                <QueueMusicIcon style={{ color: '#fff' }} />
+                <p>All List</p>
                 </Link>
               </Col>
             </Row>
-            </Container>
-          </Container>
 
-       
+          </Container>
+     
     
-     <Footer />
+   
      
    </>  
    
@@ -122,8 +191,9 @@ export const query = graphql`
             key
             featureImage{
               childImageSharp{
-                fixed{
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 500, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluidLimitPresentationSize
                 }
               }
             }
