@@ -188,14 +188,11 @@ export default function Template({data,location}){
   const htmlChordSheet = new ChordSheetJS.HtmlTableFormatter().format(song)
 
   //change backround of title
-  const changeBackround = () => {
-    if (window.scrollY >= 300) {
-      setBgtitle(true);
-    }else {
-      setBgtitle(false);
-    }
-  };
-  window.addEventListener('scroll',changeBackround);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setBgtitle(window.scrollY >= 300);
+    });
+}, []);
 
 
   return( 
