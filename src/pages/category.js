@@ -10,7 +10,7 @@ import { Container, Row, Col} from "react-bootstrap"
 import Layout from "../components/layout"
 import "./category.css"
 import { FaArrowUp } from "react-icons/fa"
-
+import Iconsbar from "../components/iconsbar/navigationLine";
 import "../components/FeatureImage"
 
 const TagsPage = ({
@@ -24,7 +24,7 @@ const TagsPage = ({
   <div>
     <Helmet title={title} />
     <Layout />
-       
+      <Iconsbar />
      <Container fluid className="catBg px-0 ">           
        <Container>
          <div>

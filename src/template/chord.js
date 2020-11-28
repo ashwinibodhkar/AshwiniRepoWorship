@@ -32,6 +32,7 @@ import "aos/dist/aos.css";
 
 import ShareIcon from '@material-ui/icons/Share';
 import Fab from '@material-ui/core/Fab';
+import HeartIcon from '@material-ui/icons/FavoriteBorder';
 export default function Template({data,location}){
  
   const post = data.markdownRemark;
@@ -236,7 +237,7 @@ export default function Template({data,location}){
           <p className="m-0">key {key.toString()}</p>
         </Col>
         <Col xs={2} className="align-self-center">
-        
+          <HeartIcon />
         </Col>
       </Row>
       

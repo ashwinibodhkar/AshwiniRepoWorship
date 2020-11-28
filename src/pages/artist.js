@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import { Container, Row, Col } from "react-bootstrap"
 import { FaArrowUp } from "react-icons/fa";
 import Img from 'gatsby-image'
-
+import Iconsbar from "../components/iconsbar/navigationLine";
 
 
 
@@ -17,6 +17,7 @@ const ArtistPage = ({data,title}) => (
     <SEO title="Artist Page" />
     {/* */}
     <Layout />
+    <Iconsbar />
     <Container fluid className="catBg  ">           
       <Container>
         <div >

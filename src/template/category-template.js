@@ -5,7 +5,7 @@ import { Link, graphql } from "gatsby"
 import "./category-tem.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container,Row,Col} from 'react-bootstrap'
-
+import Iconsbar from "../components/iconsbar/navigationLine";
 
 import Layout from "../components/layout";
 
@@ -19,6 +19,7 @@ const Tags = ({ pageContext, data,title }) => {
   return (
     <div>
       <Layout />
+      <Iconsbar />
       <Container fluid className="bgcat px-0">           
       <Container>
         <div className="bg-text">

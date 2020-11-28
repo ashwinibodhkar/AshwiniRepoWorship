@@ -7,11 +7,11 @@
     
 }
 .midContainer{padding: 20px 0 20px 0;}
-nav .search_bar svg{width: 0em;}
+
 .navWidth{width: 96%;float: left;}
 .navbar-brand{width: 150%;}
 .navbar-brand h3{font-size: 30px;float: left;color: rgb(201, 202, 202);font-weight: 400;}
-.navbar-brand h4{font-size: 30px; background: -webkit-linear-gradient(157deg, #ff29b9, #de1f1f);
+.navbar-brand h4{font-size: 30px; background: -webkit-linear-gradient(140deg,#265D84, #745984,#CB6686,#FF687D,#FEAF88);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  font-weight: 1000;}
 .navbar-nav .nav-link {font-size: 18px;color: rgba(255, 255, 255,1);font-weight: 900;}
@@ -22,13 +22,13 @@ nav .search_bar svg{width: 0em;}
 @media (max-width: 648px) { 
     .midContainer{padding: 20px 0 0px 0;}
     .navbar-nav .nav-link{font-size: 18px;}
+    
     .navWidth{width: 100%;}    
     .navbar-brand h3{font-size: 20px;}
     .navbar-brand h4{font-size: 20px;}
        
 }
 @media (max-width: 1024px) { 
-    .navBg{background-image: linear-gradient(157deg, #333233, #0e0f33);}
-    nav .search_bar svg{width: 2em;}
-    .outside .search_bar svg{width: 0em;height: 0em;}
+    .navBg{background-image: linear-gradient(140deg,#265D84, #745984,#CB6686,#FF687D,#FEAF88);}
+    
 }

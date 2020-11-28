@@ -19,7 +19,7 @@ const artist = () => (
     <Row className="artistInline">
    
     <Card xs={4}  >
-        <Link to="/category/thanks/">
+        <Link to="/category/sheldon-bangera">
             <Card.Img variant="top" src={ThankYou} /> 
             <h6 className="text-white">sheldon bangera</h6>                   
         </Link>

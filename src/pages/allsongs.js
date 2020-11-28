@@ -10,9 +10,7 @@ import "aos/dist/aos.css";
 import Aos from "aos";
 
 import Img from 'gatsby-image'
-import HomeIcon from '@material-ui/icons/Home';
-import QueueMusicIcon from '@material-ui/icons/QueueMusic';
-import SearchWrapper from "../components/searchBar/searchwrapper";
+import Iconsbar from "../components/iconsbar/navigationLine";
 
 export default function AllSongs({ data }) {
   // const { edges: posts } = data.allMarkdownRemark;
@@ -27,7 +25,7 @@ export default function AllSongs({ data }) {
   return (
       <>
       <Layout />
-      
+      <Iconsbar />
         <Container fluid className="catBg">
           <Container>
             {/* songs list */}
@@ -56,26 +54,7 @@ export default function AllSongs({ data }) {
               ))}
             </Row>
           </Container>
-          { /* sticky bottom banner */}
-          <Row className="bottomBar">
-            <Col xs={4}>
-              <Link to="/">
-                <HomeIcon style={{ color: '#fff' }} />
-                <p>Home</p>
-              </Link>
-            </Col>
-            <Col xs={4}>
-              {/* <Link to={}> */}
-              <SearchWrapper />
-              <p>Search</p>
-            </Col>
-            <Col xs={4}>
-            <Link to="/allsongs">
-              <QueueMusicIcon style={{ color: '#fff' }} />
-              <p>All List</p>
-              </Link>
-            </Col>
-          </Row>
+         
         </Container>
             
     </>
