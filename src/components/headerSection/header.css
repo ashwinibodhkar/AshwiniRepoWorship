@@ -7,8 +7,9 @@
     
 }
 .midContainer{padding: 20px 0 20px 0;}
-
-.navWidth{width: 96%;float: left;}
+.midContainer svg{color: rgb(184, 185, 185);}
+nav .MuiSvgIcon-root{width: 0em;}
+.navWidth{width: 95%;float: left;}
 .navbar-brand{width: 150%;}
 .navbar-brand h3{font-size: 30px;float: left;color: rgb(201, 202, 202);font-weight: 400;}
 .navbar-brand h4{font-size: 30px; background: -webkit-linear-gradient(140deg,#265D84, #745984,#CB6686,#FF687D,#FEAF88);
@@ -22,7 +23,6 @@
 @media (max-width: 648px) { 
     .midContainer{padding: 20px 0 0px 0;}
     .navbar-nav .nav-link{font-size: 18px;}
-    
     .navWidth{width: 100%;}    
     .navbar-brand h3{font-size: 20px;}
     .navbar-brand h4{font-size: 20px;}
@@ -30,5 +30,7 @@
 }
 @media (max-width: 1024px) { 
     .navBg{background-image: linear-gradient(140deg,#265D84, #745984,#CB6686,#FF687D,#FEAF88);}
-    
+    nav .MuiSvgIcon-root{width: 2em;}
+    .outside button .MuiSvgIcon-root{width: 0em;height: 0em;}
+    .outside button{width: 0px;height: 0px;}
 }

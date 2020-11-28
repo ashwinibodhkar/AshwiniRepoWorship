@@ -300,7 +300,7 @@ export default function Template({data,location}){
                     <p>Zoom</p>
                 </Col>
               </Row>
-              <Row className="FontIcon align-self-end">
+          <Row className="sharelinkIcon align-self-end">
           <Col >
           <OverlayTrigger                     
               overlay={<Tooltip  > 
@@ -309,9 +309,7 @@ export default function Template({data,location}){
                           </Toast.Header>
                           <Toast.Body style={{background: "#000"}}>
                           <FacebookShareButton 
-                            data-aos="fade-left" 
-                            data-aos-delay="30"
-                            data-aos-duration="500"
+                            
                             url={`${siteUrl}${location.pathname}`}
                             title={post.frontmatter.title}
                             description= {post.frontmatter.title} 
@@ -323,9 +321,7 @@ export default function Template({data,location}){
                           </FacebookShareButton>
 
                           <FacebookMessengerShareButton 
-                              data-aos="fade-down" 
-                              data-aos-delay="30"
-                              data-aos-duration="500"
+                             
                               url={`${siteUrl}${location.pathname}`}
                               title={post.frontmatter.title}
                             >
@@ -333,9 +329,7 @@ export default function Template({data,location}){
                           </FacebookMessengerShareButton>
 
                           <WhatsappShareButton 
-                              data-aos="fade-right" 
-                              data-aos-delay="30"
-                              data-aos-duration="500"
+                              
                               url={`${siteUrl}${location.pathname}`} 
                               title={post.frontmatter.title} 
                               separator=":: "
