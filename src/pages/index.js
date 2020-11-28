@@ -20,6 +20,7 @@ import Trending from '../components/trending/trending'
  import Category from '../components/categorySection/category';
 // import "animate.css/animate.min.css";
 import Artist from '../components/artist/artistName'; 
+import Iconsbar from "../components/iconsbar/navigationLine";
 import {  FaAngleDoubleRight} from "react-icons/fa"
 
 import HomeIcon from '@material-ui/icons/Home';
@@ -27,6 +28,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import QueueMusicIcon from '@material-ui/icons/QueueMusic';
 import SearchWrapper from "../components/searchBar/searchwrapper";
 import AboutArtist from "../components/aboutArtist/testimony";
+
 export default function BlogIndex ({data}){
 
   // const post = data.allMarkdownRemark;
@@ -43,7 +45,7 @@ export default function BlogIndex ({data}){
       <SEO title="Lets-Worship"
            image={Logo} />
           
-          <Container fluid>
+          <Container fluid className="bgpage">
            
             {/* top slider section */}
             <Row>
@@ -54,7 +56,7 @@ export default function BlogIndex ({data}){
             {/* category section */}
             <Container>
               <Row>
-                <Col className="py-3 text-white">
+                <Col className="pt-5 text-white">
                   <h2>Category</h2>
                 </Col>
               </Row>
@@ -67,7 +69,7 @@ export default function BlogIndex ({data}){
             {/* trending section */}
             <Container>
               <Row>
-                <Col className="py-3 text-white">
+                <Col className="pt-4 text-white">
                   <h2>Trending songs</h2>
                 </Col>
               </Row>
@@ -80,7 +82,7 @@ export default function BlogIndex ({data}){
             {/* artist testimony section */}
             <Container>
               <Row>
-                <Col xs={8} className="py-3 px-0 text-white">
+                <Col xs={8} className="pt-4 px-0 text-white">
                   <h2>About Artist</h2>
                 </Col>
                 <Col xs={4} className="text-right align-self-center">
@@ -99,7 +101,7 @@ export default function BlogIndex ({data}){
             {/* Artist section */}
             <Container>
               <Row>
-                <Col xs={6} className="py-3 px-0 text-white">
+                <Col xs={6} className="pt-4 px-0 text-white">
                   <h2>Artist</h2>
                 </Col>
                 <Col xs={6} className="text-right align-self-center">
@@ -116,7 +118,7 @@ export default function BlogIndex ({data}){
             
             {/* all songs */}
             <Row>
-                <Col className="py-3 text-white">
+                <Col className="pt-5 text-white">
                   <h2>Some Tracks For You</h2>
                 </Col>
               </Row>
@@ -144,8 +146,10 @@ export default function BlogIndex ({data}){
               ))}
             </Row>
             </Container>
+            <Iconsbar/>
+            
              {/* sticky bottom banner */}
-             <Row className="bottomBar">
+             {/* <Row className="bottomBar">
               <Col xs={4}>
                 <Link to="/">
                   <HomeIcon style={{ color: '#fff' }} />
@@ -154,19 +158,19 @@ export default function BlogIndex ({data}){
               </Col>
               <Col xs={4}>
                 {/* <Link to={}> */}
-                <SearchWrapper />
+                {/* <SearchWrapper />
                 <p>Search</p>
-                  
+                   */}
                   
                 {/* </Link> */}
-              </Col>
+              {/* </Col>
               <Col xs={4}>
               <Link to="/allsongs">
                 <QueueMusicIcon style={{ color: '#fff' }} />
                 <p>All List</p>
                 </Link>
               </Col>
-            </Row>
+            </Row> */}
 
           </Container>
      

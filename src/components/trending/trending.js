@@ -7,7 +7,10 @@ import { Row,Card } from 'react-bootstrap'
 import {  FaAngleDoubleRight} from "react-icons/fa"
 import "./trending.css";
 import rajKare from '../../images/tu-raj-kare.jpg';
-
+import Pyarkaru from '../../../content/image/Pyar-Karu-Shelly-Reddy.jpg'
+import chattan from '../../../content/image/chattan.jpg';
+import mazayeshu from '../../../content/image/maza-yeshu-mark-tribhuvan.jpg';
+import sangtere from '../../../content/image/Sang-Tere1.png';
 const category = () => (
     
     <div className="container">
@@ -15,29 +18,27 @@ const category = () => (
               <Row className="trend">
               <Card xs={6}  >
                   <Link to="/category/thanks/">
-                      <Card.Img variant="top" src={rajKare} />
+                      <Card.Img variant="top" src={Pyarkaru} />
                          
                                 
                   </Link>
               </Card> 
               <Card xs={6}  >
-                  <Link to="/category/dance/">
-                    
-                      <Card.Img variant="top" src={rajKare} />                 
-                     
+                  <Link to="/chattan">                    
+                      <Card.Img variant="top" src={chattan} />                 
                   </Link>
               </Card>
               <Card xs={6}  >
-              <Link to="/category/worship">
+              <Link to="/Maazha-Yeshu-Mark-Tribhuvan">
                    
-                       <Card.Img variant="top" src={rajKare} />                 
+                       <Card.Img variant="top" src={mazayeshu} />                 
                       
                   </Link>
               </Card>
               <Card xs={6}  >
-              <Link to="/category/freedom/">
+              <Link to="/Sang%20Tere%20by%20Bridge%20Music">
                     
-                        <Card.Img variant="top" src={rajKare} />                 
+                        <Card.Img variant="top" src={sangtere} />                 
                         
                   </Link>
               </Card>

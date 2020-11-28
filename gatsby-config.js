@@ -40,8 +40,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `LetsWorship`,
-        short_name: `LetsWorship`,
+        name: `TuneWorship`,
+        short_name: `TuneWorship`,
         start_url: `/`,
         background_color: `#000`,
         theme_color: `#000`,

@@ -31,7 +31,7 @@ const Header = ({ siteTitle },{subtitle}) => (
           <SearchWrapper />
           <Link to="/">
             <Navbar.Brand href="#home">
-              <h3>Lets</h3><h4>Worship</h4>
+              <h3>tune</h3><h4>Worship</h4>
             </Navbar.Brand>
           </Link> 
                

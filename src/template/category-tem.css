@@ -2,7 +2,7 @@
 .bgcat{
     
   max-width: 100%;
-  background-image: url("../images/bgImage.jpg" );
+  background:#000;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;  

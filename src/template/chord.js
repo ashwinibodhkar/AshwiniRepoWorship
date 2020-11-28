@@ -31,7 +31,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import ShareIcon from '@material-ui/icons/Share';
-
+import Fab from '@material-ui/core/Fab';
 export default function Template({data,location}){
  
   const post = data.markdownRemark;
@@ -228,7 +228,7 @@ export default function Template({data,location}){
       </div>
       {/* top title backround change */}
       <Row className={bgTitle ? 'bgTitle active' : 'bgTitle'} >
-        <Col xs={8} className="pr-0 align-self-center">
+        <Col xs={8} className="pr-0 py-1 align-self-center">
           <h6 className="m-0">{post.frontmatter.title}</h6>
           <p className="m-0">{post.frontmatter.artist}</p> 
         </Col>
@@ -236,7 +236,7 @@ export default function Template({data,location}){
           <p className="m-0">key {key.toString()}</p>
         </Col>
         <Col xs={2} className="align-self-center">
-          <ShareIcon />
+        
         </Col>
       </Row>
       
@@ -299,6 +299,61 @@ export default function Template({data,location}){
                     <p>Zoom</p>
                 </Col>
               </Row>
+              <Row className="FontIcon align-self-end">
+          <Col >
+          <OverlayTrigger                     
+              overlay={<Tooltip  > 
+                        <Toast  >
+                          <Toast.Header>                                  
+                          </Toast.Header>
+                          <Toast.Body style={{background: "#000"}}>
+                          <FacebookShareButton 
+                            data-aos="fade-left" 
+                            data-aos-delay="30"
+                            data-aos-duration="500"
+                            url={`${siteUrl}${location.pathname}`}
+                            title={post.frontmatter.title}
+                            description= {post.frontmatter.title} 
+                            background="transparent"
+                        
+                          >
+                          <FacebookIcon size={36}/>
+
+                          </FacebookShareButton>
+
+                          <FacebookMessengerShareButton 
+                              data-aos="fade-down" 
+                              data-aos-delay="30"
+                              data-aos-duration="500"
+                              url={`${siteUrl}${location.pathname}`}
+                              title={post.frontmatter.title}
+                            >
+                            <FacebookMessengerIcon size={36}/>
+                          </FacebookMessengerShareButton>
+
+                          <WhatsappShareButton 
+                              data-aos="fade-right" 
+                              data-aos-delay="30"
+                              data-aos-duration="500"
+                              url={`${siteUrl}${location.pathname}`} 
+                              title={post.frontmatter.title} 
+                              separator=":: "
+                          >
+                            <WhatsappIcon size={36} />
+                          </WhatsappShareButton>   
+                          </Toast.Body>
+                        </Toast>
+                      </Tooltip>} 
+            >
+              <span className=""> 
+              <Fab color="secondary" aria-label="edit">
+              <ShareIcon />
+              </Fab>                   
+                                   
+              </span>
+            </OverlayTrigger>
+          </Col>
+        </Row>
               
             </Col>
           </Row>
@@ -331,45 +386,9 @@ export default function Template({data,location}){
         </Row>
 
         {/* shareicons */}
-        <Row>
-                <Col className="FontIcon text-right">
-                    <FacebookShareButton 
-                        data-aos="fade-left" 
-                        data-aos-delay="30"
-                        data-aos-duration="500"
-                        url={`${siteUrl}${location.pathname}`}
-                        title={post.frontmatter.title}
-                        description= {post.frontmatter.title} 
-                        background="transparent"
-                    
-                    >
-                    <FacebookIcon size={36}/>
-
-                  </FacebookShareButton>
-
-                  <FacebookMessengerShareButton 
-                      data-aos="fade-down" 
-                      data-aos-delay="30"
-                      data-aos-duration="500"
-                      url={`${siteUrl}${location.pathname}`}
-                      title={post.frontmatter.title}
-                    >
-                    <FacebookMessengerIcon size={36}/>
-                  </FacebookMessengerShareButton>
-
-                  <WhatsappShareButton 
-                      data-aos="fade-right" 
-                      data-aos-delay="30"
-                      data-aos-duration="500"
-                      url={`${siteUrl}${location.pathname}`} 
-                      title={post.frontmatter.title} 
-                      separator=":: "
-                  >
-                    <WhatsappIcon size={36} />
-                  </WhatsappShareButton>   
-
-                </Col>
-              </Row>
+        
+        
+        
       </Container>
     </Container>  
 

@@ -3,10 +3,10 @@ import React from 'react'
 import {Link} from 'gatsby';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row,Card } from 'react-bootstrap'
-import sheldon from "../../../content/image/sheldon-bangera.jpg"
-import amit from "../../../content/image/amit-kamble.jpg"
-import yeshua from "../../../content/image/yeshua.jpg"
-import bridge from "../../../content/image/bridge-music.png"
+import sheldon from "../../../content/image/sheldon.jpg"
+import amit from "../../../content/image/amit1.jpg"
+import yeshua from "../../../content/image/cameron-mendes.jpg"
+import bridge from "../../../content/image/bridgeMusic.jpg"
 
 import "./testimony.css"
 

@@ -28,7 +28,7 @@ nav .search_bar svg{width: 0em;}
        
 }
 @media (max-width: 1024px) { 
-    .navBg{background-image: linear-gradient(157deg, #ff29b9, #de1f1f);}
+    .navBg{background-image: linear-gradient(157deg, #333233, #0e0f33);}
     nav .search_bar svg{width: 2em;}
     .outside .search_bar svg{width: 0em;height: 0em;}
 }
