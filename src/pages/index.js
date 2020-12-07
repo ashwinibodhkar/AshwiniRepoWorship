@@ -4,35 +4,22 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container ,Row,Col,Card} from "react-bootstrap";
-// import {Button,Fab } from '@material-ui/core';
-// import AddIcon from '@material-ui/icons/Add';
-// import Button from '@material-ui/core/Button';
 import "./index.css"
 import Aos from "aos"
 import "aos/dist/aos.css"
-
 import Img from 'gatsby-image'
-
 import Slider from '../components/slider/slider'
 import Logo from "../images/logo.png"
 import Trending from '../components/trending/trending'
-// import Gif from '../components/gifSection/gif';
- import Category from '../components/categorySection/category';
-// import "animate.css/animate.min.css";
+import Category from '../components/categorySection/category';
 import Artist from '../components/artist/artistName'; 
 import Iconsbar from "../components/iconsbar/navigationLine";
 import {  FaAngleDoubleRight} from "react-icons/fa"
-
-import HomeIcon from '@material-ui/icons/Home';
-
-import QueueMusicIcon from '@material-ui/icons/QueueMusic';
-import SearchWrapper from "../components/searchBar/searchwrapper";
 import AboutArtist from "../components/aboutArtist/testimony";
 
 export default function BlogIndex ({data}){
 
-  // const post = data.allMarkdownRemark;
-  // const featuredImage = post.frontmatter.featureImage.childImageSharp.fixed
+  
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -147,31 +134,6 @@ export default function BlogIndex ({data}){
             </Row>
             </Container>
             <Iconsbar/>
-            
-             {/* sticky bottom banner */}
-             {/* <Row className="bottomBar">
-              <Col xs={4}>
-                <Link to="/">
-                  <HomeIcon style={{ color: '#fff' }} />
-                  <p>Home</p>
-                </Link>
-              </Col>
-              <Col xs={4}>
-                {/* <Link to={}> */}
-                {/* <SearchWrapper />
-                <p>Search</p>
-                   */}
-                  
-                {/* </Link> */}
-              {/* </Col>
-              <Col xs={4}>
-              <Link to="/allsongs">
-                <QueueMusicIcon style={{ color: '#fff' }} />
-                <p>All List</p>
-                </Link>
-              </Col>
-            </Row> */}
-
           </Container>
      
     

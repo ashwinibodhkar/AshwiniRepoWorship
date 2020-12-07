@@ -13,7 +13,7 @@
 
 .flip-switch {
   display: block;
-  height: 35px;
+  height: 25px;
   width: 62px;
   margin: 0 auto;
   -webkit-perspective: 50px;
@@ -21,6 +21,7 @@
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
+  margin-bottom: 2px;
   
   input {
     opacity: 0;

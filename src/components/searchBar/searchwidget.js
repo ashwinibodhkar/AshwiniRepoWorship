@@ -76,10 +76,10 @@ const SearchWidget = () => {
   }
   return (
     <div className="search_bar">
-        <SearchIcon onClick={handleShow} style={{ color: '#fff' }} />
+        <SearchIcon onClick={handleShow} />
         {/* <FaSearch onClick={handleShow} size="25" color="white" />       */}
       
-      <Modal show={show} onHide={handleClose}  size="lg"  backdrop="static" >
+      <Modal show={show} onHide={handleClose}  size="lg"  >
         <Modal.Header closeButton>
         </Modal.Header>
         <Modal.Body className="input-box m-0" closeButton>

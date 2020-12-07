@@ -70,13 +70,13 @@
 .sharelinkIcon svg{border-radius: 10%;}
 .button svg{stroke: 0.7;}
 .bgTitle h6{font-size: 18px;}
-.bgTitle.active{background-image: linear-gradient(140deg,rgb(203, 102, 134),rgb(255, 104, 125),rgb(254, 175, 136));color: #fff;position: sticky;top: 0;z-index: 1;}
+.bgTitle.active{background-image: linear-gradient(140deg,rgb(254, 45, 102),#ff2b6e,#ff355b);color: #fff;position: sticky;top: 0;z-index: 1;}
 .bgTitle{background:transparent;width: 100%;height: 80px;color: #2b2c2c;}
   @media (max-width: 648px) { 
     
     .stick .transpose button p{font-size: 12px;}
-    .transpose{margin-bottom: 0;width: 100%;font-size: 12px;position: fixed;bottom: 0;}
-    .transpose p{margin-bottom: 0;}
+    .transpose{margin-bottom: 0;width: 100%;font-size: 10px;position: fixed;bottom: 0;}
+    .transpose p{margin-bottom: 0;line-height: 1;}
    
     
     .chordImg .imgText h1{font-size: 38px;}

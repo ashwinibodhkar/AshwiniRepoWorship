@@ -5,15 +5,13 @@ import ChordSheetJS from 'chordsheetjs';
 import $ from 'jquery';
 import Layout from '../components/layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container,Row,Col} from 'react-bootstrap'
+import { Container,Row,Col, Button,DropdownButton,ButtonGroup,Dropdown,OverlayTrigger,Tooltip,Toast,Modal} from 'react-bootstrap'
 import "./chord.css"
 import "./chord.scss"
 import { FaCaretUp, FaCaretDown, FaBookOpen, FaSearchPlus, FaSearchMinus,FaYoutube,FaArrowUp  } from "react-icons/fa";
-import '../components/footerSection/footer.scss';
+import '../components/hideShowChordEye.scss';
 //import { MDXRenderer } from "gatsby-plugin-mdx"
 import FeatureImage from '../components/FeatureImage';
-
-import { OverlayTrigger,Tooltip,Toast} from 'react-bootstrap'
 //import SearchWrapper from '../components/searchwrapper'
 import Video from "../components/videoSection/video"
 import SEO from "../components/seo"
@@ -33,6 +31,8 @@ import "aos/dist/aos.css";
 import ShareIcon from '@material-ui/icons/Share';
 import Fab from '@material-ui/core/Fab';
 import HeartIcon from '@material-ui/icons/FavoriteBorder';
+import SearchWidget from '../components/searchBar/searchwidget';
+import SearchWrapper from '../components/searchBar/searchwrapper';
 export default function Template({data,location}){
  
   const post = data.markdownRemark;
@@ -133,6 +133,12 @@ export default function Template({data,location}){
   //     })
   //   })
   // }
+
+
+  //share Icons 
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   //useEffect hook used to automate scrolling using defined speed
   useEffect(() => {
@@ -241,9 +247,8 @@ export default function Template({data,location}){
         </Col>
       </Row>
       
-      {/* lyrics Content */}
-      <Container className="BgContainerChord ">
-     
+      {/* top feature Content */}
+      <Container className="BgContainerChord ">     
         <Row >
           <Col xs={12} md={6} className="topFeature text-white ">
             <h4 >Key of {key.toString()}</h4>
@@ -268,93 +273,79 @@ export default function Template({data,location}){
             </h6>  
           </Col>
         </Row>
-        </Container>
-        <Container fluid>
-          
-          <Row>       
-            <Col className="stick">
-              <Row  className="transpose  text-center">               
-                <Col xs={3} className="px-0 ">
-                  <FaCaretUp onClick={() => trpUp()} size="25" className="mb-2" />
-                  <FaCaretDown onClick={() => trpDown()} size="25" className="mb-2" />
-                  
-                  <p>Transpose</p>
-                </Col>
-                <Col xs={2} className="px-0 pb-1">
-                  <h5 onClick={() => FlatOrSharp()}>b/# </h5>
-                  <p >Flat/Sharp</p>
-                  
-                </Col>           
-                <Col xs={4} className="text-center p-0">   
-                  
-                    <div class="flip-switch flip-switch-icon"  >
-                      <input type="checkbox" id="c2" />
-                      <label for="c2"  id="bnId"></label>
-                    </div> 
-                    <p>Chords Show/Hide</p>
-                                       
-                </Col>                        
-                <Col xs={3} className="px-0 text-center">                  
-                    <FaSearchPlus onClick={() => SetFsize(Fsize+2)} size="26" height="30" xs={6} className="my-1 px-1"></FaSearchPlus>  
-                    <FaSearchMinus onClick={() => SetFsize(Fsize-2)} size="26" height="30" xs={6} className="my-1 px-1" /> 
-                    <p>Zoom</p>
-                </Col>
-              </Row>
-          <Row className="sharelinkIcon align-self-end">
-          <Col >
-          <OverlayTrigger                     
-              overlay={<Tooltip  > 
-                        <Toast  >
-                          <Toast.Header>                                  
-                          </Toast.Header>
-                          <Toast.Body style={{background: "#000"}}>
-                          <FacebookShareButton 
-                            
-                            url={`${siteUrl}${location.pathname}`}
-                            title={post.frontmatter.title}
-                            description= {post.frontmatter.title} 
-                            background="transparent"
-                        
-                          >
-                          <FacebookIcon size={36}/>
-
-                          </FacebookShareButton>
-
-                          <FacebookMessengerShareButton 
-                             
-                              url={`${siteUrl}${location.pathname}`}
-                              title={post.frontmatter.title}
-                            >
-                            <FacebookMessengerIcon size={36}/>
-                          </FacebookMessengerShareButton>
-
-                          <WhatsappShareButton 
-                              
-                              url={`${siteUrl}${location.pathname}`} 
-                              title={post.frontmatter.title} 
-                              separator=":: "
-                          >
-                            <WhatsappIcon size={36} />
-                          </WhatsappShareButton>   
-                          </Toast.Body>
-                        </Toast>
-                      </Tooltip>} 
-            >
-              <span className=""> 
-              <Fab color="secondary" aria-label="edit">
-              <ShareIcon />
-              </Fab>                   
-                                   
-              </span>
-            </OverlayTrigger>
+      </Container>
+      <Container fluid>
+        <Row>       
+          <Col className="stick">
+            <Row  className="transpose  text-center">               
+              <Col xs={2} className="px-0 ">
+                <FaCaretUp onClick={() => trpUp()} size="25" className="mb-2" />
+                <FaCaretDown onClick={() => trpDown()} size="25" className="mb-2" />
+                
+                <p>Transpose</p>
+              </Col>
+              <Col xs={2} className="px-0 pb-1">
+                <h5 onClick={() => FlatOrSharp()}>b/# </h5>
+                <p >Flat/Sharp</p>
+                
+              </Col >
+                
+              <Col xs={4} className="mt-2" style={{color: "#ff2b6e"}}>
+                <SearchWrapper />
+                <p>Search</p>
+              </Col>           
+              <Col xs={2} className="text-center p-0">   
+                
+                  <div class="flip-switch flip-switch-icon"  >
+                    <input type="checkbox" id="c2" />
+                    <label for="c2"  id="bnId"></label>
+                  </div> 
+                  <p>Chords<br></br> Show/Hide</p>
+                                      
+              </Col>                        
+              <Col xs={2} className="px-0 text-center">                  
+                  <FaSearchPlus onClick={() => SetFsize(Fsize+2)} size="26" height="30" xs={6} className="my-1 px-1"></FaSearchPlus>  
+                  <FaSearchMinus onClick={() => SetFsize(Fsize-2)} size="26" height="30" xs={6} className="my-1 px-1" /> 
+                  <p>Zoom</p>
+              </Col>
+            </Row>
+            <Row className="sharelinkIcon align-self-end">
+              <Col >
+                <Fab color="secondary" aria-label="edit">
+                  <ShareIcon onClick={handleShow} style={{ color: '#fff' }} />
+                </Fab>
+                <Modal show={show} onHide={handleClose}   centered >
+            
+                  <Modal.Body className="input-box m-0" closeButton>
+                    <FacebookShareButton            
+                      url={`${siteUrl}${location.pathname}`}
+                      title={post.frontmatter.title}
+                      description= {post.frontmatter.title} 
+                      background="transparent"            
+                    >
+                    <FacebookIcon size={36}/>
+                    </FacebookShareButton>
+                    <FacebookMessengerShareButton                   
+                        url={`${siteUrl}${location.pathname}`}
+                        title={post.frontmatter.title}
+                      >
+                    <FacebookMessengerIcon size={36}/>
+                    </FacebookMessengerShareButton>
+                    <WhatsappShareButton                  
+                        url={`${siteUrl}${location.pathname}`} 
+                        title={post.frontmatter.title} 
+                        separator=":: "
+                    >
+                    <WhatsappIcon size={36} />
+                    </WhatsappShareButton>
+                  </Modal.Body>
+                </Modal>            
+              </Col>
+            </Row>
           </Col>
         </Row>
-              
-            </Col>
-          </Row>
-          
-        </Container>
-        <Container>
+      </Container>
+      <Container>
         <Row>
           <Col xs={12} md={5}>
             <div style={{textAlign: "center"}}>
@@ -378,17 +369,9 @@ export default function Template({data,location}){
           <Col>
             <Link to="#trans"> <button aria-label="Mute volume"><FaArrowUp size={15}color="yellow" ></FaArrowUp></button></Link>
           </Col>
-        </Row>
-
-        {/* shareicons */}
-        
-        
-        
+        </Row>             
       </Container>
-    </Container>  
-
-    {/* footer section */}
-  
+    </Container>    
     </>
   )  
 }

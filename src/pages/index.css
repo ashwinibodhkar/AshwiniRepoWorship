@@ -1,5 +1,5 @@
 .bgpage{background: #0f1011;}
-.bgpage h2{font-size: 26px;font-weight: bolder;background: -webkit-linear-gradient(140deg,#265D84, #745984,#CB6686,#FF687D,#FEAF88);
+.bgpage h2{font-size: 26px;font-weight: bolder;background: -webkit-linear-gradient(140deg,rgb(254, 45, 102),rgb(255, 43, 110),rgb(255, 53, 91));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 .songL .card img{width: 100%;}
