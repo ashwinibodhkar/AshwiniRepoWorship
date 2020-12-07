@@ -29,7 +29,7 @@ nav .MuiSvgIcon-root{width: 0em;}
        
 }
 @media (max-width: 1024px) { 
-    .navBg{background-image: linear-gradient(140deg,rgb(254, 45, 102),rgb(255, 43, 110),rgb(255, 53, 91));}
+    .navBg{background-image: linear-gradient(140deg,#ff135d,#d30565,#FEAF88);}
     nav .MuiSvgIcon-root{width: 2em;}
     .outside button .MuiSvgIcon-root{width: 0em;height: 0em;}
     .outside button{width: 0px;height: 0px;}

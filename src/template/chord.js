@@ -240,7 +240,7 @@ export default function Template({data,location}){
           <p className="m-0">{post.frontmatter.artist}</p> 
         </Col>
         <Col xs={2} className="text-right p-0 align-self-center">
-          <p className="m-0">key {key.toString()}</p>
+          <p className="m-0" style={{fontWeight: "bolder",fontSize:"1.3em",color:"#f1f518"}}>key {key.toString()}</p>
         </Col>
         <Col xs={2} className="align-self-center">
           <HeartIcon />
