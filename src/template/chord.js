@@ -230,11 +230,11 @@ export default function Template({data,location}){
       </div>
       {/* top title backround change */}
       <Row className={bgTitle ? 'bgTitle active' : 'bgTitle'} >
-        <Col xs={8} className="pr-0 py-1 align-self-center">
+        <Col xs={7} className="pr-0 py-1 align-self-center">
           <h6 className="m-0">{post.frontmatter.title}</h6>
           <p className="m-0">{post.frontmatter.artist}</p> 
         </Col>
-        <Col xs={2} className="key text-right p-0 align-self-center">
+        <Col xs={3} className="key text-right p-0 align-self-center">
           <p className="m-0" >key {key.toString()}</p>
         </Col>
         <Col xs={2} className="align-self-center">
