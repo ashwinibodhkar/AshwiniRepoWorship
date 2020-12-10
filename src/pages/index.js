@@ -1,9 +1,9 @@
-import React,{useEffect}  from "react";
+import React,{useEffect,useState}  from "react";
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container ,Row,Col,Card} from "react-bootstrap";
+import { Container ,Row,Col,Card,Toast,Alert} from "react-bootstrap";
 import "./index.css"
 import Aos from "aos"
 import "aos/dist/aos.css"
@@ -16,9 +16,11 @@ import Artist from '../components/artist/artistName';
 import Iconsbar from "../components/iconsbar/navigationLine";
 import {  FaAngleDoubleRight} from "react-icons/fa"
 import AboutArtist from "../components/aboutArtist/testimony";
-
+import Button from '@material-ui/core/Button';
+import CloseIcon from '@material-ui/icons/Close'
+import GetAppIcon from '@material-ui/icons/GetApp'
 export default function BlogIndex ({data}){
-
+  const [show, setShow] = useState(true);
   
 
   useEffect(() => {
@@ -33,7 +35,21 @@ export default function BlogIndex ({data}){
            image={Logo} />
           
           <Container fluid className="bgpage">
-           
+           <Row>
+             <Col className="bannerInstall">
+              <Alert show={show} >  
+              For long use Intall App
+              <Button variant="contained" color="secondary" onClick={() => setShow(false)} >
+                <CloseIcon />
+              </Button>
+              <Button variant="contained" color="secondary" className="mr-2">
+                <GetAppIcon />
+              </Button> 
+              
+                 
+                </Alert>
+             </Col>
+           </Row>
             {/* top slider section */}
             <Row>
               <Col >

@@ -1,6 +1,0 @@
-.videoSlider{margin: 0 auto;width: 70%;}
-.videoSlider video{width: 100%; border-radius: 20px;}
-
-@media (max-width: 648px){
-  .videoSlider{width: 100%;}
-}

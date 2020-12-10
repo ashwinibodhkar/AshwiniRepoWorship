@@ -2,12 +2,11 @@ import React, { useState, useRef  } from "react"
 import lunr, { Index } from "lunr"
 import { graphql, useStaticQuery } from "gatsby"
 import SearchResults from "./searchresults"
-import "./search-form.css"
+import "./search-form.css";
 import { Modal} from "react-bootstrap";
 import SearchIcon from '@material-ui/icons/Search';
-import "../headerSection/header.css";
-import "./search-form.scss"
 
+import Fab from '@material-ui/core/Fab'
 const SearchWidget = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -76,15 +75,18 @@ const SearchWidget = () => {
   }
   return (
     <div className="search_bar">
+      <Fab color="secondary" aria-label="edit">
         <SearchIcon onClick={handleShow} />
-        {/* <FaSearch onClick={handleShow} size="25" color="white" />       */}
+      </Fab>
+        
+        
       
       <Modal show={show} onHide={handleClose}  size="lg"  >
-        <Modal.Header closeButton>
-        </Modal.Header>
         <Modal.Body className="input-box m-0" closeButton>
           <div className="search-wrapper">
+            
             <div role="search">
+            <SearchIcon />
                 <input
                 id="search-input"
                 ref={inputEl}

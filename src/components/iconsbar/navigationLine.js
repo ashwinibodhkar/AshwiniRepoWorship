@@ -6,7 +6,7 @@ import { Row,Col} from 'react-bootstrap'
 import HomeIcon from '@material-ui/icons/Home';
 
 import QueueMusicIcon from '@material-ui/icons/QueueMusic';
-import SearchWrapper from "../searchBar/searchwrapper";
+import Searchjs from "../searchBar/search";
 
 import "./navigationList.css"
 
@@ -24,7 +24,7 @@ const iconsbar = () => (
               </Col>
               <Col xs={4}>
                 {/* <Link to={}> */}
-                <SearchWrapper />
+                <Searchjs />
                 <p>Search</p>
                   
                   

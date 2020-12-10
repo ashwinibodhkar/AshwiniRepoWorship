@@ -5,34 +5,27 @@ import ChordSheetJS from 'chordsheetjs';
 import $ from 'jquery';
 import Layout from '../components/layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container,Row,Col, Button,DropdownButton,ButtonGroup,Dropdown,OverlayTrigger,Tooltip,Toast,Modal} from 'react-bootstrap'
+import { Container,Row,Col,OverlayTrigger,Tooltip,Toast,Modal} from 'react-bootstrap'
 import "./chord.css"
 import "./chord.scss"
 import { FaCaretUp, FaCaretDown, FaBookOpen, FaSearchPlus, FaSearchMinus,FaYoutube,FaArrowUp  } from "react-icons/fa";
 import '../components/hideShowChordEye.scss';
-//import { MDXRenderer } from "gatsby-plugin-mdx"
 import FeatureImage from '../components/FeatureImage';
-//import SearchWrapper from '../components/searchwrapper'
 import Video from "../components/videoSection/video"
 import SEO from "../components/seo"
 import useSiteMetadata from "../hooks/use-site-metadata"
-//import Helmet from 'react-helmet';
-//import AudioPlayer from 'react-h5-audio-player';
-//import 'react-h5-audio-player/lib/styles.css';
-//import Dpad from '../components/D.mp3'
 import 'react-h5-audio-player/lib/styles.css';
 import { FacebookShareButton,FacebookIcon, 
          WhatsappShareButton,  WhatsappIcon, 
          FacebookMessengerShareButton,FacebookMessengerIcon } from 'react-share';
-//import Dpad from '../components/D.mp3'
 import Aos from "aos";
 import "aos/dist/aos.css";
-
 import ShareIcon from '@material-ui/icons/Share';
 import Fab from '@material-ui/core/Fab';
 import HeartIcon from '@material-ui/icons/FavoriteBorder';
+import SearchIcon from '@material-ui/icons/Search'
+// import "../components/likeSongHeart.scss";
 import SearchWidget from '../components/searchBar/searchwidget';
-import SearchWrapper from '../components/searchBar/searchwrapper';
 export default function Template({data,location}){
  
   const post = data.markdownRemark;
@@ -204,8 +197,8 @@ export default function Template({data,location}){
 
   return( 
     <>
-     <Layout />  
-
+     
+    <Layout />
      {/* <Helmet>
             <link rel="canonical" href={`${siteUrl}${location.pathname}`} />
             <meta property="og:title" content="My Awesome Website" />
@@ -218,9 +211,10 @@ export default function Template({data,location}){
           image={featuredImage}
           pathname={`${siteUrl}${location.pathname}`}
      />   
-
+    
     {/* top image section */}
     <Container fluid className="BgChordPage">
+      
       <div className="chordImg" id="trans">         
         <FeatureImage  fixed={featuredImage} /> 
         <Container className="imgTextStick">   
@@ -231,7 +225,8 @@ export default function Template({data,location}){
             </Col>
           </Row>   
           
-        </Container>    
+        </Container>  
+          
       </div>
       {/* top title backround change */}
       <Row className={bgTitle ? 'bgTitle active' : 'bgTitle'} >
@@ -239,10 +234,11 @@ export default function Template({data,location}){
           <h6 className="m-0">{post.frontmatter.title}</h6>
           <p className="m-0">{post.frontmatter.artist}</p> 
         </Col>
-        <Col xs={2} className="text-right p-0 align-self-center">
-          <p className="m-0" style={{fontWeight: "bolder",fontSize:"1.3em",color:"#f1f518"}}>key {key.toString()}</p>
+        <Col xs={2} className="key text-right p-0 align-self-center">
+          <p className="m-0" >key {key.toString()}</p>
         </Col>
         <Col xs={2} className="align-self-center">
+          
           <HeartIcon />
         </Col>
       </Row>
@@ -250,6 +246,7 @@ export default function Template({data,location}){
       {/* top feature Content */}
       <Container className="BgContainerChord ">     
         <Row >
+         
           <Col xs={12} md={6} className="topFeature text-white ">
             <h4 >Key of {key.toString()}</h4>
             <OverlayTrigger                     
@@ -278,23 +275,23 @@ export default function Template({data,location}){
         <Row>       
           <Col className="stick">
             <Row  className="transpose  text-center">               
-              <Col xs={2} className="px-0 ">
+              <Col xs={3} className="px-0 ">
                 <FaCaretUp onClick={() => trpUp()} size="25" className="mb-2" />
                 <FaCaretDown onClick={() => trpDown()} size="25" className="mb-2" />
                 
                 <p>Transpose</p>
               </Col>
-              <Col xs={2} className="px-0 pb-1">
+              <Col xs={3} className="px-0">
                 <h5 onClick={() => FlatOrSharp()}>b/# </h5>
                 <p >Flat/Sharp</p>
                 
               </Col >
                 
-              <Col xs={4} className="mt-2" style={{color: "#ff2b6e"}}>
+              {/* <Col xs={4} className="mt-2" style={{color: "#ff2b6e"}}>
                 <SearchWrapper />
-                <p>Search</p>
-              </Col>           
-              <Col xs={2} className="text-center p-0">   
+                <p>Search</p> 
+              </Col>            */}
+              <Col xs={3} className="text-center p-0">   
                 
                   <div class="flip-switch flip-switch-icon"  >
                     <input type="checkbox" id="c2" />
@@ -303,20 +300,27 @@ export default function Template({data,location}){
                   <p>Chords<br></br> Show/Hide</p>
                                       
               </Col>                        
-              <Col xs={2} className="px-0 text-center">                  
+              <Col xs={3} className="px-0 text-center">                  
                   <FaSearchPlus onClick={() => SetFsize(Fsize+2)} size="26" height="30" xs={6} className="my-1 px-1"></FaSearchPlus>  
                   <FaSearchMinus onClick={() => SetFsize(Fsize-2)} size="26" height="30" xs={6} className="my-1 px-1" /> 
                   <p>Zoom</p>
               </Col>
             </Row>
-            <Row className="sharelinkIcon align-self-end">
-              <Col >
+            <Row className="searchicon">
+              <Col>
+                <SearchWidget />
+              </Col>
+            </Row>
+            <Row className="sharelinkIcon ">
+              <Col className=" ">
+             
+             
                 <Fab color="secondary" aria-label="edit">
                   <ShareIcon onClick={handleShow} style={{ color: '#fff' }} />
                 </Fab>
                 <Modal show={show} onHide={handleClose}   centered >
             
-                  <Modal.Body className="input-box m-0" closeButton>
+                  <Modal.Body className="m-0" closeButton>
                     <FacebookShareButton            
                       url={`${siteUrl}${location.pathname}`}
                       title={post.frontmatter.title}
@@ -324,18 +328,23 @@ export default function Template({data,location}){
                       background="transparent"            
                     >
                     <FacebookIcon size={36}/>
+                   
                     </FacebookShareButton>
+                    <br></br>
                     <FacebookMessengerShareButton                   
                         url={`${siteUrl}${location.pathname}`}
                         title={post.frontmatter.title}
                       >
                     <FacebookMessengerIcon size={36}/>
                     </FacebookMessengerShareButton>
+                    <br>
+                    </br>
                     <WhatsappShareButton                  
                         url={`${siteUrl}${location.pathname}`} 
                         title={post.frontmatter.title} 
                         separator=":: "
                     >
+                      
                     <WhatsappIcon size={36} />
                     </WhatsappShareButton>
                   </Modal.Body>
@@ -346,10 +355,10 @@ export default function Template({data,location}){
         </Row>
       </Container>
       <Container>
-        <Row>
-          <Col xs={12} md={5}>
+        <Row className="pb-5 mb-5">
+          <Col xs={12} md={5} >
             <div style={{textAlign: "center"}}>
-              <pre>
+              <pre> 
                 <div
                   className="song" id="songD"
                   style={{fontSize: Fsize +'px'}}
@@ -365,11 +374,7 @@ export default function Template({data,location}){
             />
           </Col>
         </Row>
-        <Row className="backPage text-white text-right">
-          <Col>
-            <Link to="#trans"> <button aria-label="Mute volume"><FaArrowUp size={15}color="yellow" ></FaArrowUp></button></Link>
-          </Col>
-        </Row>             
+                    
       </Container>
     </Container>    
     </>

@@ -17,8 +17,7 @@ nav .MuiSvgIcon-root{width: 0em;}
     -webkit-text-fill-color: transparent;  font-weight: 1000;}
 .navbar-nav .nav-link {font-size: 18px;color: rgba(255, 255, 255,1);font-weight: 900;}
 .navBg{text-align: center;}
-.modal-header button span{color: #fff;}
-.modal-content{box-shadow: 0 0 10px 4px #fff;}
+
 
 @media (max-width: 648px) { 
     .midContainer{padding: 20px 0 0px 0;}

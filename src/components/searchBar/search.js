@@ -2,12 +2,16 @@ import React, { useState, useRef  } from "react"
 import lunr, { Index } from "lunr"
 import { graphql, useStaticQuery } from "gatsby"
 import SearchResults from "./searchresults"
-import "./search-form.css"
-import { Row,Col} from "react-bootstrap";
-import "../headerSection/header.css";
+import "./search-form.css";
+import { Modal} from "react-bootstrap";
+import SearchIcon from '@material-ui/icons/Search';
 
+import Fab from '@material-ui/core/Fab'
+const SearchWidget = () => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-const Search = () => {
   const inputEl = useRef(null)
   const [value, setValue] = useState("")
   const [results, setResults] = useState([])
@@ -70,38 +74,47 @@ const Search = () => {
     
   }
   return (
-    <Row className="input-box m-0">
-    <Col  className="p-0 text-left">
-      <div className="search-wrapper">
-          <div role="search">
-              <input
-              id="search-input"
-              ref={inputEl}
-              type="search"
-              value={value}
-              onChange={handleChange}
-              placeholder="Search Songs by Name" style={{color:"#fdfdfd"}}
+    <div className="search_bar">
+      
+        <SearchIcon onClick={handleShow} />
+      
+        
+        
+      
+      <Modal show={show} onHide={handleClose}  size="lg"  >
+        <Modal.Body className="input-box m-0" closeButton>
+          <div className="search-wrapper">
+            
+            <div role="search">
+            <SearchIcon />
+                <input
+                id="search-input"
+                ref={inputEl}
+                type="search"
+                value={value}
+                onChange={handleChange}
+                placeholder="Search by title, artist, category or lyrics"
               />
               {value.trim().length > 1 && <SearchResults results={results} />}
-               {value && (
-                <button
-                  type="button"
-                  aria-label="Reset search"
-                  onClick={e => {
-                  handleChange(e)
-                  inputEl.current.focus()
-                  }}
-                >
-                </button>
+              {value && (
+                
+                  <button
+                    type="button"
+                    aria-label="Reset search"
+                    onClick={e => {
+                    handleChange(e)
+                    inputEl.current.focus()
+                    }}
+                  >
+                  </button>
                 )}
+            </div>
+            
+        
           </div>
-          
-      
-      </div>
-
-    </Col>
-  </Row>
-      
-    )
+        </Modal.Body>
+      </Modal> 
+    </div>
+  )
 }
-export default Search
+export default SearchWidget
