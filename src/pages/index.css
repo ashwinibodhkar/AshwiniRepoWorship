@@ -2,8 +2,9 @@
 .bgpage h2{font-size: 26px;font-weight: bolder;background: -webkit-linear-gradient(140deg,rgb(254, 45, 102),rgb(255, 43, 110),rgb(255, 53, 91));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
-.bgpage .bannerInstall{background: linear-gradient(157deg, #20fadd, #0ef650);}
+.bgpage .bannerInstall{border-radius: 10px;font-size: 18px;z-index: 1;background: linear-gradient(157deg, rgb(239, 106, 151),rgb(249, 141, 145),rgb(217, 123, 94));}
 .bgpage .bannerInstall button{float: right; }
+.bgpage .bannerInstall .alert{margin-bottom: 0;}
 .songL .card img{width: 100%;}
 .songL{line-height: 1;margin: 0 auto;}
 .songL .card{background-color: transparent;margin:0 0 10px 0;border-radius: 10px;padding: 0 5px 0 5px;}

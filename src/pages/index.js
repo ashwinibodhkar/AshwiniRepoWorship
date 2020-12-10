@@ -36,16 +36,16 @@ export default function BlogIndex ({data}){
           
           <Container fluid className="bgpage">
            <Row>
-             <Col className="bannerInstall">
+             <Col className="bannerInstall align-self-center">
               <Alert show={show} >  
-              For long use Intall App
+              <p>For long use Intall App
               <Button variant="contained" color="secondary" onClick={() => setShow(false)} >
                 <CloseIcon />
               </Button>
               <Button variant="contained" color="secondary" className="mr-2">
                 <GetAppIcon />
               </Button> 
-              
+              </p>
                  
                 </Alert>
              </Col>
