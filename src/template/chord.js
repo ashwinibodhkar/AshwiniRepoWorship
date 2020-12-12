@@ -312,11 +312,9 @@ export default function Template({data,location}){
               </Col>
             </Row>
             <Row className="sharelinkIcon ">
-              <Col className=" ">
-             
-             
-                <Fab color="secondary" aria-label="edit">
-                  <ShareIcon onClick={handleShow} style={{ color: '#fff' }} />
+              <Col className=" "> 
+                <Fab aria-label="edit">
+                  <ShareIcon onClick={handleShow}  />
                 </Fab>
                 <Modal show={show} onHide={handleClose}   centered >
             

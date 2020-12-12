@@ -75,7 +75,7 @@ const SearchWidget = () => {
   }
   return (
     <div className="search_bar">
-      <Fab color="secondary" aria-label="edit">
+      <Fab >
         <SearchIcon onClick={handleShow} />
       </Fab>
         

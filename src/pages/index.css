@@ -1,7 +1,5 @@
 .bgpage{background: #0f1011;}
-.bgpage h2{font-size: 26px;font-weight: bolder;background: -webkit-linear-gradient(140deg,rgb(254, 45, 102),rgb(255, 43, 110),rgb(255, 53, 91));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+.bgpage h2{font-size: 26px;font-weight: bolder;color: #fff; }
 .bgpage .bannerInstall{border-radius: 5px;font-size: 18px;z-index: 1;background: linear-gradient(157deg, #20fadd, #0ef650);}
 .bgpage .bannerInstall button{float: right; }
 .bgpage .bannerInstall .alert{margin-bottom: 0;}
@@ -15,14 +13,5 @@
 .allLink button{background: linear-gradient(157deg, #20fadd, #0ef650);color: rgb(255, 255, 255);padding: 5px 38px 5px 38px;font-weight: bolder;}
 .allLink button:hover{background-color:rgb(112, 112, 109);}
 
-/* {
 
-@media (max-width: 648px) { 
-  
-  .section{padding: 50px 0  0px 0;}
-  .section h1{font-size: 2.1em;padding: 40px 0 30px 0;}
- 
-  .category h1{font-size: 2.1em;padding: 34px 0px 30px 0px;}
-  .songsList h1{font-size: 2em;padding: 60px 0 40px 0;}
-} */
 body{background: #000;}
