@@ -23,9 +23,13 @@ import "aos/dist/aos.css";
 import ShareIcon from '@material-ui/icons/Share';
 import Fab from '@material-ui/core/Fab';
 import HeartIcon from '@material-ui/icons/FavoriteBorder';
-import SearchIcon from '@material-ui/icons/Search'
+import ThreedotsIcon from '@material-ui/icons/MoreVert';
 // import "../components/likeSongHeart.scss";
-import SearchWidget from '../components/searchBar/searchwidget';
+import SearchWidget from '../components/searchBar/search';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import UpArrowIcon from '@material-ui/icons/ExpandLess'
+import Button from '@material-ui/core/Button'
 export default function Template({data,location}){
  
   const post = data.markdownRemark;
@@ -51,6 +55,16 @@ export default function Template({data,location}){
   //for changing backround of title
   const [bgTitle,setBgtitle] = useState(false);
 
+  //three dots 
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(false);
+  };
 
   // //for setting speed
   // const [speedVal, setspeedVal] = useState("");
@@ -130,7 +144,7 @@ export default function Template({data,location}){
 
   //share Icons 
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
+  // const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   //useEffect hook used to automate scrolling using defined speed
@@ -247,7 +261,7 @@ export default function Template({data,location}){
       <Container className="BgContainerChord ">     
         <Row >
          
-          <Col xs={12} md={6} className="topFeature text-white ">
+          <Col xs={12} md={6} className="topFeature text-white " id="top">
             <h4 >Key of {key.toString()}</h4>
             <OverlayTrigger                     
               overlay={<Tooltip  > 
@@ -281,7 +295,7 @@ export default function Template({data,location}){
                 
                 <p>Transpose</p>
               </Col>
-              <Col xs={3} className="px-0">
+              <Col xs={2} className="px-0">
                 <h5 onClick={() => FlatOrSharp()}>b/# </h5>
                 <p >Flat/Sharp</p>
                 
@@ -305,13 +319,55 @@ export default function Template({data,location}){
                   <FaSearchMinus onClick={() => SetFsize(Fsize-2)} size="26" height="30" xs={6} className="my-1 px-1" /> 
                   <p>Zoom</p>
               </Col>
+              <Col xs={1} className="pl-0">
+                <ThreedotsIcon aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} />
+                
+                <Menu
+                  id="simple-menu"
+                  anchorEl={anchorEl}
+                  keepMounted
+                  open={Boolean(anchorEl)}
+                  onClose={handleClose}
+                  className="menudesc"
+                >
+                  <MenuItem onClick={handleClose}><ShareIcon onClick={handleClick}/>
+                  <Menu
+                  id="simple-menu"
+                  anchorEl={anchorEl}
+                  keepMounted
+                  open={Boolean(anchorEl)}
+                  onClose={handleClose}
+                  className="menudesc"
+                >
+                  <MenuItem onClick={handleClose}>
+                  <FacebookShareButton            
+                      url={`${siteUrl}${location.pathname}`}
+                      title={post.frontmatter.title}
+                      description= {post.frontmatter.title} 
+                      background="transparent"            
+                    >
+                    <FacebookIcon size={36}/>
+                   
+                    </FacebookShareButton>  
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}><SearchWidget /></MenuItem>
+                  
+                </Menu>
+                   </MenuItem>
+                  <MenuItem onClick={handleClose}><SearchWidget /></MenuItem>
+                  
+                </Menu>
+              </Col>
             </Row>
             <Row className="searchicon">
               <Col>
-                <SearchWidget />
+                <Link to="#top"><Fab>
+                  <UpArrowIcon />
+                </Fab>
+                </Link>
               </Col>
             </Row>
-            <Row className="sharelinkIcon ">
+            {/* <Row className="sharelinkIcon ">
               <Col className=" "> 
                 <Fab aria-label="edit">
                   <ShareIcon onClick={handleShow}  />
@@ -348,7 +404,7 @@ export default function Template({data,location}){
                   </Modal.Body>
                 </Modal>            
               </Col>
-            </Row>
+            </Row> */}
           </Col>
         </Row>
       </Container>

@@ -18,7 +18,7 @@ const iconsbar = () => (
          <Row className="bottomBar">
               <Col xs={4}>
                 <Link to="/">
-                  <HomeIcon style={{ color: '#fff' }} />
+                  <HomeIcon  />
                   <p>Home</p>
                 </Link>
               </Col>
@@ -32,7 +32,7 @@ const iconsbar = () => (
               </Col>
               <Col xs={4}>
               <Link to="/allsongs">
-                <QueueMusicIcon style={{ color: '#fff' }} />
+                <QueueMusicIcon  />
                 <p>All List</p>
                 </Link>
               </Col>

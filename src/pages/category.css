@@ -36,9 +36,7 @@
 .mainCard  a:hover{color: rgb(92, 92, 91)}
 
 .backHome a{text-decoration: none;color: chartreuse;padding-top: 200px;}
-.bottomBar{position: fixed;width: 100%;bottom: 0;text-align: center;z-index: 1;padding: 20px 0 20px 0;border-top-right-radius: 10px;border-top-left-radius: 10px;color: rgb(187, 187, 187); background-image: linear-gradient(to bottom, rgb(32, 32, 32), rgb(10, 10, 10)) ;box-shadow: 0 0 10px 0 rgb(129, 128, 128);}
-.bottomBar a p{margin-bottom: 0;padding-bottom: 5px;font-size: .7em;color: rgb(179, 178, 178);}
-.bottomBar svg{margin-top: 5px;}
+
 
 @media (max-width: 648px) { 
   .catCard{max-width: 95%;}

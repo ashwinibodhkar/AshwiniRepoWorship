@@ -7,7 +7,7 @@ import SearchWrapper from '../searchBar/searchwrapper';
 import { Link } from 'gatsby';
 import UserIcon from '@material-ui/icons/Person';
 import Fab from '@material-ui/core/Fab';
-
+// import Login from '../loginPage/signup'
 const Header = ({ siteTitle },{subtitle}) => (
  
   <Container fluid className="headPart ">
