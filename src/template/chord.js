@@ -321,7 +321,7 @@ export default function Template({data,location}){
               </Col>
               <Col xs={1} className="pl-0">
                 <ThreedotsIcon aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} />
-                
+                <p>more</p>
                 <Menu
                   id="simple-menu"
                   anchorEl={anchorEl}
@@ -361,7 +361,7 @@ export default function Template({data,location}){
             </Row>
             <Row className="searchicon">
               <Col>
-                <Link to="#top"><Fab>
+                <Link to="#top"><Fab color="secondary" aria-label="edit">
                   <UpArrowIcon />
                 </Fab>
                 </Link>

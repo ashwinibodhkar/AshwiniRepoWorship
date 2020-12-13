@@ -1,7 +1,7 @@
 .bgpage{background: #0f1011;}
 .bgpage h2{font-size: 26px;font-weight: bolder;color: #fff; }
-.bgpage .bannerInstall{border-radius: 5px;font-size: 18px;z-index: 1;background: linear-gradient(157deg, #20fadd, #0ef650);}
-.bgpage .bannerInstall button{float: right; }
+.bgpage .bannerInstall{border-radius: 5px;font-size: 18px;z-index: 1;color: #fff;background: linear-gradient(177deg,#ea4b94, #c81f34,#8c0606);}
+.bgpage .bannerInstall button{float: right;background-color: #e3ee2d; }
 .bgpage .bannerInstall .alert{margin-bottom: 0;}
 .songL .card img{width: 100%;}
 .songL{line-height: 1;margin: 0 auto;}
@@ -10,8 +10,6 @@
 .songL .card .card-title:hover{color: rgb(202, 189, 11);}
 .songL .card .card-body a{text-decoration: none;}
 
-.allLink button{background: linear-gradient(157deg, #20fadd, #0ef650);color: rgb(255, 255, 255);padding: 5px 38px 5px 38px;font-weight: bolder;}
-.allLink button:hover{background-color:rgb(112, 112, 109);}
 
 
 body{background: #000;}

@@ -39,10 +39,10 @@ export default function BlogIndex ({data}){
              <Col className="bannerInstall align-self-center">
               <Alert show={show} >  
               <p>For long use Intall App
-              <Button variant="contained" color="secondary" onClick={() => setShow(false)} >
+              <Button  onClick={() => setShow(false)} >
                 <CloseIcon />
               </Button>
-              <Button variant="contained" color="secondary" className="mr-2">
+              <Button  className="mr-2">
                 <GetAppIcon />
               </Button> 
               </p>
