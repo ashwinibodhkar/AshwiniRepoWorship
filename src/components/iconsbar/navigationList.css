@@ -1,3 +1,3 @@
-.bottomBar{position: fixed;width: 100%;bottom: 0;text-align: center;z-index: 1;font-size: .7em;border-top-right-radius: 5px;border-top-left-radius: 5px;color: rgb(187, 187, 187); background-image: linear-gradient(177deg,#c40a0a, #c81f34,#8c0606);}
+.bottomBar{position: fixed;width: 100%;bottom: 0;text-align: center;z-index: 1;font-size: .7em;border-top-right-radius: 5px;border-top-left-radius: 5px;color: rgb(187, 187, 187); background:#B44A56;}
   .bottomBar p{margin-bottom: 0;padding-bottom: 10px;font-size: .7em;color: rgb(236, 236, 236);}
   .bottomBar svg{margin-top: 5px;width: 1.3em;color: rgb(250, 246, 246);}
