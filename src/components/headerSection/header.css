@@ -6,9 +6,8 @@
     z-index: 1;
     
 }
-.midContainer{padding: 20px 0 20px 0;}
-.midContainer svg{color: rgb(184, 185, 185);}
-nav .MuiSvgIcon-root{width: 0em;}
+
+
 .navWidth{width: 95%;float: left;}
 .navbar-brand{width: 150%;}
 .navbar-brand h3{font-size: 30px;float: left;color: rgb(201, 202, 202);font-weight: 400;}
@@ -29,7 +28,4 @@ nav .MuiSvgIcon-root{width: 0em;}
 }
 @media (max-width: 1024px) { 
     .navBg{background-image: linear-gradient(140deg,#2b292a,#424242,#524f4e);}
-    nav .MuiSvgIcon-root{width: 2em;}
-    .outside button .MuiSvgIcon-root{width: 0em;height: 0em;}
-    .outside button{width: 0px;height: 0px;}
 }

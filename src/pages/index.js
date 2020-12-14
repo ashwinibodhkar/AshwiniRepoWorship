@@ -58,11 +58,7 @@ export default function BlogIndex ({data}){
                 <Slider />            
               </Col>
             </Row>
-            <Row>
-              <Col>
-              <moreButton />
-              </Col>
-            </Row>
+            
             {/* category section */}
             <Container>
               <Row>

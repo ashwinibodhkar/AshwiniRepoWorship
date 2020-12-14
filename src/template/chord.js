@@ -25,7 +25,7 @@ import Fab from '@material-ui/core/Fab';
 import HeartIcon from '@material-ui/icons/FavoriteBorder';
 
 // import "../components/likeSongHeart.scss";
-import SearchWidget from '../components/searchBar/search';
+import Search from '../components/searchBar/search';
 
 import UpArrowIcon from '@material-ui/icons/ExpandLess'
 import Button from '@material-ui/core/Button'
@@ -47,6 +47,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     bottom : 0,
     flexGrow: 1,
+    left: 13,
   },
   exampleWrapper: {
     position: 'relative',
@@ -275,7 +276,7 @@ export default function Template({data,location}){
 
   //
   const actions = [
-    { icon: <SearchWidget />, name: 'Search' },  
+    { icon: <Search />, name: 'Search' },  
     { icon: <ShareIcon onClick={handleShow}/>, name: 'Share' },
     
   ];
@@ -316,7 +317,7 @@ export default function Template({data,location}){
       {/* top title backround change */}
       <Row className={bgTitle ? 'bgTitle active' : 'bgTitle'} >
         <Col xs={7} className="pr-0 py-1 align-self-center">
-          <marquee><h6 className="m-0">{post.frontmatter.title}</h6></marquee>
+          <h6 className="m-0">{post.frontmatter.title}</h6>
           
         </Col>
         <Col xs={3} className="key text-right p-0 align-self-center">
@@ -328,12 +329,7 @@ export default function Template({data,location}){
         </Col>
       </Row>
       
-      {/* floating */}
-      <Row>
-            <Col >
-                
-            </Col>
-        </Row>
+    
 
       {/* top feature Content */}
       <Container className="BgContainerChord ">     
@@ -370,13 +366,13 @@ export default function Template({data,location}){
         <Row>       
           <Col className="stick">
             <Row  className="transpose  text-center">               
-              <Col xs={3} className="px-0 ">
+              <Col  className="px-0 ">
                 <FaCaretUp onClick={() => trpUp()} size="25" className="mb-2" />
                 <FaCaretDown onClick={() => trpDown()} size="25" className="mb-2" />
                 
                 <p>Transpose</p>
               </Col>
-              <Col xs={2} className="px-0">
+              <Col  className="px-0">
                 <h5 onClick={() => FlatOrSharp()}>b/# </h5>
                 <p >Flat/Sharp</p>
                 
@@ -386,7 +382,7 @@ export default function Template({data,location}){
                 <SearchWrapper />
                 <p>Search</p> 
               </Col>            */}
-              <Col xs={3} className="text-center p-0">   
+              <Col  className="text-center p-0">   
                 
                   <div class="flip-switch flip-switch-icon"  >
                     <input type="checkbox" id="c2" />
@@ -395,12 +391,12 @@ export default function Template({data,location}){
                   <p>Chords<br></br> Show/Hide</p>
                                       
               </Col>                        
-              <Col xs={2} className="px-0 text-center">                  
+              <Col  className="px-0 text-center">                  
                   <FaSearchPlus onClick={() => SetFsize(Fsize+2)} size="26" height="30" xs={6} className="my-1 px-1"></FaSearchPlus>  
                   <FaSearchMinus onClick={() => SetFsize(Fsize-2)} size="26" height="30" xs={6} className="my-1 px-1" /> 
                   <p>Zoom</p>
               </Col>
-              <Col xs={2} className="pl-0">
+              <Col  className="pl-0">
               <div className={classes.root}>
                 <div className={classes.exampleWrapper}>
                     <SpeedDial

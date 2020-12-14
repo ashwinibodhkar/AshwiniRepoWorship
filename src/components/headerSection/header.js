@@ -15,7 +15,7 @@ const Header = ({ siteTitle },{subtitle}) => (
     <Row >
       <Col>   
         <Navbar  variant="dark" expand="lg" className="navWidth p-0">
-          <UserIcon />
+          
           <Link to="/">
             <Navbar.Brand href="#home">
               <h3>tune</h3><h4>Worship</h4>
@@ -34,11 +34,7 @@ const Header = ({ siteTitle },{subtitle}) => (
         </Navbar.Collapse> 
 
       </Navbar> 
-      <div className="outside">
-        <Fab color="secondary" aria-label="edit">
-        <UserIcon  />  
-        </Fab>
-      </div> 
+      
        
       
     </Col>
