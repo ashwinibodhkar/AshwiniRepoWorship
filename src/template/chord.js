@@ -23,13 +23,55 @@ import "aos/dist/aos.css";
 import ShareIcon from '@material-ui/icons/Share';
 import Fab from '@material-ui/core/Fab';
 import HeartIcon from '@material-ui/icons/FavoriteBorder';
-import ThreedotsIcon from '@material-ui/icons/MoreVert';
+
 // import "../components/likeSongHeart.scss";
 import SearchWidget from '../components/searchBar/search';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+
 import UpArrowIcon from '@material-ui/icons/ExpandLess'
 import Button from '@material-ui/core/Button'
+
+
+
+import { makeStyles } from '@material-ui/core/styles';
+
+
+import SpeedDial from '@material-ui/lab/SpeedDial';
+import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
+import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    transform: 'translateZ(0px)',
+    flexGrow: 1,
+    position: 'absolute',
+    bottom : 0,
+    flexGrow: 1,
+  },
+  exampleWrapper: {
+    position: 'relative',
+    marginTop: theme.spacing(3),
+    
+    
+  },
+  radioGroup: {
+    margin: theme.spacing(1, 0),
+  },
+  speedDial: {
+    position: 'absolute',
+    '&.MuiSpeedDial-directionUp, &.MuiSpeedDial-directionLeft': {
+      bottom: theme.spacing(2),
+      right: theme.spacing(2),
+    },
+    '&.MuiSpeedDial-directionDown, &.MuiSpeedDial-directionRight': {
+      top: theme.spacing(2),
+      left: theme.spacing(2),
+    },
+  },
+}));
+
+
+
 export default function Template({data,location}){
  
   const post = data.markdownRemark;
@@ -48,6 +90,29 @@ export default function Template({data,location}){
   //const urlValue = typeof window !== 'undefined' ? window.location.href : '';
   const {siteUrl} = useSiteMetadata();
 
+
+//floating button
+  const classes = useStyles();
+  const [direction, setDirection] = React.useState('up');
+  const [open, setOpen] = React.useState(false);
+  const [hidden, setHidden] = React.useState(false);
+
+  const handleDirectionChange = (event) => {
+    setDirection(event.target.value);
+  };
+
+  const handleHiddenChange = (event) => {
+    setHidden(event.target.checked);
+  };
+
+  const handleTClose = () => {
+    setOpen(false);
+  };
+
+  const handleTOpen = () => {
+    setOpen(true);
+  };
+
   //for setting pad
 
   //const [pad, setpad] = useState(post.frontmatter.WorshipPad);
@@ -62,7 +127,7 @@ export default function Template({data,location}){
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleEClose = () => {
     setAnchorEl(false);
   };
 
@@ -144,7 +209,7 @@ export default function Template({data,location}){
 
   //share Icons 
   const [show, setShow] = useState(false);
-  // const handleClose = () => setShow(false);
+  const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   //useEffect hook used to automate scrolling using defined speed
@@ -208,6 +273,12 @@ export default function Template({data,location}){
     });
 }, []);
 
+  //
+  const actions = [
+    { icon: <SearchWidget />, name: 'Search' },  
+    { icon: <ShareIcon onClick={handleShow}/>, name: 'Share' },
+    
+  ];
 
   return( 
     <>
@@ -245,8 +316,8 @@ export default function Template({data,location}){
       {/* top title backround change */}
       <Row className={bgTitle ? 'bgTitle active' : 'bgTitle'} >
         <Col xs={7} className="pr-0 py-1 align-self-center">
-          <h6 className="m-0">{post.frontmatter.title}</h6>
-          <p className="m-0">{post.frontmatter.artist}</p> 
+          <marquee><h6 className="m-0">{post.frontmatter.title}</h6></marquee>
+          
         </Col>
         <Col xs={3} className="key text-right p-0 align-self-center">
           <p className="m-0" >key {key.toString()}</p>
@@ -257,6 +328,13 @@ export default function Template({data,location}){
         </Col>
       </Row>
       
+      {/* floating */}
+      <Row>
+            <Col >
+                
+            </Col>
+        </Row>
+
       {/* top feature Content */}
       <Container className="BgContainerChord ">     
         <Row >
@@ -281,6 +359,9 @@ export default function Template({data,location}){
                 <FaYoutube size="25" color="red"></FaYoutube>
                   <i className="videoPlay"> Listen to {post.frontmatter.title} </i>
               </Link>
+            </h6>
+            <h6>
+            <p><HeartIcon /> Make it favourite</p>
             </h6>  
           </Col>
         </Row>
@@ -314,64 +395,53 @@ export default function Template({data,location}){
                   <p>Chords<br></br> Show/Hide</p>
                                       
               </Col>                        
-              <Col xs={3} className="px-0 text-center">                  
+              <Col xs={2} className="px-0 text-center">                  
                   <FaSearchPlus onClick={() => SetFsize(Fsize+2)} size="26" height="30" xs={6} className="my-1 px-1"></FaSearchPlus>  
                   <FaSearchMinus onClick={() => SetFsize(Fsize-2)} size="26" height="30" xs={6} className="my-1 px-1" /> 
                   <p>Zoom</p>
               </Col>
-              <Col xs={1} className="pl-0">
-                <ThreedotsIcon aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick} />
-                <p>more</p>
-                <Menu
-                  id="simple-menu"
-                  anchorEl={anchorEl}
-                  keepMounted
-                  open={Boolean(anchorEl)}
-                  onClose={handleClose}
-                  className="menudesc"
-                >
-                  <MenuItem onClick={handleClose}><ShareIcon onClick={handleClick}/>
-                  <Menu
-                  id="simple-menu"
-                  anchorEl={anchorEl}
-                  keepMounted
-                  open={Boolean(anchorEl)}
-                  onClose={handleClose}
-                  className="menudesc"
-                >
-                  <MenuItem onClick={handleClose}>
-                  <FacebookShareButton            
-                      url={`${siteUrl}${location.pathname}`}
-                      title={post.frontmatter.title}
-                      description= {post.frontmatter.title} 
-                      background="transparent"            
+              <Col xs={2} className="pl-0">
+              <div className={classes.root}>
+                <div className={classes.exampleWrapper}>
+                    <SpeedDial
+                    ariaLabel="SpeedDial example"
+                    
+                    hidden={hidden}
+                    icon={<SpeedDialIcon />}
+                    onClose={handleTClose}
+                    onOpen={handleTOpen}
+                    open={open}
+                    direction={direction}
+                    
                     >
-                    <FacebookIcon size={36}/>
-                   
-                    </FacebookShareButton>  
-                  </MenuItem>
-                  <MenuItem onClick={handleClose}><SearchWidget /></MenuItem>
-                  
-                </Menu>
-                   </MenuItem>
-                  <MenuItem onClick={handleClose}><SearchWidget /></MenuItem>
-                  
-                </Menu>
+                    {actions.map((action) => (
+                        <SpeedDialAction
+                        key={action.name}
+                        icon={action.icon}
+                        tooltipTitle={action.name}
+                        onClick={handleTClose}
+                        />
+                    ))}
+                    </SpeedDial>
+                    <p>more</p>
+                </div>
+              </div>
+                
               </Col>
             </Row>
             <Row className="searchicon">
               <Col>
-                <Link to="#top"><Fab color="secondary" aria-label="edit">
+                <Link to="#top"><Button >
                   <UpArrowIcon />
-                </Fab>
+                </Button>
                 </Link>
               </Col>
             </Row>
-            {/* <Row className="sharelinkIcon ">
+             <Row className="sharelinkIcon ">
               <Col className=" "> 
-                <Fab aria-label="edit">
+                {/*<Fab aria-label="edit">
                   <ShareIcon onClick={handleShow}  />
-                </Fab>
+            </Fab>*/}
                 <Modal show={show} onHide={handleClose}   centered >
             
                   <Modal.Body className="m-0" closeButton>
@@ -404,7 +474,7 @@ export default function Template({data,location}){
                   </Modal.Body>
                 </Modal>            
               </Col>
-            </Row> */}
+            </Row>
           </Col>
         </Row>
       </Container>

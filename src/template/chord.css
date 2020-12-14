@@ -56,7 +56,10 @@
 .transpose h5{margin-bottom:.52em ;color: rgb(255, 253, 253);}
 .transpose p{color: rgb(247, 245, 245);}
 .transpose svg{color: rgb(252, 252, 252);}
-.transpose Menu{width: 90%;}
+.transpose .MuiFab-primary{background: transparent;box-shadow: none;z-index: 1;}
+.transpose .MuiFab-primary:hover{background: transparent;box-shadow: none;}
+.transpose .MuiSpeedDialAction-fab{background: #4e4e4e;}
+
 .song{
     font-size: 24px;
     text-align: center; 
@@ -67,16 +70,14 @@
 .paragraph{text-align: left;padding: 10px 0 10px 0;line-height: 1.0;}
 .paragraph .row{margin: 0;padding-bottom: 10px;}
 .paragraph .chord{color: #ebae68;font-weight: 500;padding: 0;}
-.sharelinkIcon{margin-bottom: 0;width: 100%;font-size: 12px;position: fixed;bottom: 70px;left:83%;z-index: 1;display: block;}
-.sharelinkIcon svg{border-radius: 10%; }
-.sharelinkIcon .modal-body button{display: block;}
-.sharelinkIcon button{background-image: linear-gradient(140deg,#20fadd, #0ef650);}
 
-.searchicon{margin-bottom: 0;width: 100%;font-size: 12px;position: fixed;bottom: 70px;left:83%;z-index: 1;}
+
+.searchicon{margin-bottom: 0;font-size: 12px;position: fixed;bottom: 70px;left:88%;}
+.searchicon button{background: #B44A56;color: #fff;    height: 35px;width: 40px;min-width: 0;}
 .button svg{stroke: 0.7;color: rgb(255, 255, 255);}
 
-.bgTitle h6{font-size: 18px;}
-.bgTitle{background:transparent;width: 100%;height: 80px;color: transparent;}
+.bgTitle h6{font-size: 14px;}
+.bgTitle{background:transparent;width: 100%;height: 50px;color: transparent;}
 .bgTitle.active{background:#B44A56;color: rgb(255, 249, 249);position: sticky;top: 0px;z-index: 1;text-transform: capitalize;}
 .bgTitle .key{color: transparent;}
 .bgTitle.active .key{font-weight: bolder;font-size: 1.3em;color: #25f7f1;;}

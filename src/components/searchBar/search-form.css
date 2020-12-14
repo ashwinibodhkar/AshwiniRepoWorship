@@ -37,7 +37,7 @@
 .search_bar button:hover{background: transparent;border: none;}
 .songNotFound a{text-decoration: none;color: #000;font-weight: 500;}
 .chordspageSearch input{width: 100%;height: 40px;color: #000;}
-.chordspageSearch svg{color: thistle;margin: 0 auto;background: #fff;}
+.chordspageSearch svg{color: rgb(0, 0, 0);margin: 0 auto;background: #fff;}
 @media (max-width: 576px) { 
   
   .input-box input{font-size: 14px;height: 40px;}

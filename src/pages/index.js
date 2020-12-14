@@ -19,6 +19,7 @@ import AboutArtist from "../components/aboutArtist/testimony";
 import Button from '@material-ui/core/Button';
 import CloseIcon from '@material-ui/icons/Close'
 import GetAppIcon from '@material-ui/icons/GetApp'
+
 export default function BlogIndex ({data}){
   const [show, setShow] = useState(true);
   
@@ -53,7 +54,13 @@ export default function BlogIndex ({data}){
             {/* top slider section */}
             <Row>
               <Col >
+              
                 <Slider />            
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+              <moreButton />
               </Col>
             </Row>
             {/* category section */}
