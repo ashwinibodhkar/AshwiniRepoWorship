@@ -429,14 +429,17 @@ export default function Template({data,location}){
                 
               </Col>
             </Row>
+            <Link to="#top">
             <Row className="searchicon">
               <Col>
-                <Link to="#top"><Button >
-                  <UpArrowIcon />
-                </Button>
-                </Link>
+                
+                  <Button >
+                    <UpArrowIcon />
+                  </Button>
+                
               </Col>
             </Row>
+            </Link>
              <Row className="sharelinkIcon ">
               <Col className=" "> 
                 {/*<Fab aria-label="edit">
