@@ -1,10 +1,10 @@
 import React from "react"
-import SearchWidget from "./searchwidget"
+import Search from "./search"
 
 const SearchWrapper = ({ children }) => (
   <>
     {children}
-    <SearchWidget />
+    <Search />
   </>
 )
 

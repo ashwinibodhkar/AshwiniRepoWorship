@@ -8,7 +8,7 @@ import PersonIcon from '@material-ui/icons/Person'
 import QueueMusicIcon from '@material-ui/icons/QueueMusic';
 import HeartIcon from '@material-ui/icons/Favorite'
 import Searchjs from "../searchBar/search";
-import Login from '../searchBar/searchwidget'
+import Login from '../registeration/signup';
 import "./navigationList.css"
 import { Person } from '@material-ui/icons';
 
