@@ -2,7 +2,7 @@ import React from "react"
 import {Link} from 'gatsby';
 import { Row,Col,Container} from "react-bootstrap";
 import Button from '@material-ui/core/Button';
-import './signup.css';
+import './signupcss.css';
 
 
 const SignUp = () => (  
