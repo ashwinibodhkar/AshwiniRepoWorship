@@ -1,0 +1,10 @@
+.cont h1{font-size: 34px;}
+.userInput button{background-image: linear-gradient(45deg,#8936F5,#4442F9,#0082FF);border-radius: 40px;padding: 10px 30px 10px 30px;color: #fff;}
+.logo h3{font-size: 30px;float: left;color: rgb(201, 202, 202);font-weight: 400;}
+.logo{margin: 0 auto;}
+.logo h4{font-size: 30px; background: -webkit-linear-gradient(45deg,#8936F5,#4442F9,#0082FF);
+    -webkit-background-clip: text;-webkit-text-fill-color: transparent;  font-weight: 1000;float: left;}
+.userInput{line-height: .9;font-size: 14px;color: #fff; background: url(../images/bgSignup.jpg) ;background-position: center center;background-size: cover;background-repeat: no-repeat;background-attachment: fixed; }
+   
+.userInput input{width: 100%;margin-bottom: 20px;padding: 7px;}
+.cont{border: 3px solid #fff;background-color: rgba(3, 21, 54, 0.6);margin: 0px auto;}

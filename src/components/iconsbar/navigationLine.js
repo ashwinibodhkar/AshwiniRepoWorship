@@ -8,9 +8,8 @@ import PersonIcon from '@material-ui/icons/Person'
 import QueueMusicIcon from '@material-ui/icons/QueueMusic';
 import HeartIcon from '@material-ui/icons/Favorite'
 import Searchjs from "../searchBar/search";
-import Login from '../registeration/signup';
 import "./navigationList.css"
-import { Person } from '@material-ui/icons';
+
 
 
 const iconsbar = () => (
@@ -24,9 +23,11 @@ const iconsbar = () => (
                   <p>Home</p>
                 </Link>
               </Col>
-              <Col  >
-                <HeartIcon />
-                <p>Favourites</p>
+              <Col>
+                <Link to="/favorites">
+                  <HeartIcon />
+                  <p>Favourites</p>
+                </Link>
               </Col>
               <Col >
                 {/* <Link to={}> */}
@@ -44,10 +45,12 @@ const iconsbar = () => (
                 </Link>
               </Col>
               <Col>
-                <Login />
+              <Link to="/signup">
+                <PersonIcon  />
                 <p>Login</p>
+                </Link>
               </Col>
-
+              
             </Row>
     
 </div>

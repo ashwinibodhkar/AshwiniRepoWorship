@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container,Row,Col,OverlayTrigger,Tooltip,Toast,Modal} from 'react-bootstrap'
 import "./chord.css"
 import "./chord.scss"
-import { FaCaretUp, FaCaretDown, FaBookOpen, FaSearchPlus, FaSearchMinus,FaYoutube,FaArrowUp  } from "react-icons/fa";
+import { FaCaretUp, FaCaretDown, FaBookOpen, FaSearchPlus, FaSearchMinus,FaYoutube} from "react-icons/fa";
 import '../components/hideShowChordEye.scss';
 import FeatureImage from '../components/FeatureImage';
 import Video from "../components/videoSection/video"
@@ -21,32 +21,22 @@ import { FacebookShareButton,FacebookIcon,
 import Aos from "aos";
 import "aos/dist/aos.css";
 import ShareIcon from '@material-ui/icons/Share';
-import Fab from '@material-ui/core/Fab';
 import HeartIcon from '@material-ui/icons/FavoriteBorder';
-
-// import "../components/likeSongHeart.scss";
 import Search from '../components/searchBar/search';
-
 import UpArrowIcon from '@material-ui/icons/ExpandLess'
 import Button from '@material-ui/core/Button'
-
-
-
 import { makeStyles } from '@material-ui/core/styles';
-
-
 import SpeedDial from '@material-ui/lab/SpeedDial';
 import SpeedDialIcon from '@material-ui/lab/SpeedDialIcon';
 import SpeedDialAction from '@material-ui/lab/SpeedDialAction';
 
-
+//for more button
 const useStyles = makeStyles((theme) => ({
   root: {
     transform: 'translateZ(0px)',
     flexGrow: 1,
     position: 'absolute',
     bottom : 0,
-    flexGrow: 1,
     left: 13,
   },
   exampleWrapper: {
@@ -94,17 +84,9 @@ export default function Template({data,location}){
 
 //floating button
   const classes = useStyles();
-  const [direction, setDirection] = React.useState('up');
+  const [direction] = React.useState('up');
   const [open, setOpen] = React.useState(false);
-  const [hidden, setHidden] = React.useState(false);
-
-  const handleDirectionChange = (event) => {
-    setDirection(event.target.value);
-  };
-
-  const handleHiddenChange = (event) => {
-    setHidden(event.target.checked);
-  };
+  const [hidden] = React.useState(false);
 
   const handleTClose = () => {
     setOpen(false);
@@ -114,27 +96,8 @@ export default function Template({data,location}){
     setOpen(true);
   };
 
-  //for setting pad
-
-  //const [pad, setpad] = useState(post.frontmatter.WorshipPad);
-
   //for changing backround of title
   const [bgTitle,setBgtitle] = useState(false);
-
-  //three dots 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleEClose = () => {
-    setAnchorEl(false);
-  };
-
-  // //for setting speed
-  // const [speedVal, setspeedVal] = useState("");
-  // const [valFromClick, setvalFromClick] = useState("");
 
   //Aos animation
   useEffect(() => {
@@ -192,21 +155,6 @@ export default function Template({data,location}){
       })
     })
   }
-
-  // function reset(){
-  //   //console.log(-count);
-  //   setKey(key.transpose(-count))
-  //   song.lines.forEach(line => {
-  //     line.items.forEach(item => {
-  //       let chord = Chord.parse(item.chords)
-  //       if(chord){
-  //         chord = chord.transpose(count)
-  //         item.chords = chord
-  //       }
-  //     })
-  //   })
-  // }
-
 
   //share Icons 
   const [show, setShow] = useState(false);
@@ -285,13 +233,6 @@ export default function Template({data,location}){
     <>
      
     <Layout />
-     {/* <Helmet>
-            <link rel="canonical" href={`${siteUrl}${location.pathname}`} />
-            <meta property="og:title" content="My Awesome Website" />
-            <meta property="og:description" content="This website is so awesome that I really don't think you can handle how much awesome that is happening here." />
-            <meta property="og:image" content={featuredImage}/>
-     </Helmet> */}
-
      <SEO
           title={post.frontmatter.title}
           image={featuredImage}
@@ -324,17 +265,13 @@ export default function Template({data,location}){
           <p className="m-0" >key {key.toString()}</p>
         </Col>
         <Col xs={2} className="align-self-center">
-          
           <HeartIcon />
         </Col>
       </Row>
-      
-    
 
       {/* top feature Content */}
       <Container className="BgContainerChord ">     
         <Row >
-         
           <Col xs={12} md={6} className="topFeature text-white " id="top">
             <h4 >Key of {key.toString()}</h4>
             <OverlayTrigger                     
@@ -369,27 +306,19 @@ export default function Template({data,location}){
               <Col  className="px-0 ">
                 <FaCaretUp onClick={() => trpUp()} size="25" className="mb-2" />
                 <FaCaretDown onClick={() => trpDown()} size="25" className="mb-2" />
-                
                 <p>Transpose</p>
               </Col>
               <Col  className="px-0">
                 <h5 onClick={() => FlatOrSharp()}>b/# </h5>
                 <p >Flat/Sharp</p>
-                
               </Col >
                 
-              {/* <Col xs={4} className="mt-2" style={{color: "#ff2b6e"}}>
-                <SearchWrapper />
-                <p>Search</p> 
-              </Col>            */}
               <Col  className="text-center p-0">   
-                
-                  <div class="flip-switch flip-switch-icon"  >
-                    <input type="checkbox" id="c2" />
-                    <label for="c2"  id="bnId"></label>
-                  </div> 
-                  <p>Chords<br></br> Show/Hide</p>
-                                      
+                <div class="flip-switch flip-switch-icon"  >
+                  <input type="checkbox" id="c2" />
+                  <label for="c2"  id="bnId"></label>
+                </div> 
+                <p>Chords<br></br> Show/Hide</p>                                      
               </Col>                        
               <Col  className="px-0 text-center">                  
                   <FaSearchPlus onClick={() => SetFsize(Fsize+2)} size="26" height="30" xs={6} className="my-1 px-1"></FaSearchPlus>  
@@ -421,28 +350,21 @@ export default function Template({data,location}){
                     </SpeedDial>
                     <p>more</p>
                 </div>
-              </div>
-                
+              </div>                
               </Col>
             </Row>
             <Link to="#top">
             <Row className="searchicon">
-              <Col>
-                
-                  <Button >
-                    <UpArrowIcon />
-                  </Button>
-                
+              <Col>                
+                <Button >
+                  <UpArrowIcon />
+                </Button>    
               </Col>
             </Row>
             </Link>
              <Row className="sharelinkIcon ">
-              <Col className=" "> 
-                {/*<Fab aria-label="edit">
-                  <ShareIcon onClick={handleShow}  />
-            </Fab>*/}
+              <Col> 
                 <Modal show={show} onHide={handleClose}   centered >
-            
                   <Modal.Body className="m-0" closeButton>
                     <FacebookShareButton            
                       url={`${siteUrl}${location.pathname}`}
@@ -496,8 +418,7 @@ export default function Template({data,location}){
               videoTitle={post.frontmatter.videoTitle}
             />
           </Col>
-        </Row>
-                    
+        </Row>             
       </Container>
     </Container>    
     </>

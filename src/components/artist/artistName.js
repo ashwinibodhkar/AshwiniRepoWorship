@@ -7,7 +7,7 @@ import ThankYou from "../../images/nach.jpg"
 import dance from "../../../content/image/cameron-mendes.jpg";
 import easter from "../../../content/image/kinneth.jpg"
 import freedom from "../../../content/image/amit.jpg"
-import bridge from "../../images/nach.jpg"
+
 
 import "./artistName.css"
 

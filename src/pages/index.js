@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container ,Row,Col,Card,Toast,Alert} from "react-bootstrap";
+import { Container ,Row,Col,Card,Alert} from "react-bootstrap";
 import "./index.css"
 import Aos from "aos"
 import "aos/dist/aos.css"
