@@ -1,0 +1,6 @@
+.drawerBg .MuiPaper-root {background: linear-gradient(140deg,#222121,#292828,#1d1d1c);color: #fff;}
+hr{background: rgba(189, 187, 187, 1);}
+.drawerBg svg{color: rgba(189, 187, 187, 1);}
+.drawerBg a{text-decoration: none;color: rgba(189, 187, 187, 1);}
+.drawerBg hr{color: rgb(250, 245, 245);}
+.makeStyles-list-1 .divide{background:linear-gradient(20deg,#635d5d,#c24747,#FEAF88);color: rgb(250, 244, 244);}

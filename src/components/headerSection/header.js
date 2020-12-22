@@ -7,21 +7,23 @@ import { Link } from 'gatsby';
 import PersonIcon from '@material-ui/icons/Person'
 // import Login from '../loginPage/signup'
 import Ham from '../drawer';
+import Drwaer from '../drawer';
 const Header = ({ siteTitle },{subtitle}) => (
  
   <Container fluid className="headPart ">
     <Container className="midContainer">
       <Row >
-        <Col>   
+        <Col>  
+       
           <Navbar  variant="dark" expand="lg" className="navWidth p-0">
-            <Link to="/">
+          <Drwaer /> 
               <Navbar.Brand href="#home">
                 <h3>tune</h3><h4>Worship</h4>
               </Navbar.Brand>
-            </Link>
+           
             
-            <PersonIcon />             
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        
+            {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="navBg">
               <Nav className="ml-auto">
                 <Nav.Link href="/">Home</Nav.Link>
@@ -30,7 +32,7 @@ const Header = ({ siteTitle },{subtitle}) => (
                 <Nav.Link href="/category">Categories</Nav.Link>
                 <Nav.Link href="/contact">Contact Us</Nav.Link>    
               </Nav>          
-            </Navbar.Collapse>
+            </Navbar.Collapse> */}
           </Navbar>   
         </Col>
       </Row>

@@ -24,7 +24,7 @@ const iconsbar = () => (
                 </Link>
               </Col>
               <Col>
-                <Link to="/favorites">
+                <Link to="/favourites">
                   <HeartIcon />
                   <p>Favourites</p>
                 </Link>

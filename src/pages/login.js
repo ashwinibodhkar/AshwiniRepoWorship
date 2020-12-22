@@ -3,11 +3,12 @@ import {Link} from 'gatsby';
 import { Row,Col,Container} from "react-bootstrap";
 import Button from '@material-ui/core/Button';
 import './signupcss.css';
-
+import Layout from '../components/layout';
 
 const Login
  = () => (  
     <>   
+    <Layout />
      <Container fluid className="userInput py-5">
         <Container className="cont">
            <Row>

@@ -8,9 +8,15 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
-
+import MenuIcon from '@material-ui/icons/Menu';
+import Avatar from '@material-ui/core/Avatar';
+import FavouriteIcon from '@material-ui/icons/Favorite';
+import HomeIcon from '@material-ui/icons/Home';
+import AboutArtistIcon from '@material-ui/icons/AccountCircle';
+import CategoryIcon from '@material-ui/icons/LibraryBooks';
+import ContactIcon from '@material-ui/icons/Feedback';
+import {  Link } from "gatsby";
+import "./drawercss.css";
 const useStyles = makeStyles({
   list: {
     width: 250,
@@ -23,10 +29,9 @@ const useStyles = makeStyles({
 export default function TemporaryDrawer() {
   const classes = useStyles();
   const [state, setState] = React.useState({
-    top: false,
+   
     left: false,
-    bottom: false,
-    right: false,
+  
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -46,32 +51,79 @@ export default function TemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
+      <List className="divide pt-5">
+        <ListItem>
+          <Avatar>U</Avatar>         
+        </ListItem>
+        <ListItem>
+          <h6>Welcome , </h6>
+       
+        </ListItem>
+        <ListItem> <h5> User name</h5></ListItem>
+      </List>
+
+      <Divider />
+     
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        <Link to="/login">
+        <ListItem>
+          <ListItemIcon><FavouriteIcon /></ListItemIcon>
+          <ListItemText>Your Library</ListItemText>
+        </ListItem>
+        </Link>
+
+        <Link to="/">
+        <ListItem>
+          <ListItemIcon><HomeIcon /></ListItemIcon>
+          <ListItemText>Home</ListItemText>
+        </ListItem>
+        </Link>
+
+        <Link to="/artist">
+        <ListItem>
+          <ListItemIcon><AboutArtistIcon /></ListItemIcon>
+          <ListItemText>About Artist</ListItemText>
+        </ListItem>
+        </Link>
+
+        <Link to="/category">
+        <ListItem>
+          <ListItemIcon><CategoryIcon /></ListItemIcon>
+          <ListItemText>Categories</ListItemText>
+        </ListItem>
+        </Link>
+
+        <Link to="/contact">
+        <ListItem>
+          <ListItemIcon><ContactIcon /></ListItemIcon>
+          <ListItemText>Contact Us</ListItemText>
+        </ListItem>
+        </Link>
+        {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
-        ))}
+        ))} */}
       </List>
-      <Divider />
-      <List>
+    
+      {/* <List>
         {['All mail', 'Trash', 'Spam'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </div>
   );
 
   return (
     <div>
-      {['left', 'right', 'top', 'bottom'].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+      {['left'].map((anchor) => (
+        <React.Fragment key={anchor} className="drawerButton">
+          <Button onClick={toggleDrawer(anchor, true)}><MenuIcon  style={{color:"#fff "}}/></Button>
+          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)} className="drawerBg">
             {list(anchor)}
           </Drawer>
         </React.Fragment>

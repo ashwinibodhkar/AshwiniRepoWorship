@@ -1,7 +1,6 @@
 import React from "react"
 import {Link} from 'gatsby';
 import { Row,Col,Container, Media} from "react-bootstrap";
-import Button from '@material-ui/core/Button';
 import './signupcss.css';
 import bridge from "../images/bridge.jpg"
 import Iconsbar from "../components/iconsbar/navigationLine";
@@ -11,7 +10,7 @@ const Favourites
      <Container>
         <h2 className="text-center text-white py-5">Favourites</h2>
         <Row>
-            <Col xs={12} md={4} className="text-white">
+            <Col xs={12} md={4} className="favMedia text-white">
             <Media>
                 <img
                 width={64}
