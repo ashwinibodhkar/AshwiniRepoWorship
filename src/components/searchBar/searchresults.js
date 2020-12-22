@@ -7,7 +7,8 @@ const SearchResults = ({ results }) => (
       <>
         <div className="ResultsongList">
           <h2>
-            {results.length} Songs{results.length === 1 ? "" : `s`} Matched Your Request
+            {/* {results.length} Songs{results.length === 1 ? "" : `s`} Matched Your Request */}
+            Requested Result
           </h2>
           <ul>
             {results.map(result => (

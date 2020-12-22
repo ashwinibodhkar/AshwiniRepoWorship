@@ -29,13 +29,15 @@
   opacity: 0.8; /* Firefox */
   
 }
-.search-results{background: #f5f3f3;color: rgb(0 ,4, 8);padding:10px;}
-.search-results h6{color: rgb(80, 79, 78);}
-.ResultsongList li a{font-size: 18px;text-decoration: none;color: rgb(0, 0, 0); text-align: left;font-weight: 600;}
-.ResultsongList h2{padding-left: 20px;font-size: 20px;font-weight: bold;}
+.search-results{background: #222020;  color: rgb(239 240 241);  padding: 10px;  border-radius: 11px;}
+
+.search-results h6{color:rgb(142 140 140);;}
+.ResultsongList li{padding: 10px 0 10px 0;  border-bottom: 1px solid #4e4d4d;}
+.ResultsongList li a{font-size: 18px;text-decoration: none;color: rgb(235, 156, 38);     text-align: left;font-weight: 600;}
+.ResultsongList h2{padding-left: 20px;font-size: 20px;font-weight: bold;color: rgb(244, 248, 246);}
 
 .search_bar button:hover{background: transparent;border: none;}
-.songNotFound a{text-decoration: none;color: #000;font-weight: 500;}
+.songNotFound a{text-decoration: none;color: rgb(238, 172, 30);font-weight: 500;}
 .chordspageSearch input{width: 100%;height: 40px;color: #000;}
 .chordspageSearch svg{color: rgb(0, 0, 0);margin: 0 auto;background: #fff;}
 @media (max-width: 576px) { 
