@@ -41,12 +41,13 @@ const ArtistTemplate = ({data, location}) => {
           <Layout />  
             <Container fluid className="artBg">       
               <Container>
-                <Row>
-                  <Col className="sizeButton text-right">
+             
+                <Row className="sizeButton">
+                  <Col className=" text-right">
                     <button  
-                      onClick={() => SetFsize(Fsize+2)}> <FaSearchPlus size="25"></FaSearchPlus> </button>  
+                      onClick={() => SetFsize(Fsize+2)}> <FaSearchPlus size="20"></FaSearchPlus> </button>  
                     <button  
-                      onClick={() => SetFsize(Fsize-2)}> <FaSearchMinus size="25" /> </button> 
+                      onClick={() => SetFsize(Fsize-2)}> <FaSearchMinus size="20" /> </button> 
                   </Col>
                 </Row>
                 <Row className="artDesc">
