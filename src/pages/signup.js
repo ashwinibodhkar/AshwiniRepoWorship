@@ -4,15 +4,19 @@ import { Row,Col,Container} from "react-bootstrap";
 import Button from '@material-ui/core/Button';
 import './signupcss.css';
 import Layout from '../components/layout';
-
+import { FaGoogle,FaFacebookF,FaTwitter,FaAngleDoubleLeft} from "react-icons/fa";
 const SignUp = () => (  
     <>   
     <Layout />
      <Container fluid className="userInput pt-1 pb-5">
         <Container className="cont ">
-          
           <Row>
-              <Col className="text-center py-5">
+            <Col>
+              <h6 ><FaAngleDoubleLeft /><Link to="/"> Home</Link></h6>
+            </Col>
+          </Row>
+          <Row>
+              <Col className="text-center ">
                   <h1>Sign up</h1>
               </Col>
           </Row>
@@ -79,9 +83,21 @@ const SignUp = () => (
             <Col className="text-center">
             <p>Already have account <Link to="/login">Login here</Link></p>
             </Col>
-          </Row>  
-          </Container>
-       
+          </Row> 
+          <Row>
+            <Col className="social text-center">
+              <hr></hr>
+              <p>Or just sign in with your social account</p>
+               <Row>
+                 <Col className="SocialIcons text-center">
+                  <h3><FaGoogle /><FaFacebookF /><FaTwitter /></h3>
+                 </Col>
+               </Row>
+              
+            </Col>
+
+          </Row> 
+          </Container>       
           </Container>
     </>
 

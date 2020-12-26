@@ -24,6 +24,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import HeartIcon from '@material-ui/icons/FavoriteBorder';
 import Search from '../components/searchBar/search';
 import UpArrowIcon from '@material-ui/icons/ExpandLess'
+import DownArrowIcon from '@material-ui/icons/ExpandMore'
 import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles';
 import SpeedDial from '@material-ui/lab/SpeedDial';
@@ -353,19 +354,31 @@ export default function Template({data,location}){
               </div>                
               </Col>
             </Row>
+            {/* navigation up down button */}
             <Link to="#top">
-            <Row className="searchicon">
+            <Row className="upButton">
               <Col>                
                 <Button >
                   <UpArrowIcon />
-                </Button>    
+                </Button> 
+                  
+              </Col>
+            </Row>
+            </Link>
+            <Link to="#vid">
+            <Row className="DownButton">
+              <Col>                
+                <Button >
+                  <DownArrowIcon />
+                </Button> 
+                  
               </Col>
             </Row>
             </Link>
              <Row className="sharelinkIcon ">
               <Col> 
-                <Modal show={show} onHide={handleClose}   centered >
-                  <Modal.Body className="m-0" closeButton>
+                <Modal size="sm" show={show} onHide={handleClose}  centered className="shareButtons" >
+                  <Modal.Body className="m-0 " closeButton>
                     <FacebookShareButton            
                       url={`${siteUrl}${location.pathname}`}
                       title={post.frontmatter.title}

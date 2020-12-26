@@ -33,8 +33,8 @@ const TagsPage = ({
              <h2 >CATEGORY</h2>
              </Col>
            </Row>
-            <Row>
-             <Col className="mainCard text-center">
+          <Row className="pb-5">
+             <Col className="mainCard text-center ">
                <ul type="none" className="p-0">
                  {group.map(tag => (
                   <Link to={`/category/${kebabCase(tag.fieldValue)}/`}>
@@ -50,11 +50,7 @@ const TagsPage = ({
               </ul>            
             </Col>
           </Row> 
-          <Row>
-            <Col className="backHome text-right py-5">
-            <p><Link to="/"> Back to Home <FaArrowUp size={15}color="yellow" ></FaArrowUp></Link></p>
-            </Col>
-          </Row>
+          
         </div>      
       </Container>
       

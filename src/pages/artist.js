@@ -6,8 +6,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import { FaArrowUp } from "react-icons/fa";
 import Img from 'gatsby-image'
 import Iconsbar from "../components/iconsbar/navigationLine";
-
-
+import './category.css'
 
 
 
@@ -41,11 +40,7 @@ const ArtistPage = ({data,title}) => (
               </ul>            
             </Col>
           </Row>
-          <Row>
-            <Col className="backHome text-right pt-5  ">
-              <p><Link to="/"> Back to Home <FaArrowUp size={15}color="yellow" ></FaArrowUp></Link></p>
-            </Col>
-          </Row>
+          
         </div>      
       </Container>
       
