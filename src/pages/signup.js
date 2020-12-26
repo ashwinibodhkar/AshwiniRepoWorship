@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 
 const SignUp = () => (  
     <> 
-    <form> 
+  
     <Layout />
      <Container fluid className="userInput pt-1 pb-5">
         <Container className="cont ">
@@ -82,7 +82,7 @@ const SignUp = () => (
           </Container>
        
           </Container>
-          </form> 
+        
     </>
 
 
