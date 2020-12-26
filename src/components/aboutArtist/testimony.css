@@ -6,7 +6,7 @@
     white-space: nowrap;
     
   }
-  .testimonyInline .card h6{overflow: auto;color: #fff;z-index: 1;font-weight: lighter;font-size: 12px;}
+  .testimonyInline .card h6{overflow: auto;color: #fff;z-index: 1;font-weight: lighter;font-size: 12px;text-transform: capitalize;}
   
    .testimonyInline::-webkit-scrollbar {
     width: 1px;
@@ -39,7 +39,7 @@
   
   }
   .testimonyInline .card a{text-decoration: none;color: rgb(26, 24, 24);}
-  .testimonyInline .card img{width: 100%;height: 100%;border-radius: 10%;}
+  .testimonyInline .card img{width: 100%;height: 100%;border-radius: 10%;    box-shadow: 0 0 20px 1px #494747;}
   .testimonyBtn svg{bottom: 200px;color: #fff;}
   
   

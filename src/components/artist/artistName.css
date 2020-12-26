@@ -6,7 +6,7 @@
   white-space: nowrap;
   
 }
-.artistInline .card h6{overflow: auto;color: #fff;z-index: 1;font-weight: lighter;font-size: 12px;}
+.artistInline .card h6{overflow: auto;color: #fff;z-index: 1;font-weight: lighter;font-size: 12px;text-transform: capitalize;}
 
  .artistInline::-webkit-scrollbar {
   width: 1px;
@@ -23,7 +23,7 @@
   margin-top: 300px;
   
 }
-.artistInline .card1{width: 100%;}
+
 .artistInline .card{
   display: inline-block;
   width:28%; 
@@ -36,10 +36,11 @@
   border-radius: 10px;
   margin-right: 10px ;
   background: transparent;
+ 
 
 }
 .artistInline .card a{text-decoration: none;color: rgb(26, 24, 24);}
-.artistInline .card img{width: 100%;height: 100%;border-radius: 50%;}
+.artistInline .card img{width: 100%;height: 100%;border-radius: 50%;     box-shadow: 0 0 20px 1px #494747;}
 .artistBtn svg{bottom: 200px;color: #fff;}
 
 

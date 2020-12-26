@@ -6,7 +6,8 @@ import './signupcss.css';
 import Layout from '../components/layout';
 
 const SignUp = () => (  
-    <>   
+    <> 
+    <form> 
     <Layout />
      <Container fluid className="userInput pt-1 pb-5">
         <Container className="cont ">
@@ -27,13 +28,11 @@ const SignUp = () => (
             </Col>
           </Row>
           <Row>
-              <Col xs={12} >
-                <label>What's your email :</label>
+              <Col xs={12} >         
+                <label for="email-field">What's your email :</label>
               </Col>
               <Col xs={12} >
-                <input type="email" 
-                      placeholder="Enter your email"
-                      id="userEmail"></input>
+              <input name="email" id="email-field" type="text" />
               </Col>
           </Row>
           <Row>
@@ -83,6 +82,7 @@ const SignUp = () => (
           </Container>
        
           </Container>
+          </form> 
     </>
 
 
