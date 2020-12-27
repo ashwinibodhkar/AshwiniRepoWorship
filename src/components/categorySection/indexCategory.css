@@ -19,10 +19,7 @@
     margin-bottom: 300px;
     
   }
-  .categoryBox .card{
-    
-  }
-.categoryBox .card:after {
+ .categoryBox .card:after {
     position: absolute;
     content: " ";
     top: 0;
@@ -56,6 +53,5 @@
 
   @media (max-width: 648px) { 
     .categoryBox .card{width: 30%;height: 100px;}
-    .artist h2{font-size: 0px;}
     .categoryBox .card h3{font-size: 20px;}
   }

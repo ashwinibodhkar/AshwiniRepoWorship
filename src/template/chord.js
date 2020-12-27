@@ -223,7 +223,7 @@ export default function Template({data,location}){
     });
 }, []);
 
-  //
+  //more button content(speedDial)
   const actions = [
     { icon: <Search />, name: 'Search' },  
     { icon: <ShareIcon onClick={handleShow}/>, name: 'Share' },
@@ -232,7 +232,6 @@ export default function Template({data,location}){
 
   return( 
     <>
-     
     <Layout />
      <SEO
           title={post.frontmatter.title}
@@ -241,26 +240,23 @@ export default function Template({data,location}){
      />   
     
     {/* top image section */}
-    <Container fluid className="BgChordPage">
-      
+    <Container fluid className="bgChordPage">      
       <div className="chordImg" id="trans">         
         <FeatureImage  fixed={featuredImage} /> 
-        <Container className="imgTextStick">   
+        <Container >   
           <Row className="imgText ">
             <Col>
               <h1 >{post.frontmatter.title}</h1>
               <p >{post.frontmatter.artist}</p> 
             </Col>
-          </Row>   
-          
-        </Container>  
-          
+          </Row>           
+        </Container>           
       </div>
+
       {/* top title backround change */}
       <Row className={bgTitle ? 'bgTitle active' : 'bgTitle'} >
         <Col xs={7} className="pr-0 py-1 align-self-center">
-          <h6 className="m-0">{post.frontmatter.title}</h6>
-          
+          <h6 className="m-0">{post.frontmatter.title}</h6>          
         </Col>
         <Col xs={3} className="key text-right p-0 align-self-center">
           <p className="m-0" >key {key.toString()}</p>
@@ -291,7 +287,7 @@ export default function Template({data,location}){
             <h6 >
               <Link to="#vid">
                 <FaYoutube size="25" color="red"></FaYoutube>
-                  <i className="videoPlay"> Listen to {post.frontmatter.title} </i>
+                  <i> Listen to {post.frontmatter.title} </i>
               </Link>
             </h6>
             <h6>
@@ -300,15 +296,18 @@ export default function Template({data,location}){
           </Col>
         </Row>
       </Container>
+
+      {/* chords bottom bar */}
       <Container fluid>
         <Row>       
-          <Col className="stick">
-            <Row  className="transpose  text-center">               
+          <Col >
+            <Row  className="bottomStickyBar  text-center">               
               <Col  className="px-0 ">
                 <FaCaretUp onClick={() => trpUp()} size="25" className="mb-2" />
                 <FaCaretDown onClick={() => trpDown()} size="25" className="mb-2" />
                 <p>Transpose</p>
               </Col>
+
               <Col  className="px-0">
                 <h5 onClick={() => FlatOrSharp()}>b/# </h5>
                 <p >Flat/Sharp</p>
@@ -320,12 +319,14 @@ export default function Template({data,location}){
                   <label for="c2"  id="bnId"></label>
                 </div> 
                 <p>Chords<br></br> Show/Hide</p>                                      
-              </Col>                        
+              </Col> 
+
               <Col  className="px-0 text-center">                  
                   <FaSearchPlus onClick={() => SetFsize(Fsize+2)} size="26" height="30" xs={6} className="my-1 px-1"></FaSearchPlus>  
                   <FaSearchMinus onClick={() => SetFsize(Fsize-2)} size="26" height="30" xs={6} className="my-1 px-1" /> 
                   <p>Zoom</p>
               </Col>
+
               <Col  className="pl-0">
               <div className={classes.root}>
                 <div className={classes.exampleWrapper}>
@@ -354,28 +355,8 @@ export default function Template({data,location}){
               </div>                
               </Col>
             </Row>
-            {/* navigation up down button */}
-            <Link to="#top">
-            <Row className="upButton">
-              <Col>                
-                <Button >
-                  <UpArrowIcon />
-                </Button> 
-                  
-              </Col>
-            </Row>
-            </Link>
-            <Link to="#vid">
-            <Row className="DownButton">
-              <Col>                
-                <Button >
-                  <DownArrowIcon />
-                </Button> 
-                  
-              </Col>
-            </Row>
-            </Link>
-             <Row className="sharelinkIcon ">
+            {/* after clicking more share icons list */}
+            <Row>
               <Col> 
                 <Modal size="sm" show={show} onHide={handleClose}  centered className="shareButtons" >
                   <Modal.Body className="m-0 " closeButton>
@@ -409,9 +390,31 @@ export default function Template({data,location}){
                 </Modal>            
               </Col>
             </Row>
+
+            {/* navigation up down button */}
+            <Link to="#top">
+              <Row className="upButton">
+                <Col>                
+                  <Button >
+                    <UpArrowIcon />
+                  </Button>                  
+                </Col>
+              </Row>
+            </Link>
+
+            <Link to="#vid">
+              <Row className="DownButton">
+                <Col>                
+                  <Button >
+                    <DownArrowIcon />
+                  </Button>                     
+                </Col>
+              </Row>
+            </Link>             
           </Col>
         </Row>
       </Container>
+      {/* song Lyrics section */}
       <Container>
         <Row className="pb-5 mb-5">
           <Col xs={12} md={5} >

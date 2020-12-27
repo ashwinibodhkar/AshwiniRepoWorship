@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import './signupcss.css';
 import Layout from '../components/layout';
 import { FaGoogle,FaFacebookF,FaTwitter,FaAngleDoubleLeft} from "react-icons/fa";
+import ButtonGroup from'@material-ui/core/ButtonGroup';
 const SignUp = () => (  
     <>   
     <Layout />
@@ -89,8 +90,22 @@ const SignUp = () => (
               <hr></hr>
               <p>Or just sign in with your social account</p>
                <Row>
-                 <Col className="SocialIcons text-center">
-                  <h3><FaGoogle /><FaFacebookF /><FaTwitter /></h3>
+               <Col className="SocialIcons text-center">
+                  <ButtonGroup disableElevation variant="contained"  >
+                    <Button><FaGoogle /></Button>
+                    <Button>Google</Button>
+                  </ButtonGroup>
+                  
+                  <ButtonGroup disableElevation variant="contained" className="my-3 mx-3">
+                    <Button><FaTwitter /></Button>
+                    <Button>Twitter</Button>
+                  </ButtonGroup>
+
+                  <ButtonGroup disableElevation variant="contained" >
+                    <Button><FaFacebookF /></Button>
+                    <Button>Facebook</Button>
+                  </ButtonGroup>
+                  
                  </Col>
                </Row>
               

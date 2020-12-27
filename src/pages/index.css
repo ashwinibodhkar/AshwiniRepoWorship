@@ -1,14 +1,14 @@
-.bgpage{background: #02000F}
-.bgpage h2{font-size: 26px;font-weight: bolder;color: #fff; }
-.bgpage .bannerInstall{border-radius: 5px;font-size: 18px;z-index: 1;color: #fff;background: linear-gradient(177deg,#ea4b94, #c81f34,#8c0606);}
-.bgpage .bannerInstall button{float: right;background-color: #e3ee2d; }
-.bgpage .bannerInstall .alert{margin-bottom: 0;}
-.songL .card img{width: 100%;}
-.songL{line-height: 1;margin: 0 auto;}
-.songL .card{background-color: transparent;margin:0 0 10px 0;border-radius: 10px;padding: 0 5px 0 5px;}
-.songL .card .card-title{color: #ddd;font-weight: bolder;font-size: 14px;}
-.songL .card .card-title:hover{color: rgb(202, 189, 11);}
-.songL .card .card-body a{text-decoration: none;}
+.bgPage{background: #02000F}
+.bgPage h2{font-size: 26px;font-weight: bolder;color: #fff; }
+.bgPage .bannerInstall{border-radius: 5px;font-size: 18px;z-index: 1;color: #fff;background: linear-gradient(177deg,#ea4b94, #c81f34,#8c0606);}
+.bgPage .bannerInstall button{float: right;background-color: #e3ee2d; }
+.bgPage .bannerInstall .alert{margin-bottom: 0;}
+.songList .card img{width: 100%;}
+.songList{line-height: 1;margin: 0 auto;}
+.songList .card{background-color: transparent;margin:0 0 10px 0;border-radius: 10px;padding: 0 5px 0 5px;}
+.songList .card .card-title{color: #ddd;font-weight: bolder;font-size: 14px;}
+.songList .card .card-title:hover{color: rgb(202, 189, 11);}
+.songList .card .card-body a{text-decoration: none;}
 
 
 

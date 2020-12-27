@@ -1,7 +1,0 @@
-.artistL .card img{width: 100%;}
-.artistL{line-height: 1;margin: 0 auto;}
-.artistL .card{background-color: transparent;margin:0 0 10px 0;border-radius: 10px;padding: 0 5px 0 5px;}
-.artistL .card .card-title{color: #fff;z-index: 1;text-align: center;font-weight: lighter;font-size: 12px;}
-.artistL .card .card-title:hover{color: rgb(202, 189, 11);}
-.artistL .card .card-body a{text-decoration: none;}
-.artistL .card img{border-radius: 50%;}

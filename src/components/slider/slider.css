@@ -1,4 +1,4 @@
-.slide img{border-radius: 20px;padding: 5px 10px 5px 10px;}
+.slide img{border-radius: 20px;padding: 5px 10px 5px 10px;width: 100%;}
 .slide{background: #000;}
 .slide .carousel-indicators {z-index: -1;}
 .slide .carousel-control-next, .carousel-control-prev{z-index: -1;}

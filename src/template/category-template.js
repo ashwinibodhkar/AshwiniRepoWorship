@@ -20,23 +20,22 @@ const Tags = ({ pageContext, data,title }) => {
     <div>
       <Layout />
       <Iconsbar />
-      <Container fluid className="bgcat px-0">           
+      <Container fluid className="bgCategory px-0">           
       <Container>
-        <div className="bg-text">
-          <Row className="desc">
+        <div className="categoryCont">
+          <Row className="description">
             <Col className="py-5 text-center text-white">
             <h1>{tagHeader}</h1>
             </Col>
           </Row>
-          <Row className="bgList pb-5">
+          <Row className="categoryList pb-5">
             <Col >
               {data.allMarkdownRemark.edges.map(({node}) => (
                 <ul type="none">
                   <li>
                     <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
                   </li>
-                </ul>
-                
+                </ul>                
               ))}                          
             </Col>
           </Row>
@@ -46,8 +45,7 @@ const Tags = ({ pageContext, data,title }) => {
             </Col>
           </Row>
         </div>      
-      </Container>
-      
+      </Container>      
     </Container>
    
      

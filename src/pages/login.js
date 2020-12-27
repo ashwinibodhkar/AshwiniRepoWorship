@@ -5,15 +5,15 @@ import Button from '@material-ui/core/Button';
 import './signupcss.css';
 import Layout from '../components/layout';
 import { FaGoogle,FaFacebookF,FaTwitter,FaAngleDoubleLeft} from "react-icons/fa";
-
+import ButtonGroup from '@material-ui/core/ButtonGroup'
 const Login
  = () => (  
     <>   
     <Layout />
-     <Container fluid className="userInput py-3">
+     <Container fluid className="userInput py-4">
         <Container className="cont">
            <Row>
-              <Col className="text-center py-5">
+              <Col className="text-center ">
                   <h1>Login</h1>
               </Col>
           </Row>
@@ -58,7 +58,21 @@ const Login
               <p>Or just Login with your social account</p>
                <Row>
                  <Col className="SocialIcons text-center">
-                  <h3><FaGoogle /><FaFacebookF /><FaTwitter /></h3>
+                  <ButtonGroup disableElevation variant="contained"  >
+                    <Button><FaGoogle /></Button>
+                    <Button>Google</Button>
+                  </ButtonGroup>
+                  
+                  <ButtonGroup disableElevation variant="contained" className="my-3 mx-3">
+                    <Button><FaTwitter /></Button>
+                    <Button>Twitter</Button>
+                  </ButtonGroup>
+
+                  <ButtonGroup disableElevation variant="contained" >
+                    <Button><FaFacebookF /></Button>
+                    <Button>Facebook</Button>
+                  </ButtonGroup>
+                  
                  </Col>
                </Row>
               

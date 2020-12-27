@@ -11,7 +11,7 @@ import Img from 'gatsby-image'
 import Slider from '../components/slider/slider'
 import Logo from "../images/logo.png"
 import Trending from '../components/trending/trending'
-import Category from '../components/categorySection/category';
+import Category from '../components/categorySection/indexCategory';
 import Artist from '../components/artist/artistName'; 
 import Iconsbar from "../components/iconsbar/navigationLine";
 import {  FaAngleDoubleRight} from "react-icons/fa"
@@ -30,34 +30,32 @@ export default function BlogIndex ({data}){
 
   return(
         <>
-    <Layout />
-    
+    <Layout />    
       <SEO title="Lets-Worship"
-           image={Logo} />
-          
-          <Container fluid className="bgpage">
-           <Row>
-             <Col className="bannerInstall align-self-center">
+           image={Logo} />          
+        <Container fluid className="bgPage">
+          {/* Install Banner */}
+          <Row>
+            <Col className="bannerInstall align-self-center">
               <Alert show={show} >  
-              <p>For long use Intall App
-              <Button  onClick={() => setShow(false)} >
-                <CloseIcon />
-              </Button>
-              <Button  className="mr-2">
-                <GetAppIcon />
-              </Button> 
-              </p>
-                 
-                </Alert>
-             </Col>
-           </Row>
-            {/* top slider section */}
-            <Row>
-              <Col >
-              
-                <Slider />            
-              </Col>
-            </Row>
+                <p>For long use Intall App
+                <Button  onClick={() => setShow(false)} >
+                  <CloseIcon />
+                </Button>
+                <Button  className="mr-2">
+                  <GetAppIcon />
+                </Button> 
+                </p>
+              </Alert>
+            </Col>
+          </Row>
+
+          {/* top slider section */}
+          <Row>
+            <Col>              
+              <Slider />            
+            </Col>
+          </Row>
             
             {/* category section */}
             <Container>
@@ -128,7 +126,7 @@ export default function BlogIndex ({data}){
                   <h2>Some Tracks For You</h2>
                 </Col>
               </Row>
-              <Row className="songL py-5 ">
+              <Row className="songList py-5 ">
                 {data.allMarkdownRemark.edges.map(({node}) =>(
                   <Col  xs="12" md="3" className="mb-2 " >
                     <Card data-aos="zoom-in" 
@@ -137,7 +135,7 @@ export default function BlogIndex ({data}){
                     >
                     <Row>
                       <Col xs={5} md={5} className="align-self-center pl-0">
-                      <Img fluid={node.frontmatter.featureImage.childImageSharp.fluid} />
+                        <Img fluid={node.frontmatter.featureImage.childImageSharp.fluid} />
                       </Col>
                       <Col xs={7} md={7} className="align-self-center">
                           <Link to={node.fields.slug}>
@@ -146,14 +144,13 @@ export default function BlogIndex ({data}){
                             <Card.Subtitle className="mb-2 text-muted">{node.frontmatter.artist}</Card.Subtitle>
                       </Col>
                     </Row>                                          
-                </Card>
-                </Col>
-
-              ))}
-            </Row>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
             </Container>
-            <Iconsbar/>
-          </Container>
+          <Iconsbar/>
+        </Container>
      
     
    

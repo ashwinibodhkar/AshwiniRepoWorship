@@ -13,47 +13,40 @@ import "./testimony.css"
 
 const aboutArtist = () => (
     
-    <div className="container" >
-         
-    <Row className="testimonyInline">
-   
-    <Card xs={4}  >
-        <Link to="/Sheldon-Bangera/">
-            <Card.Img variant="top" src={sheldon} /> 
-            <h6 className="text-white">sheldon bangera</h6>                   
-        </Link>
-    </Card>
-    
- 
-    <Card xs={4}>
-        <Link to="/Amit-Kamble/">
-            <Card.Img variant="top" src={amit} /> 
-            <h6 className="text-white">Amit Kamble</h6>              
-        </Link>
-    </Card>
-    
+    <div className="container" >         
+        <Row className="testimonyInline">   
+            <Card xs={4}  >
+                <Link to="/Sheldon-Bangera/">
+                    <Card.Img variant="top" src={sheldon} /> 
+                    <h6 className="text-white">sheldon bangera</h6>                   
+                </Link>
+            </Card>
+            
+        
+            <Card xs={4}>
+                <Link to="/Amit-Kamble/">
+                    <Card.Img variant="top" src={amit} /> 
+                    <h6 className="text-white">Amit Kamble</h6>              
+                </Link>
+            </Card>
+            
 
-    <Card xs={4} >
-        <Link to="Yeshua%20Ministries/"> 
-             <Card.Img variant="top" src={yeshua} />
-             <h6 className="text-white">yeshua ministries</h6>                
-        </Link>
-    </Card>
-    
+            <Card xs={4} >
+                <Link to="Yeshua%20Ministries/"> 
+                    <Card.Img variant="top" src={yeshua} />
+                    <h6 className="text-white">yeshua ministries</h6>                
+                </Link>
+            </Card>
+            
 
-    <Card xs={4}>
-        <Link to="/Bridge-Music/">
-            <Card.Img variant="top" src={bridge} /> 
-            <h6 className="text-white">Bridge Music</h6>                
-        </Link>
-    </Card>
-    
-
-    
-  
-</Row>
-    
-</div>
+            <Card xs={4}>
+                <Link to="/Bridge-Music/">
+                    <Card.Img variant="top" src={bridge} /> 
+                    <h6 className="text-white">Bridge Music</h6>                
+                </Link>
+            </Card>
+        </Row>        
+    </div>
 
 )
 

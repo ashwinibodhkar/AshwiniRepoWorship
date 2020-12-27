@@ -1,5 +1,4 @@
 import React from 'react'
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap'
 import slide1 from "../../images/slide1.jpg";
@@ -58,9 +57,7 @@ const slider = () => (
               alt="First slide"
             />            
           </Carousel.Item>
-        </Carousel>
-
-        
+        </Carousel>        
     </div>
 
 )

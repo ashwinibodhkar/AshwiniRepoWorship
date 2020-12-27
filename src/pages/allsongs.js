@@ -24,13 +24,13 @@ export default function AllSongs({ data }) {
   
   return (
       <>
-      <Layout />
+    
       <Iconsbar />
         <Container fluid className="catBg">
           <Container>
             {/* songs list */}
             <h2 className="text-center text-white pt-5">Song List</h2>
-            <Row className="songL pt-5">
+            <Row className="songList pt-2">
               {data.allMarkdownRemark.edges.map(({node}) =>(
               <Col  xs="12" md="3" className="mb-2" >
                 <Card data-aos="zoom-in" 

@@ -15,8 +15,10 @@ import HomeIcon from '@material-ui/icons/Home';
 import AboutArtistIcon from '@material-ui/icons/AccountCircle';
 import CategoryIcon from '@material-ui/icons/LibraryBooks';
 import ContactIcon from '@material-ui/icons/Feedback';
+import PersonIcon from '@material-ui/icons/Person'
 import {  Link } from "gatsby";
 import "./drawercss.css";
+
 const useStyles = makeStyles({
   list: {
     width: 250,
@@ -51,13 +53,12 @@ export default function TemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List className="divide pt-5">
+      <List className="userProfile pt-5">
         <ListItem>
           <Avatar>U</Avatar>         
         </ListItem>
         <ListItem>
-          <h6>Welcome , </h6>
-       
+          <h6>Welcome , </h6>       
         </ListItem>
         <ListItem> <h5> User name</h5></ListItem>
       </List>
@@ -99,22 +100,15 @@ export default function TemporaryDrawer() {
           <ListItemText>Contact Us</ListItemText>
         </ListItem>
         </Link>
-        {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
+
+        <Link to="/login">
+          <ListItem>
+            <ListItemIcon><PersonIcon  /></ListItemIcon>
+            <ListItemText>Login</ListItemText>
           </ListItem>
-        ))} */}
+        </Link>
+     
       </List>
-    
-      {/* <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List> */}
     </div>
   );
 

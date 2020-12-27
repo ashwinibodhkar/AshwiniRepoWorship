@@ -15,7 +15,7 @@ const ArtistPage = ({data,title}) => (
   <div>
     <SEO title="Artist Page" />
     {/* */}
-    <Layout />
+   
     <Iconsbar />
     <Container fluid className="catBg  ">           
       <Container>

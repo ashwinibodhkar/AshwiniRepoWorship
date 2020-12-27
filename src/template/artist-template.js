@@ -4,7 +4,6 @@ import FeatureImage from '../components/FeatureImage'
 import Layout from "../components/layout"
 import { Container,Row,Col} from 'react-bootstrap'
 import "./artist-tem.css"
-
 import {FaSearchPlus, FaSearchMinus} from "react-icons/fa";
 import { FacebookShareButton,FacebookIcon, 
          WhatsappShareButton,  WhatsappIcon, 
@@ -39,9 +38,8 @@ const ArtistTemplate = ({data, location}) => {
           pathname={`${siteUrl}${location.pathname}`}
           />       
           <Layout />  
-            <Container fluid className="artBg">       
-              <Container>
-             
+            <Container fluid className="artistBg">       
+              <Container>             
                 <Row className="sizeButton">
                   <Col className=" text-right">
                     <button  
@@ -50,14 +48,14 @@ const ArtistTemplate = ({data, location}) => {
                       onClick={() => SetFsize(Fsize-2)}> <FaSearchMinus size="20" /> </button> 
                   </Col>
                 </Row>
-                <Row className="artDesc">
+                <Row className="artistDesc">
                   <Col>
                     <h2>{post.frontmatter.title}</h2>
                   </Col>
                 </Row>
 
                 <Row className="pb-5">
-                  <Col data-aos="fade-down" data-aos-delay="20" data-aos-duration="500" md="5" className="artImage mt-3 p-0" >
+                  <Col data-aos="fade-down" data-aos-delay="20" data-aos-duration="500" md="5" className="artistImage mt-3 p-0" >
                     <FeatureImage fixed={featuredImage}/>
                   </Col>                                   
                   <Col md="7" id="target">
@@ -69,7 +67,7 @@ const ArtistTemplate = ({data, location}) => {
                   </Col>                  
                 </Row>
                 <Row>
-                  <Col className="FontIcon text-right">
+                  <Col className="text-right">
                     <FacebookShareButton 
                       url={`${siteUrl}${location.pathname}`}
                       quote={"View Lyrics With Original Chords"}

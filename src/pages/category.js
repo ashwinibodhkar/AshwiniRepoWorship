@@ -23,7 +23,7 @@ const TagsPage = ({
   }) => (
   <div>
     <Helmet title={title} />
-    <Layout />
+    
       <Iconsbar />
      <Container fluid className="catBg px-0 ">           
        <Container>
