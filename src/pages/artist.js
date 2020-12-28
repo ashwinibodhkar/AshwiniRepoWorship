@@ -1,9 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
+
 import SEO from "../components/seo"
 import { Container, Row, Col } from "react-bootstrap"
-import { FaArrowUp } from "react-icons/fa";
 import Img from 'gatsby-image'
 import Iconsbar from "../components/iconsbar/navigationLine";
 import './category.css'

@@ -1,11 +1,12 @@
 import React from "react"
 import {Link} from 'gatsby';
-import { Row,Col,Container} from "react-bootstrap";
+import { Row,Col,Container, Form} from "react-bootstrap";
 import Button from '@material-ui/core/Button';
 import './signupcss.css';
 import Layout from '../components/layout';
-import { FaGoogle,FaFacebookF,FaTwitter,FaAngleDoubleLeft} from "react-icons/fa";
+import { FaGoogle,FaFacebookF,FaTwitter} from "react-icons/fa";
 import ButtonGroup from '@material-ui/core/ButtonGroup'
+
 const Login
  = () => (  
     <>   
@@ -17,24 +18,27 @@ const Login
                   <h1>Login</h1>
               </Col>
           </Row>
+          <Form >
+
+          
           <Row>
               <Col xs={12} md={6} className="text-center">
-                <label>What's your email :</label>
+                <Form.Label>What's your email :</Form.Label>
               </Col>
               <Col xs={12} md={6}>
-                <input type="email" 
+                <Form.Control type="email" 
                       placeholder="Enter your email"
-                      id="userEmail"></input>
+                      id="userEmail" required></Form.Control>
               </Col>
           </Row>
           <Row>
               <Col xs={12} md={6} className="text-center">
-                <label>Your password :</label>
+                <Form.Label>Your password :</Form.Label>
               </Col>
               <Col xs={12} md={6}>
-                <input type="password" 
+                <Form.Control type="password" 
                       placeholder="Your password"
-                      id="userId"></input>
+                      id="userId" required></Form.Control>
               </Col>
           </Row>
           
@@ -79,6 +83,7 @@ const Login
             </Col>
 
           </Row> 
+          </Form>
           </Container>
        
           </Container>

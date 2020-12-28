@@ -1,5 +1,4 @@
 import React, {useEffect} from "react"
-import Layout from "../components/layout"
 import { Container ,Row,Col} from "react-bootstrap";
 import "./index.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,7 +7,6 @@ import Card from 'react-bootstrap/Card'
 import "./category.css";
 import "aos/dist/aos.css";
 import Aos from "aos";
-
 import Img from 'gatsby-image'
 import Iconsbar from "../components/iconsbar/navigationLine";
 

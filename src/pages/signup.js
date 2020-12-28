@@ -1,11 +1,12 @@
 import React from "react"
 import {Link} from 'gatsby';
-import { Row,Col,Container} from "react-bootstrap";
+import { Row,Col,Container, Form} from "react-bootstrap";
 import Button from '@material-ui/core/Button';
 import './signupcss.css';
 import Layout from '../components/layout';
 import { FaGoogle,FaFacebookF,FaTwitter,FaAngleDoubleLeft} from "react-icons/fa";
 import ButtonGroup from'@material-ui/core/ButtonGroup';
+
 const SignUp = () => (  
     <>   
     <Layout />
@@ -21,54 +22,55 @@ const SignUp = () => (
                   <h1>Sign up</h1>
               </Col>
           </Row>
+          <Form>
           <Row>
-            <Col xs={12}  className="">
-              <label>What should we call you : </label>
+            <Col xs={12}  >
+              <Form.Label>What should we call you : </Form.Label>
             </Col>
             <Col xs={12} >                    
-              <input type="text" 
+              <Form.Control type="text" 
                     placeholder="Enter your name"
-                    id="userName"></input>
+                    id="userName"></Form.Control>
             </Col>
           </Row>
           <Row>
               <Col xs={12} >
-                <label>What's your email :</label>
+                <Form.Label>What's your email :</Form.Label>
               </Col>
               <Col xs={12} >
-                <input type="email" 
+                <Form.Control type="email" 
                       placeholder="Enter your email"
-                      id="userEmail"></input>
+                      id="userEmail"></Form.Control>
               </Col>
           </Row>
           <Row>
               <Col xs={12} >
-                <label>Create a password :</label>
+                <Form.Label>Create a password :</Form.Label>
               </Col>
               <Col xs={12} >
-                <input type="password" 
+                <Form.Control type="password" 
                       placeholder="Create a password"
-                      id="userId"></input>
+                      id="userId"></Form.Control>
               </Col>
           </Row>
           <Row>
               <Col xs={12} >
-                <label>Your church's name:</label>
+                <Form.Label>Your church's name:</Form.Label>
               </Col>
               <Col xs={12} >
-                <input type="text" 
+                <Form.Control type="text" 
                       placeholder="church name"
-                      id="userChurch"></input>
+                      id="userChurch"></Form.Control>
               </Col>
           </Row>
           <Row>
               <Col xs={12} >
-                <label>City :</label>
+                <Form.Label>City :</Form.Label>
               </Col>
               <Col xs={12} >
-                <input type="text" 
+                <Form.Control type="text" 
                       placeholder="city"
-                      id="userCity"></input>
+                      id="userCity"></Form.Control>
               </Col>
           </Row>
           <Row>
@@ -111,7 +113,8 @@ const SignUp = () => (
               
             </Col>
 
-          </Row> 
+          </Row>
+          </Form> 
           </Container>       
           </Container>
     </>

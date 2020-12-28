@@ -7,11 +7,11 @@ import kebabCase from "lodash/kebabCase"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 import { Container, Row, Col} from "react-bootstrap"
-import Layout from "../components/layout"
 import "./category.css"
 import { FaArrowUp } from "react-icons/fa"
 import "../components/FeatureImage"
 import Iconsbar from "../components/iconsbar/navigationLine";
+
 const ArtistPage = ({
   data: {
     allMarkdownRemark: { group },

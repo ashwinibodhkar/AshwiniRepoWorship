@@ -4,7 +4,6 @@ import {Link} from 'gatsby';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row,Col} from 'react-bootstrap'
 import HomeIcon from '@material-ui/icons/Home';
-import PersonIcon from '@material-ui/icons/Person'
 import QueueMusicIcon from '@material-ui/icons/QueueMusic';
 import HeartIcon from '@material-ui/icons/Favorite'
 import Searchjs from "../searchBar/search";
