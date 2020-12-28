@@ -27,8 +27,8 @@ export default function AllSongs({ data }) {
         <Container fluid className="catBg">
           <Container>
             {/* songs list */}
-            <h2 className="text-center text-white pt-5">Song List</h2>
-            <Row className="songList pt-2">
+            <h2 className="text-center text-white py-5">Song List</h2>
+            <Row className="songList">
               {data.allMarkdownRemark.edges.map(({node}) =>(
               <Col  xs="12" md="3" className="mb-2" >
                 <Card data-aos="zoom-in" 

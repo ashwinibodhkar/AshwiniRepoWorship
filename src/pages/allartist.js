@@ -26,12 +26,8 @@ const ArtistPage = ({
     <Iconsbar />
     <Container fluid className="catBg px-0 ">           
       <Container>
-        <div>
-          <Row >
-            <Col className="text-center text-white py-5">
-            <h2 >Artist</h2>
-            </Col>
-          </Row>
+        <div>          
+          <h2 className="text-center text-white py-5">Artist</h2>
           <Row>
             <Col className="mainCard text-center">
               <ul type="none" className="p-0">

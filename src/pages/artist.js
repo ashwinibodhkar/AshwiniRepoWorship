@@ -19,11 +19,7 @@ const ArtistPage = ({data,title}) => (
     <Container fluid className="catBg  ">           
       <Container>
         <div >
-          <Row >
-            <Col >
-              <h2 className="pt-5 text-center text-white">ABOUT ARTIST</h2>
-            </Col>
-          </Row>
+          <h2 className="text-center text-white py-5">ABOUT ARTIST</h2>
           <Row>
             <Col className="mainCard text-center">
             <ul type="none" className="p-0">

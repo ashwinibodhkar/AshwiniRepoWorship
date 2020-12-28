@@ -11,16 +11,11 @@ const Login
  = () => (  
     <>   
     <Layout />
-     <Container fluid className="userInput py-4">
+     <Container fluid className="userInput">
         <Container className="cont">
-           <Row>
-              <Col className="text-center ">
-                  <h1>Login</h1>
-              </Col>
-          </Row>
-          <Form >
-
-          
+          <h1 className="text-center text-white pt-5 pb-3">Login</h1>
+            
+          <Form >         
           <Row>
               <Col xs={12} md={6} className="text-center">
                 <Form.Label>What's your email :</Form.Label>
@@ -61,21 +56,16 @@ const Login
               <hr></hr>
               <p>Or just Login with your social account</p>
                <Row>
-                 <Col className="SocialIcons text-center">
-                  <ButtonGroup disableElevation variant="contained"  >
-                    <Button><FaGoogle /></Button>
-                    <Button>Google</Button>
-                  </ButtonGroup>
+                 <Col className="socialIcons text-center">
+                 <Button><FaGoogle /></Button>                  
+                
                   
-                  <ButtonGroup disableElevation variant="contained" className="my-3 mx-3">
-                    <Button><FaTwitter /></Button>
-                    <Button>Twitter</Button>
-                  </ButtonGroup>
+                
+                <Button clasName="mr-3"><FaTwitter /></Button>
+               
 
-                  <ButtonGroup disableElevation variant="contained" >
-                    <Button><FaFacebookF /></Button>
-                    <Button>Facebook</Button>
-                  </ButtonGroup>
+           
+                <Button><FaFacebookF /></Button>
                   
                  </Col>
                </Row>

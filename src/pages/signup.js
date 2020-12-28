@@ -16,12 +16,9 @@ const SignUp = () => (
             <Col>
               <h6 ><FaAngleDoubleLeft /><Link to="/"> Home</Link></h6>
             </Col>
-          </Row>
-          <Row>
-              <Col className="text-center ">
-                  <h1>Sign up</h1>
-              </Col>
-          </Row>
+          </Row>         
+            <h1 className="text-center text-white pt-2 pb-3">Sign up</h1>
+            
           <Form>
           <Row>
             <Col xs={12}  >
@@ -92,21 +89,19 @@ const SignUp = () => (
               <hr></hr>
               <p>Or just sign in with your social account</p>
                <Row>
-               <Col className="SocialIcons text-center">
-                  <ButtonGroup disableElevation variant="contained"  >
-                    <Button><FaGoogle /></Button>
-                    <Button>Google</Button>
-                  </ButtonGroup>
+               <Col className="socialIcons text-center">
                   
-                  <ButtonGroup disableElevation variant="contained" className="my-3 mx-3">
-                    <Button><FaTwitter /></Button>
-                    <Button>Twitter</Button>
-                  </ButtonGroup>
+                    <Button><FaGoogle /></Button>                  
+                
+                  
+                
+                    <Button clasName="mr-3"><FaTwitter /></Button>
+                   
 
-                  <ButtonGroup disableElevation variant="contained" >
+               
                     <Button><FaFacebookF /></Button>
-                    <Button>Facebook</Button>
-                  </ButtonGroup>
+                   
+               
                   
                  </Col>
                </Row>

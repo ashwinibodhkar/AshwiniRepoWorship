@@ -1,16 +1,12 @@
 .bgcontainer{
-    background:url("../images/bgImage.jpg");
+   
     margin:0;
     color: #fff;
     
 }
 
-form{
-   
-    padding: 100px 40px 200px 40px;
-    
-}
-.outlineForm button{background-color: rgb(207, 177, 8);text-align: center;border: 1px solid rgb(139, 115, 4);}
+
+.outlineForm button{background-image: linear-gradient(45deg,#99034D,#AE0730);color: #fff;}
 .outlineForm{
     border: 1px solid #fff;
     padding: 20px;
@@ -23,5 +19,5 @@ form{
 
 @media (max-width: 648px) { 
     .outlineForm{width: 100%;}
-    form{padding: 100px 10px 200px 10px;}
+   
 }

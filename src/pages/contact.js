@@ -1,7 +1,9 @@
 import React from 'react';
-import {Form, Col, Button, Container} from "react-bootstrap";
+import {Form, Col, Row, Container} from "react-bootstrap";
 import Layout from '../components/layout';
 import "./contact.css";
+import Iconsbar from "../components/iconsbar/navigationLine";
+import Button from '@material-ui/core/Button'
 const ContactForm = () => (
   <>
   
@@ -11,7 +13,7 @@ const ContactForm = () => (
     <Form class="form" name="contact" 
           method="POST" target="_blank" 
           action="https://formsubmit.co/letsworshipnagpur@gmail.com">
-            
+        <h2 className="text-center text-white py-5"> Contact Us</h2>  
       <div className="outlineForm">
       <Form.Group controlId="formGridAddress1">
         <Form.Label>Name</Form.Label>
@@ -29,13 +31,18 @@ const ContactForm = () => (
         <Form.Label>Message</Form.Label>
         <Form.Control as="textarea" rows="3" name="message" placeholder="Request a song or suggest an improvment"/>
       </Form.Group>
-
-      <Button  type="submit" >
+      <Row>
+        <Col className="text-center">
+          <Button  type="submit" >
         Submit
       </Button>
+        </Col>
+      </Row>
+      
       </div>
     </Form>
   </Container>
+  <Iconsbar/>
 </div>
 </>
 )
