@@ -19,7 +19,7 @@ const ArtistPage = ({data,title}) => (
     <Container fluid className="catBg  ">           
       <Container>
         <div >
-          <h2 className="text-center text-white py-5">ABOUT ARTIST</h2>
+          <h2 className="text-center text-white pt-2 pb-5">ABOUT ARTIST</h2>
           <Row>
             <Col className="mainCard text-center">
             <ul type="none" className="p-0">

@@ -27,7 +27,7 @@ const TagsPage = ({
      <Container fluid className="catBg px-0 ">           
        <Container>
          <div>
-            <h2 className="text-center text-white py-5">CATEGORY</h2> 
+            <h2 className="text-center text-white pt-2 pb-5">CATEGORY</h2> 
           <Row className="pb-5">
              <Col className="mainCard text-center ">
                <ul type="none" className="p-0">

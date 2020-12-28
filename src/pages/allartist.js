@@ -27,7 +27,7 @@ const ArtistPage = ({
     <Container fluid className="catBg px-0 ">           
       <Container>
         <div>          
-          <h2 className="text-center text-white py-5">Artist</h2>
+          <h2 className="text-center text-white pt-2 pb-5">Artist</h2>
           <Row>
             <Col className="mainCard text-center">
               <ul type="none" className="p-0">

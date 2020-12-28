@@ -5,11 +5,11 @@
 .cont{margin: 0 auto;width: 60%;}
 .cont .social hr{width: 30%;background: #fff;}
 .cont .social svg{margin: 0 13px 0 13px;}
-.socialIcons button{    width: 20%;
+.socialIcons button{    width: 50px;
     border-radius: 50%;
     color: #b8b7b7;
     background-image: linear-gradient(45deg,#99034D,#AE0730);
-    height: 171%;
+    height:60px;
     font-size: 24px;
 margin: 0 10px 0 10px;}
 .cont h6 a{background: -webkit-linear-gradient(45deg,#36f5c9,#49e25f,#eae642);
