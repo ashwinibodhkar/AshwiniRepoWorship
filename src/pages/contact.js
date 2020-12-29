@@ -14,7 +14,7 @@ const ContactForm = () => (
           method="POST" target="_blank" 
           action="https://formsubmit.co/letsworshipnagpur@gmail.com">
         <h2 className="text-center text-white py-5"> Contact Us</h2>  
-      <div className="outlineForm">
+      <div className="outlineForm pb-5 mb-5">
       <Form.Group controlId="formGridAddress1">
         <Form.Label>Name</Form.Label>
         <Form.Control type="text" name="name" placeholder="Enter your name" required/>

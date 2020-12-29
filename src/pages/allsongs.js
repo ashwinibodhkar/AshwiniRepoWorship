@@ -28,7 +28,7 @@ export default function AllSongs({ data }) {
           <Container>
             {/* songs list */}
             <h2 className="text-center text-white pt-2 pb-5">Song List</h2>
-            <Row className="songList">
+            <Row className="songList pb-5">
               {data.allMarkdownRemark.edges.map(({node}) =>(
               <Col  xs="12" md="3" className="mb-2" >
                 <Card data-aos="zoom-in" 

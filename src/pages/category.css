@@ -1,11 +1,11 @@
   
 .catBg{
-  background:#000 ;
+ 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   
-  padding-bottom: 200px;
+ 
 }
 
 .catBg h2{font-weight: 1000;}

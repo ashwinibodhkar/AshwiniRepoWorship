@@ -1,4 +1,4 @@
-.bgPage{background: #02000F}
+.bgPage{background: #02000F;padding-bottom: 60px;}
 .bgPage h2{font-size: 26px;font-weight: bolder;color: #fff; }
 .bgPage .bannerInstall{border-radius: 5px;font-size: 18px;z-index: 1;color: #fff;background: lightseagreen;}
 .bgPage .bannerInstall button{float: right;background-color: #e3ee2d; }
