@@ -12,8 +12,8 @@ const Favourites
  = () => (  
  
     <>   
-     <Container>
-        <h2 className="text-center text-white py-5">Favourites</h2>
+     <Container className="catBg">
+        <h2 className=" text-center text-white py-5">Favourites</h2>
         <Row>
             <Col xs={12} className="favList text-white text-center">
                 <h6><span role="img" aria-label="">&#128543;</span>seems like you don't have any song in your list</h6>

@@ -4,7 +4,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 120px;
+  
   padding-bottom: 200px;
 }
 
@@ -41,7 +41,7 @@
 @media (max-width: 648px) { 
   .catCard{max-width: 95%;}
   .catCard li a{font-size: 12px;}
-  .catBg{ padding-top: 50px;}
+  
   .catBg p a{font-size: 14px;}
  
 
