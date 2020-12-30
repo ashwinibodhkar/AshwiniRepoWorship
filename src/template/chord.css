@@ -63,8 +63,10 @@
 .upButton button{background-image: linear-gradient(45deg,#99034D,#AE0730);color: #fff;    height: 35px;width: 40px;min-width: 0;}
 .DownButton{margin-bottom: 0;font-size: 12px;position: fixed;bottom: 37%;left: 88%;z-index: 1;}
 .DownButton button{background-image: linear-gradient(45deg,#99034D,#AE0730);color: #fff;    height: 35px;width: 40px;min-width: 0;}
-.shareButtons{width: 75%;margin-left: 15%;} 
-.shareButtons button{margin-left:45%;margin-bottom: 10px;}
+.shareBg{background: #020202;}
+.shareButtons{    width: 60%;margin-left: 18%;} 
+.shareButtons button{width: 60px;height:60px;}
+.shareButtons button svg{width: 50px;height: 50px;border-radius: 50%;    box-shadow: 0 0 10px 4px #6b6868;}
 .song{
     font-size: 24px;
     text-align: center; 

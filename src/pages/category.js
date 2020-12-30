@@ -33,7 +33,7 @@ const TagsPage = ({
                <ul type="none" className="p-0">
                  {group.map(tag => (
                   <Link to={`/category/${kebabCase(tag.fieldValue)}/`}>
-                  <Col lg={3} className="catCard">
+                  <Col lg={3} className="catCard catCardPadding">
                   <li key={tag.fieldValue}>
                     
                       {tag.fieldValue} ({tag.totalCount})

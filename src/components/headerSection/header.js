@@ -18,6 +18,7 @@ const Header = () => (
               <Navbar.Brand href="#home">
                 <h3>tune</h3><h4>Worship</h4>
               </Navbar.Brand>
+              
           </Navbar>   
         </Col>
       </Row>

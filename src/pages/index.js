@@ -19,6 +19,7 @@ import AboutArtist from "../components/aboutArtist/testimony";
 import Button from '@material-ui/core/Button';
 import CloseIcon from '@material-ui/icons/Close'
 import GetAppIcon from '@material-ui/icons/GetApp'
+import Skel from '../components/skeleton';
 
 export default function BlogIndex ({data}){
   const [show, setShow] = useState(true);
@@ -35,6 +36,7 @@ export default function BlogIndex ({data}){
            image={Logo} />          
         <Container fluid className="bgPage">
           {/* Install Banner */}
+         <Skel />
           <Row>
             <Col className="bannerInstall align-self-center">
               <Alert show={show} >  

@@ -24,6 +24,7 @@
   transition: 0.6s;
   position: relative;    
 }
+.catCardPadding{padding: 15px 0 15px 0;}
 .catCard:hover{
   justify-self: center;
   background-image: linear-gradient(rgb(243, 229, 38), rgb(182, 182, 40));   

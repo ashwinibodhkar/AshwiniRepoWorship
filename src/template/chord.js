@@ -358,34 +358,44 @@ export default function Template({data,location}){
             {/* after clicking more share icons list */}
             <Row>
               <Col> 
-                <Modal size="sm" show={show} onHide={handleClose}  centered className="shareButtons" >
-                  <Modal.Body className="m-0 " closeButton>
-                    <FacebookShareButton            
-                      url={`${siteUrl}${location.pathname}`}
-                      title={post.frontmatter.title}
-                      description= {post.frontmatter.title} 
-                      background="transparent"            
-                    >
-                    <FacebookIcon size={36}/>
+                <Modal size="sm" show={show} onHide={handleClose}  centered className="shareButtons"  >
+                  <Modal.Body className="m-0 shareBg" closeButton>
+                    <Container>
+                      <Row>
+                        <Col xs={12} className="text-center">
+                          <FacebookShareButton            
+                            url={`${siteUrl}${location.pathname}`}
+                            title={post.frontmatter.title}
+                            description= {post.frontmatter.title} 
+                            background="transparent"            
+                          >
+                          <FacebookIcon />
+                        
+                          </FacebookShareButton>
+                        </Col>
+                        <Col xs={12} className="text-center">
+                          <FacebookMessengerShareButton                   
+                              url={`${siteUrl}${location.pathname}`}
+                              title={post.frontmatter.title}
+                            >
+                          <FacebookMessengerIcon />
+                          </FacebookMessengerShareButton>
+                        </Col>
+                        <Col xs={12} className="text-center">
+                          <WhatsappShareButton                  
+                          url={`${siteUrl}${location.pathname}`} 
+                          title={post.frontmatter.title} 
+                          separator=":: "
+                          >
+                            
+                          <WhatsappIcon  />
+                          </WhatsappShareButton>
+                        </Col>
+                      </Row>
+                    </Container>
                    
-                    </FacebookShareButton>
-                    <br></br>
-                    <FacebookMessengerShareButton                   
-                        url={`${siteUrl}${location.pathname}`}
-                        title={post.frontmatter.title}
-                      >
-                    <FacebookMessengerIcon size={36}/>
-                    </FacebookMessengerShareButton>
-                    <br>
-                    </br>
-                    <WhatsappShareButton                  
-                        url={`${siteUrl}${location.pathname}`} 
-                        title={post.frontmatter.title} 
-                        separator=":: "
-                    >
-                      
-                    <WhatsappIcon size={36} />
-                    </WhatsappShareButton>
+                  
+                    
                   </Modal.Body>
                 </Modal>            
               </Col>
