@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useAddToHomescreenPrompt } from "../hooks/useAddToHomescreenPrompt";
+import { useAddToHomescreenPrompt } from "../hooks/useAddTOHomescreenPrompt";
 
 export default function InstallPwa() {
   const [prompt, promptToInstall] = useAddToHomescreenPrompt();
