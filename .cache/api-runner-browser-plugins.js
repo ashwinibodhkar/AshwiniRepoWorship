@@ -1,6 +1,6 @@
 module.exports = [{
       plugin: require('../node_modules/gatsby-plugin-manifest/gatsby-browser.js'),
-      options: {"plugins":[],"name":"TuneWorship","short_name":"TuneWorship","start_url":"/","background_color":"#000","theme_color":"#000","display":"minimal-ui","icon":"src/images/maskable_logo.png","purpose":"maskable","gcm_sender_id":"103953800507","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"59857de81e01a0c0abe57d5699dc1edb"},
+      options: {"plugins":[],"name":"TuneWorship","short_name":"TuneWorship","start_url":"/","background_color":"#000","theme_color":"#000","display":"minimal-ui","icon":"src/images/logo11.png","purpose":"maskable","gcm_sender_id":"103953800507","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"60482c1c2ffbe7223f8e7894f85ce161"},
     },{
       plugin: require('../node_modules/gatsby-plugin-offline/gatsby-browser.js'),
       options: {"plugins":[]},

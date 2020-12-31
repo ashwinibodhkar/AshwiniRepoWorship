@@ -18,12 +18,12 @@ import {  FaAngleDoubleRight} from "react-icons/fa"
 import AboutArtist from "../components/aboutArtist/testimony";
 import Button from '@material-ui/core/Button';
 import CloseIcon from '@material-ui/icons/Close'
-import GetAppIcon from '@material-ui/icons/GetApp'
+
 import Skel from '../components/skeleton';
-import InstallApp from '../components/InstallApp';
+
+
 export default function BlogIndex ({data}){
-  const [show, setShow] = useState(true);
-  
+  const [show, setShow] = useState(true);  
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -37,20 +37,21 @@ export default function BlogIndex ({data}){
         <Container fluid className="bgPage">
           {/* Install Banner */}
          
-          <Row>
-            <Col className="bannerInstall align-self-center">
-              <Alert show={show} >  
+          {/* <Row>
+            <Col className=" align-self-center">
+              {/* <Alert show={show} >  
                 <p>For long use Intall App
                 <Button  onClick={() => setShow(false)} >
                   <CloseIcon />
                 </Button>
                 <Button  className="mr-2">
-                  <GetAppIcon />
+                  <InstallPwa />
                 </Button> 
                 </p>
               </Alert>
+              
             </Col>
-          </Row>
+          </Row> */}
 
           {/* top slider section */}
           <Row>
