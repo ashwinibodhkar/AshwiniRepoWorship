@@ -20,12 +20,13 @@ const Header = () => (
                 {/* <h3>tune</h3><h4>Worship</h4> */}
                 <img src={logo1}></img>
               </Navbar.Brand>
-              
+              <InstallPwa/> 
           </Navbar> 
-          <InstallPwa/>  
+           
         </Col>
       </Row>
     </Container>
+    
   </Container>
   
 )

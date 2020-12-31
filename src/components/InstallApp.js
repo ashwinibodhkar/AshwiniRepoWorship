@@ -25,7 +25,7 @@ export default function InstallPwa() {
     <div  onClick={hide} className="installAppBtn">
       {/* <button onClick={hide}>Close</button>
       Hello! Wanna add to homescreen? */}
-      <button onClick={promptToInstall}>Install<GetAppIcon /></button>
+      <button onClick={promptToInstall}><GetAppIcon />Install</button>
     </div>
   );
 }
