@@ -14,20 +14,21 @@ const Tags = ({ pageContext, data,title }) => {
   const { totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} Song${
     totalCount === 1 ? "" : "s"
-  } in "${tag}"`
+  } of ${tag}`
 
   return (
     <div>
-      <Layout />
+     
       <Iconsbar />
-      <Container fluid className="bgCategory px-0">           
+      <Container fluid className="bgCategory px-0">  
+      <Row className="description">
+        <Col className="pt-2 pb-5 text-center text-white">
+          <h1>{tagHeader}</h1>
+        </Col>
+      </Row>         
       <Container>
         <div className="categoryCont">
-          <Row className="description">
-            <Col className="py-5 text-center text-white">
-            <h1>{tagHeader}</h1>
-            </Col>
-          </Row>
+          
           <Row className="categoryList pb-5">
             <Col >
               {data.allMarkdownRemark.edges.map(({node}) => (

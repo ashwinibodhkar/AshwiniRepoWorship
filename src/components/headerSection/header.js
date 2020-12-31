@@ -4,7 +4,7 @@ import "./header.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container,Row,Col} from 'react-bootstrap';
 import Drawer from './drawer';
-
+import logo1 from '../../images/logo11.png';
 const Header = () => (
  
   <Container fluid className="headPart">
@@ -15,8 +15,9 @@ const Header = () => (
             {/* sidebar */}
             <Drawer /> 
             {/* logo */}
-              <Navbar.Brand href="#home">
-                <h3>tune</h3><h4>Worship</h4>
+              <Navbar.Brand href="#home" className="logo">
+                {/* <h3>tune</h3><h4>Worship</h4> */}
+                <img src={logo1}></img>
               </Navbar.Brand>
               
           </Navbar>   

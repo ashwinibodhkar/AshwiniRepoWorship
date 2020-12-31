@@ -22,7 +22,7 @@
 .artistImage img{width: 100%;}
 
 @media (max-width: 648px) { 
-    .artistImage{width: 60%;}
+   
     .artistDesc h2{text-align: center;}
-    .artistBg p{padding: 32px 20px 30px 20px;}
+    
 }

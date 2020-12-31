@@ -1,62 +1,52 @@
-import React from 'react';
-import { Button, Modal, Card, CardText, CardBody, CardTitle } from 'react-bootstrap';
-import useIosInstallPrompt from '../hooks/useIosInstallPrompt'
-import useWebInstallPrompt from '../hooks/useWebInstallPrompt'
 
-export const InstallPWA = () => {
-  const [iosInstallPrompt, handleIOSInstallDeclined] = useIosInstallPrompt();
-  const [webInstallPrompt, handleWebInstallDeclined, handleWebInstallAccepted] = useWebInstallPrompt();
+import { useAddToHomescreenPrompt } from '../hooks/useAddTOHomescreenPrompt';
+import React,{useEffect,useState}  from "react";
+import {Row,Col, Alert} from "react-bootstrap";
+import Button from '@material-ui/core/Button';
+import CloseIcon from '@material-ui/icons/Close'
+import GetAppIcon from '@material-ui/icons/GetApp'
+import '../pages/index.css';
+export default function InstallPwa() {
+  const [show, setShow] = useState(true);
+  const [prompt, promptToInstall] = useAddToHomescreenPrompt();
+  const [isVisible, setVisibleState] = React.useState(false);
 
-  if (!iosInstallPrompt && !webInstallPrompt) {
-    return null;
-  }
-  return (
-    <Modal isOpen centered>
-      <Card>
-        <img
-          className="mx-auto"
-          style={{
-            borderTopRightRadius: '50%',
-            borderTopLeftRadius: '50%',
-            backgroundColor: '#fff',
-            marginTop: '-50px'
-          }}
-          width="100px"
-          src="content/images/appIcon-transparent.png"
-          alt="Icon"
-        />
-        <CardBody>
-          <CardTitle className="text-center">
-            <h3>Install App</h3>
-          </CardTitle>
-          {iosInstallPrompt && (
-            <>
-              <CardText className="text-center">
-                Tap
-                <img
-                  src="content/images/Navigation_Action_2x.png"
-                  style={{ margin: 'auto 8px 8px' }}
-                  className=""
-                  alt="Add to homescreen"
-                  width="20"
-                />
-                then &quot;Add to Home Screen&quot;
-              </CardText>
-              <div className="d-flex justify-content-center">
-                <Button onClick={handleIOSInstallDeclined}>Close</Button>
-              </div>
-            </>
-          )}
-          {webInstallPrompt && (
-            <div className="d-flex justify-content-around">
-              <Button color="primary" onClick={handleWebInstallAccepted}>
-                Install
-              </Button>
-              <Button onClick={handleWebInstallDeclined}>Close</Button>
-            </div>
-          )}
-        </CardBody>
-      </Card>
-    </Modal>
+  const hide = () => setVisibleState(false);
+
+  React.useEffect(
+    () => {
+      if (prompt) {
+        setVisibleState(true);
+      }
+    },
+    [prompt]
   );
-};
+
+  if (!isVisible) {
+    return <div />;
+  }
+
+  return (
+    <div >
+      {/* {/* <button onClick={hide}>Close</button>
+      Hello! Wanna add to homescreen? */}
+      {/* <button onClick={promptToInstall}>Install free app</button> */}
+      <Row>
+        <Col className="bannerInstall align-self-center" style={{background : '#fff',color: "#000",height: "200px"}}>
+        <Alert show={show}  >  
+        <p>For long use Install App
+        <Button  onClick={() => setShow(false)} >
+          <CloseIcon />
+        </Button>
+        <Button  onClick={promptToInstall} className="mr-2">
+          <GetAppIcon />
+        </Button> 
+        </p>
+      </Alert>
+        </Col>
+      </Row>
+     
+    </div>
+    
+  );
+}

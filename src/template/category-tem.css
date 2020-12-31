@@ -12,26 +12,25 @@
 .description h1{font-size: 34px;}
 .categoryCont{width: 90%;margin: 0 auto;padding-bottom: 300px; }
 .categoryList{
-background-color: rgb(0,0,0); 
-background-color: rgba(255, 255, 255, 0.779); 
-color: white;
+
+ 
+color: rgb(238, 237, 237);
 font-weight: bold;
-border: 2px solid #fff; 
+
 width: 100%;
 margin: auto; 
 
 }
 .categoryList ul{padding-left: 0;}
 
-.categoryList li{text-decoration: none;border-bottom: 1px solid #fff;padding: 20px;}
+.categoryList li{text-decoration: none;padding: 20px;background-color: rgba(48, 47, 47, 0.779);border-radius: 20px;}
 
-.categoryList li a{color: #000;}
+.categoryList li a{color: rgb(219, 216, 216);}
 
 
 @media (max-width: 648px) { 
   h1{font-size: 20px;}
-  .categoryCont{width: 80%;}
-}
+  }
 
   
   

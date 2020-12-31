@@ -1,8 +1,8 @@
 .bgPage{background: #02000F;padding-bottom: 60px;}
 .bgPage h2{font-size: 26px;font-weight: bolder;color: #fff; }
-.bgPage .bannerInstall{border-radius: 5px;font-size: 18px;z-index: 1;color: #fff;background: lightseagreen;}
-.bgPage .bannerInstall button{float: right;background-color: #e3ee2d; }
-.bgPage .bannerInstall .alert{margin-bottom: 0;}
+.bannerInstall{border-radius: 5px;font-size: 18px;z-index: 1;color: #fff;background: lightseagreen;}
+.bannerInstall button{float: right;background-color: #e3ee2d; }
+.bannerInstall .alert{margin-bottom: 0;}
 .songList .card img{width: 100%;}
 .songList{line-height: 1;margin: 0 auto;}
 .songList .card{background-color: transparent;margin:0 0 10px 0;border-radius: 10px;padding: 0 5px 0 5px;}

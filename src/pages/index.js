@@ -20,7 +20,7 @@ import Button from '@material-ui/core/Button';
 import CloseIcon from '@material-ui/icons/Close'
 import GetAppIcon from '@material-ui/icons/GetApp'
 import Skel from '../components/skeleton';
-
+import InstallApp from '../components/InstallApp';
 export default function BlogIndex ({data}){
   const [show, setShow] = useState(true);
   
