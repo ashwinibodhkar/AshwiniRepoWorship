@@ -36,7 +36,7 @@ export default function BlogIndex ({data}){
            image={Logo} />          
         <Container fluid className="bgPage">
           {/* Install Banner */}
-         <Skel />
+         
           <Row>
             <Col className="bannerInstall align-self-center">
               <Alert show={show} >  
