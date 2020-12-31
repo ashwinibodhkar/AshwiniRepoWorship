@@ -5,16 +5,18 @@
     box-shadow: 0px 0px 10px 4px rgb(80 ,80, 80 , .75);
     z-index: 1;    
 }
-.navWidth{width: 95%;float: left;}
-.logo{margin: 0 auto;}
-.logo img{width: 8rem;}
+nav{float: left;}
+.logo img{width: 8rem;} 
+.logo{margin-right: auto;}
+/* .logo{margin-right: auto}
+/* .logo img{width: 8rem;} */ */
 /* .navbar-brand h3{font-size: 30px;float: left;color: rgb(201, 202, 202);font-weight: 400;}
 .navbar-brand h4{font-size: 30px; background: -webkit-linear-gradient(45deg,#99034D,#D2065F,#AE0730,#61052B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  font-weight: 1000;} */
 
 @media (max-width: 648px) { 
-    .navWidth{width: 90%;}    
+    
     /* .navbar-brand h3{font-size: 20px;}
     .navbar-brand h4{font-size: 20px;} */
        

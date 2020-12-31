@@ -1,6 +1,7 @@
 import * as React from "react";
-import { useAddToHomescreenPrompt } from "../hooks/useAddTOHomescreenPrompt";
-
+import { useAddToHomescreenPrompt } from "../hooks/useAddToHomescreenPrompt";
+import './skeleton.css';
+import GetAppIcon from '@material-ui/icons/GetApp';
 export default function InstallPwa() {
   const [prompt, promptToInstall] = useAddToHomescreenPrompt();
   const [isVisible, setVisibleState] = React.useState(false);
@@ -21,10 +22,10 @@ export default function InstallPwa() {
   }
 
   return (
-    <div style={{backgroundColor:"linear-gradient(45deg,#99034D,#AE0730)" }} onClick={hide} >
+    <div  onClick={hide} className="installAppBtn">
       {/* <button onClick={hide}>Close</button>
       Hello! Wanna add to homescreen? */}
-      <button onClick={promptToInstall}>Install free app</button>
+      <button onClick={promptToInstall}>Install<GetAppIcon /></button>
     </div>
   );
 }
