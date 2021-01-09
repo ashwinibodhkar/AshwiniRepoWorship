@@ -12,7 +12,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('C:/Users/ashwi/Desktop/AshwiniRepoWorship/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"TuneWorship","short_name":"TuneWorship","start_url":"/","background_color":"#000","theme_color":"#000","display":"minimal-ui","icon":"src/images/logo11.png","purpose":"maskable","gcm_sender_id":"103953800507","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"60482c1c2ffbe7223f8e7894f85ce161"},
+      options: {"plugins":[],"name":"TuneWorship","short_name":"TuneWorship","start_url":"/","background_color":"#000","theme_color":"#000","display":"standalone","icon":"src/images/maskable_logo.png","purpose":"maskable","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"59857de81e01a0c0abe57d5699dc1edb"},
     },{
       plugin: require('C:/Users/ashwi/Desktop/AshwiniRepoWorship/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[]},
@@ -21,7 +21,7 @@ var plugins = [{
       options: {"plugins":[],"extensions":[".md",".mdx"]},
     },{
       plugin: require('C:/Users/ashwi/Desktop/AshwiniRepoWorship/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
-      options: {"plugins":[],"trackingId":"UA-178217347-1"},
+      options: {"plugins":[],"trackingId":"UA-186360937-1"},
     },{
       plugin: require('C:/Users/ashwi/Desktop/AshwiniRepoWorship/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
       options: {"plugins":[],"fonts":["Fira Sans Condensed","Bowlby One SC","Rancho","Yesteryear","Denk One","Fruktur","Zhi Mang Xing","Bree Serif","Caveat","Carter One","Archivo Black","Bangers"],"display":"swap"},

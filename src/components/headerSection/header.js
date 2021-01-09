@@ -18,7 +18,7 @@ const Header = () => (
             {/* logo */}
               <Navbar.Brand href="#home" className="logo">
                 {/* <h3>tune</h3><h4>Worship</h4> */}
-                <img src={logo1}></img>
+                <img src={logo1} alt="logoImg"></img>
               </Navbar.Brand>
               <InstallPwa/> 
           </Navbar> 

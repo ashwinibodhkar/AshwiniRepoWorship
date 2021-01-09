@@ -3,11 +3,11 @@ import React from 'react'
 import {Link} from 'gatsby';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row,Card } from 'react-bootstrap'
-import ThankYou from "../../images/THANK YOU.jpg"
-import dance from "../../images/Dance (1).jpg"
-import easter from "../../images/easter.jpg"
-import freedom from "../../images/bridgeMusic.jpg"
-import bridge from "../../images/bridge.jpg"
+import ThankYou from "../../images/THANK YOU (1).jpg"
+import dance from "../../images/Dance (1) (1).jpg"
+import easter from "../../images/easter (1).jpg"
+import freedom from "../../images/freedom1.png"
+import bridge from "../../images/bridge (1).jpg"
 import {  FaAngleDoubleRight} from "react-icons/fa"
 import "./indexCategory.css"
 

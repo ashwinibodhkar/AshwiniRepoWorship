@@ -5,7 +5,6 @@ import GetAppIcon from '@material-ui/icons/GetApp';
 export default function InstallPwa() {
   const [prompt, promptToInstall] = useAddToHomescreenPrompt();
   const [isVisible, setVisibleState] = React.useState(false);
-
   const hide = () => setVisibleState(false);
 
   React.useEffect(
@@ -22,10 +21,10 @@ export default function InstallPwa() {
   }
 
   return (
-    <div  onClick={hide} className="installAppBtn">
+    <div  onClick={hide} className="installAppBtn" role = "button">
       {/* <button onClick={hide}>Close</button>
       Hello! Wanna add to homescreen? */}
-      <button onClick={promptToInstall}><GetAppIcon />Install</button>
+      <button onClick={promptToInstall}  ><GetAppIcon />Install</button>
     </div>
   );
 }

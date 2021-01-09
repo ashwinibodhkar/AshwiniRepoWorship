@@ -1,3 +1,4 @@
+  
 import React from 'react'
 
 import {Link} from 'gatsby';
@@ -22,7 +23,7 @@ const iconsbar = () => (
         </Link>
       </Col>
       <Col>
-        <Link to="/favourites">
+        <Link to="/user/favourites">
           <HeartIcon />
           <p>Favourites</p>
         </Link>
@@ -47,3 +48,4 @@ const iconsbar = () => (
 
 
 export default iconsbar
+

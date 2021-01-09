@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/messaging'
 
+
 function requestPermissionOnRender(){
   if (!("Notification" in window)) {
     console.log("This browser does not support desktop notification");
@@ -39,6 +40,8 @@ function setTokenSentToServer(sent) {
 }
 
 export default function PushNotification () {
+ 
+ 
 
   var firebaseConfig = {
     apiKey: "AIzaSyCE1r0H6x5qjbnfdnFjuBD0qugGRPwvaaQ",
@@ -99,9 +102,37 @@ export default function PushNotification () {
   
   
   return(
+    <>
     <button onClick={() => requestPermissionByButton()} 
             style={{backgroundColor: 'seagreen'}}>
       Allow Notifications
     </button>
+      {/* <Button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </Button> */}
+
+      {/* <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Container>
+            <Row>
+              <Col xs={12} className="text-center">
+                <img src={Logo} alt="tune-worship"></img>
+              </Col>
+              <Col xs={12} className="text-center">
+                <p>wants to send you latest updates of tuneWorship</p>
+                <Button variant="contained" color="secondary" onClick={() => requestPermissionByButton()}>Allow Notifications</Button>
+              </Col>
+            </Row>
+            
+          </Container>
+          
+
+        </Modal.Body>
+        
+      </Modal> */}
+  </>
   )
 }

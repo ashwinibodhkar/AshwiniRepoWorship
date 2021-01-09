@@ -1,7 +1,7 @@
 import React from "react"
 import {Link} from 'gatsby';
 import { Row,Col,Container} from "react-bootstrap";
-import './signupcss.css';
+
 
 import Iconsbar from "../components/iconsbar/navigationLine";
 import AddIcon from '@material-ui/icons/Add';

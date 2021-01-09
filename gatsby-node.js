@@ -1,3 +1,5 @@
+
+  
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const path = require("path")
 const _ = require("lodash")
@@ -20,85 +22,80 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
-
   const ChordTemplate = path.resolve("src/template/chord.js")
   const ArtistTemplate = path.resolve("src/template/artist-template.js")
   const CategoryTemplate = path.resolve("src/template/category-template.js")
 
   // Individual song pages
-	const blogs = graphql(`
-  query{
-    blogs: allMarkdownRemark(
-      filter: { fileAbsolutePath: { glob: "**/content/sheets/*.md" } }
-      
-    ) {
-      edges {
-        node {
-          fields {
-            slug
+  const blogs = graphql(`
+    query {
+      blogs: allMarkdownRemark(
+        filter: { fileAbsolutePath: { glob: "**/content/sheets/*.md" } }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
           }
         }
       }
     }
-  }
   `).then(result => {
-  if (result.errors) {
-    Promise.reject(result.errors);
-  }
+    if (result.errors) {
+      Promise.reject(result.errors)
+    }
 
-  // Create song pages
-  result.data.blogs.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: ChordTemplate,
-      context:{
-        slug: node.fields.slug
-      },
-    });
-   });
-  });
+    // Create song pages
+    result.data.blogs.edges.forEach(({ node }) => {
+      createPage({
+        path: node.fields.slug,
+        component: ChordTemplate,
+        context: {
+          slug: node.fields.slug,
+        },
+      })
+    })
+  })
 
   // Individual artist pages
   const docs = graphql(`
-  query{
-    docs: allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { glob: "**/content/artists/*.md" }
-      }
-      
-    ) {
-      edges {
-        node {
-          fields {
-            slug
+    query {
+      docs: allMarkdownRemark(
+        filter: { fileAbsolutePath: { glob: "**/content/artists/*.md" } }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
           }
         }
       }
     }
-  }
   `).then(result => {
-  if (result.errors) {
-    Promise.reject(result.errors);
-  }
+    if (result.errors) {
+      Promise.reject(result.errors)
+    }
 
-  // Create artist pages
-  result.data.docs.edges.forEach(({ node }) => {
-    createPage({
-      path: `${node.fields.slug}`,
-      component: ArtistTemplate,
-      context:{
-        slug: node.fields.slug
-      }
-      });
-    });
-  });
-
+    // Create artist pages
+    result.data.docs.edges.forEach(({ node }) => {
+      createPage({
+        path: `${node.fields.slug}`,
+        component: ArtistTemplate,
+        context: {
+          slug: node.fields.slug,
+        },
+      })
+    })
+  })
 
   //creating tags page
   const cat = graphql(`
     {
-      postsRemark: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/sheets/"}}) 
-       {
+      postsRemark: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/sheets/" } }
+      ) {
         edges {
           node {
             fields {
@@ -118,25 +115,38 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     }
   `).then(result => {
     if (result.errors) {
-      Promise.reject(result.errors);
+      Promise.reject(result.errors)
     }
 
-  // Create tag pages
-  result.data.tagsGroup.group.forEach( tag => {
-    createPage({
-      path: `/category/${_.kebabCase(tag.fieldValue)}/`,
-      component: CategoryTemplate,
-      context:{
-        tag: tag.fieldValue,
-      },
-      });
-    });
-  });
-
+    // Create tag pages
+    result.data.tagsGroup.group.forEach(tag => {
+      createPage({
+        path: `/category/${_.kebabCase(tag.fieldValue)}/`,
+        component: CategoryTemplate,
+        context: {
+          tag: tag.fieldValue,
+        },
+      })
+    })
+  })
 
   // Return a Promise which would wait for both the queries to resolve
-  return Promise.all([blogs, docs, cat]);  
+  return Promise.all([blogs, docs, cat])
 }
+
+
+//*for creating client routes
+exports.onCreatePage = async ({ page, actions }) => {
+	const { createPage } = actions
+	// page.matchPath is a special key that's used for matching pages
+	// only on the client.
+	if (page.path.match(/^\/user/)) {
+	  page.matchPath = "/user/*"
+	  // Update the page.
+	  createPage(page)
+	}
+}
+
 
 //for adding lunr search
 exports.createResolvers = ({ cache, createResolvers }) => {
@@ -162,11 +172,12 @@ const createIndex = async (blogNodes, type, cache) => {
   if (cached) {
     return cached
   }
-  
+
   const documents = []
   const store = {}
   for (const node of blogNodes) {
-    const {slug} = node.fields
+	const { slug } = node.fields
+	const id = node.id
     const title = node.frontmatter.title
     const tags = node.frontmatter.tags
     const artist = node.frontmatter.artist
@@ -175,25 +186,28 @@ const createIndex = async (blogNodes, type, cache) => {
       type.getFields().excerpt.resolve(node, { pruneLength: 100 }),
     ])
     documents.push({
-      slug: node.fields.slug,
+	  slug: node.fields.slug,
+	  id: node.id,
       title: node.frontmatter.title,
       tags: node.frontmatter.tags,
       artist: node.frontmatter.artist,
       content: striptags(html),
     })
     store[slug] = {
-      title,
-      artist,
-      excerpt,
-      tags,
+		id,
+		title,
+		artist,
+		excerpt,
+		tags,
     }
   }
-  const index = lunr(function() {
-    this.ref(`slug`)
+  const index = lunr(function () {
+	this.ref(`slug`)
+	this.field(`id`)
     this.field(`title`)
     this.field(`artist`)
     this.field(`tags`)
-    this.field('content')
+    this.field("content")
     for (const doc of documents) {
       this.add(doc)
     }
@@ -202,38 +216,21 @@ const createIndex = async (blogNodes, type, cache) => {
   await cache.set(cacheKey, json)
   return json
 }
-
-//for IDB index not found error from firestore
-// exports.onCreateWebpackConfig = ({stage,actions,getConfig}) => {
-//   if (stage === 'build-html') {
-//     actions.setWebpackConfig({
-//       externals: getConfig().externals.concat(function(context, request, callback) {
-//         // Exclude bundling firebase* and react-firebase*
-//         // These are instead required at runtime.
-//         if (/^@?(react-)?firebase(.*)/.test(request)) {
-//           console.log('Excluding bundling of: ' + request);
-//           return callback(null, 'umd ' + request);
-//         }
-//         callback();
-//       })
-//     });
-//   }
-// };
-// exports.onCreateWebpackConfig = ({
-//   stage,
-//   actions,
-//   getConfig
-// }) => {
-//   if (stage === 'build-html') {
-//     actions.setWebpackConfig({
-//       externals: getConfig().externals.concat(function(context, request, callback) {
-//         const regex = /^@?firebase(\/(.+))?/;
-//         // exclude firebase products from being bundled, so they will be loaded using require() at runtime.
-//         if (regex.test(request)) {
-//           return callback(null, 'umd ' + request);
-//         }
-//         callback();
-//       })
-//     });
-//   }
-// };
+exports.onCreateWebpackConfig = ({
+  stage,
+  actions,
+  getConfig
+}) => {
+  if (stage === 'build-html') {
+    actions.setWebpackConfig({
+      externals: getConfig().externals.concat(function(context, request, callback) {
+        const regex = /^@?firebase(\/(.+))?/;
+        // exclude firebase products from being bundled, so they will be loaded using require() at runtime.
+        if (regex.test(request)) {
+          return callback(null, 'umd ' + request);
+        }
+        callback();
+      })
+    });
+  }
+};

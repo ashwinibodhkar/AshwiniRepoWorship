@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container,Row,Col} from 'react-bootstrap'
 import Iconsbar from "../components/iconsbar/navigationLine";
 
-import Layout from "../components/layout";
+
 
 const Tags = ({ pageContext, data,title }) => {
   const { tag } = pageContext

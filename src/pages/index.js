@@ -1,9 +1,9 @@
-import React,{useEffect,useState}  from "react";
+import React,{useEffect}  from "react";
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container ,Row,Col,Card,Alert} from "react-bootstrap";
+import { Container ,Row,Col,Card} from "react-bootstrap";
 import "./index.css"
 import Aos from "aos"
 import "aos/dist/aos.css"
@@ -16,47 +16,36 @@ import Artist from '../components/artist/artistName';
 import Iconsbar from "../components/iconsbar/navigationLine";
 import {  FaAngleDoubleRight} from "react-icons/fa"
 import AboutArtist from "../components/aboutArtist/testimony";
-import Button from '@material-ui/core/Button';
-import CloseIcon from '@material-ui/icons/Close'
-
-import Skel from '../components/skeleton';
+import AllowNotification from '../components/PushNotifications';
 
 
 export default function BlogIndex ({data}){
-  const [show, setShow] = useState(true);  
+   
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
 
   return(
-        <>
-    <Layout />    
-      <SEO title="Lets-Worship"
-           image={Logo} />          
+        <>  
+    <Layout />
+			<SEO 
+				title="Home"
+				image={Logo} 
+				description={data.site.siteMetadata.description}
+			/>        
         <Container fluid className="bgPage">
-          {/* Install Banner */}
-         
-          {/* <Row>
-            <Col className=" align-self-center">
-              {/* <Alert show={show} >  
-                <p>For long use Intall App
-                <Button  onClick={() => setShow(false)} >
-                  <CloseIcon />
-                </Button>
-                <Button  className="mr-2">
-                  <InstallPwa />
-                </Button> 
-                </p>
-              </Alert>
-              
-            </Col>
-          </Row> */}
-
+          
           {/* top slider section */}
           <Row>
             <Col>              
               <Slider />            
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
+            <AllowNotification />
             </Col>
           </Row>
             
@@ -152,6 +141,7 @@ export default function BlogIndex ({data}){
                 ))}
               </Row>
             </Container>
+            
           <Iconsbar/>
         </Container>
      
@@ -164,31 +154,47 @@ export default function BlogIndex ({data}){
 }
 
 export const query = graphql`
-  {
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "\/sheets/"}},
-                      sort: { fields: [frontmatter___title], order: ASC }) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            artist
-            key
-            featureImage{
-              childImageSharp{
-                fluid(maxWidth: 500, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                  ...GatsbyImageSharpFluidLimitPresentationSize
-                }
-              }
-            }
-          }
-         
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
+  	{
+		allMarkdownRemark(
+			filter: { fileAbsolutePath: { regex: "/sheets/" } }
+			sort: { fields: [frontmatter___title], order: ASC }
+		) 
+		{
+			edges 
+			{
+				node 
+				{
+					id
+					frontmatter 
+					{
+						title
+						artist
+						key
+						featureImage 
+						{
+							childImageSharp 
+							{
+								fluid(maxWidth: 500, quality: 100) 
+								{
+									...GatsbyImageSharpFluid
+									...GatsbyImageSharpFluidLimitPresentationSize
+								}
+							}
+						}
+          			}
+          			fields {
+            			slug
+          			}
+        		}
+      		}
+    	}
+		site 
+		{
+			siteMetadata 
+			{
+				title
+				description
+			}
+		}
+  	}
 `
