@@ -54,7 +54,6 @@
     "jquery": "^3.5.1",
     "lunr": "^2.3.9",
     "morgan": "^1.10.0",
-    "node-sass": "^4.14.1",
     "nodemailer": "^6.7.2",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
@@ -69,6 +68,8 @@
     "react-icons": "^3.11.0",
     "react-reveal": "^1.2.2",
     "react-share": "^4.3.1",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
     "serve-favicon": "^2.5.0",
     "striptags": "^3.2.0",
     "styled-components": "^5.2.0"
