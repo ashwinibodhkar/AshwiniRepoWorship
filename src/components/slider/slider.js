@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap'
-import slide1 from "../../images/slide11.jpg";
+import slide1 from "../../images/14.png";
 import slide2 from "../../images/slide21.jpg";
 import slide3 from "../../images/testimoniesLink1.jpg";
 import slide4 from "../../images/slide41.jpg";
@@ -23,7 +23,7 @@ const slider = () => (
             </Link>           
           </Carousel.Item>
           
-          <Carousel.Item interval={3000}>
+          {/* <Carousel.Item interval={3000}>
             <Link to="/allsongs">
               <img
                 className="d-block w-100"
@@ -56,7 +56,7 @@ const slider = () => (
               src={slide5}
               alt="First slide"
             />            
-          </Carousel.Item>
+          </Carousel.Item> */}
         </Carousel>        
     </div>
 
