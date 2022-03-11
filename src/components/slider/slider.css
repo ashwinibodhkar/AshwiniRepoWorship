@@ -1,4 +1,28 @@
-.slide img{border-radius: 20px;padding: 5px 10px 5px 10px;width: 100%;height: 100%;}
+.slide img{   
+    border-radius: 15px;    
+    width: 95%;
+    height: 100%;
+    margin: 2% 2%;}
 .slide{background: #000;}
 .slide .carousel-indicators {z-index: -1;}
-.slide .carousel-control-next, .carousel-control-prev{z-index: -1;}
+.slide .carousel-control-next, .carousel-control-prev{z-index: -1;}/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+
+
+.carousel-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+  padding: 20px;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
