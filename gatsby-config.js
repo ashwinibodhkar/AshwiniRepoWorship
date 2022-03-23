@@ -1,5 +1,6 @@
 
 module.exports = {
+
 	siteMetadata: {
 		title: `TuneWorship`,
 		description: `Play and store your favourite hindi gospel songs with original chords.`,
@@ -171,6 +172,22 @@ module.exports = {
 				display: "swap",
 			},
 		},
+
+
+		
 	],
+
+
+	
 }
 
+exports.onCreateWebpackConfig = ({
+	actions,
+  }) => {
+	const { setWebpackConfig } = actions;
+	setWebpackConfig({
+	  externals: {
+		jquery: 'jQuery', // important: 'Q' capitalized
+	  }
+	})
+  }
