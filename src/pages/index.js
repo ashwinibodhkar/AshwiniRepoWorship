@@ -99,12 +99,13 @@ export default function BlogIndex({ data }) {
 							<h2>Category</h2>
 						</Col>
 					</Row>
-				</Container>
+				
 				<Row>
 					<Col className="px-0 py-3">
 						<Category />
 					</Col>
 				</Row>
+				</Container>
 				{/* trending section */}
 				<Container>
 					<Row>
