@@ -17,6 +17,7 @@ import Iconsbar from "../components/iconsbar/navigationLine"
 import { FaAngleDoubleRight } from "react-icons/fa"
 import AboutArtist from "../components/aboutArtist/testimony"
 import Button from "@material-ui/core/Button"
+import NewArrivals from "../components/newArrivals/newArrivals"
 
 import PushNotification from "../components/PushNotifications"
 // import NewArrivals from "../components/newArrivals/newArrivals"
@@ -79,25 +80,32 @@ export default function BlogIndex({ data }) {
 				</Row>
 
 				{/* New Arrivals */}
-				{/* <Container>
-					<Row>
-						<Col className="pt-5 text-white">
-							<h2>Exclusive Songs</h2>
-						</Col>
-					</Row>
-				</Container> */}
-				{/* <Row>
-					<Col >
-						<NewArrivals/>
-					</Col>
-				</Row> */}
-
-				{/* category section */}
 				<Container>
+					<section>
+						<Row>
+							<Col className="text-white">
+								<h2>Exclusive Songs</h2>
+							</Col>
+							<Col style={{textAlign:'right', color:"#a4a4a4", margin:'auto'}}>
+								<h6>See More</h6>
+							</Col>
+						</Row>
+					
+						<Row>
+							<Col >
+								<NewArrivals/>
+							</Col>
+						</Row>
+					</section>
+				{/* category section */}
+			
 				<section>
 					<Row>
 						<Col className=" text-white">
 							<h2>Category</h2>
+						</Col>
+						<Col style={{textAlign:'right', color:"#a4a4a4",margin:'auto'}}>
+							<h6>See More</h6>
 						</Col>
 					</Row>
 				
