@@ -16,6 +16,7 @@ import "../categorySection/indexCategory.css"
 export default function NewArrivals() {
    
         const settings = {
+            
             className: "center",
               infinite: false,
               centerPadding: "60px",
@@ -30,8 +31,8 @@ export default function NewArrivals() {
                 {
                   breakpoint: 824,
                   settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
                     infinite: false,
                     dots: true
                   }

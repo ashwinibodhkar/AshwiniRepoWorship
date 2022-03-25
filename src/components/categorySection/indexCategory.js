@@ -117,13 +117,13 @@ const settings = {
       },
       responsive: [
         {
-          breakpoint: 824,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: false,
-            dots: true
+            breakpoint: 824,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: true
+            }
           }
-        }
     ]
     };
