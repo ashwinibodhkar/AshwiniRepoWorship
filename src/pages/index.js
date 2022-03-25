@@ -109,7 +109,7 @@ export default function BlogIndex({ data }) {
 						</Col>
 					</Row>
 				
-				<Row style={{overflow:'auto'}}>
+				<Row >
 					<Col >
 						<Category />
 					</Col>

@@ -18,30 +18,47 @@ const category = () => (
     
         <div>
             <Slider {...settings} className="">
-                <div className="catCards">
-                    <img src={ThankYou} alt="" />
-                    <p >Thank Youdgghfffffffffffffffffff</p> 
-                </div>
-                <div className="catCards">
-                    <img src={dance} alt="" />
-                    <p >Dance</p> 
-                </div>
-                <div className="catCards">
-                    <img src={easter} alt="" />
-                    <p >Thank Youdgghfffffffffffffffffff</p> 
-                </div>
-                <div className="catCards">
-                    <img src={freedom} alt="" />
-                    <p >Thank Youdgghfffffffffffffffffff</p> 
-                </div>
-                <div className="catCards">
-                    <img src={bridge} alt="" />
-                    <p >Thank Youdgghfffffffffffffffffff</p> 
-                </div>
-                <div className="catCards">
-                    <img src={cassette } alt="" />
-                    <p >Thank Youdgghfffffffffffffffffff</p> 
-                </div>
+                <Link to="/category/thanks/">
+                    <div className="catCards">
+                        <img src={ThankYou} alt="" />
+                        <p >Thank Youdgghfffffffffffffffffff</p> 
+                    </div>
+                </Link>
+
+                <Link to="/category/dance/">
+                    <div className="catCards">
+                        <img src={dance} alt="" />
+                        <p >Dance</p> 
+                    </div>
+                </Link>
+
+                <Link to="/category/worship">
+                    <div className="catCards">
+                        <img src={easter} alt="" />
+                        <p >Thank Youdgghfffffffffffffffffff</p> 
+                    </div>
+                </Link>
+
+                <Link to="/category/freedom/">
+                    <div className="catCards">
+                        <img src={freedom} alt="" />
+                        <p >Thank Youdgghfffffffffffffffffff</p> 
+                    </div>
+                </Link>
+
+                <Link to="/category/bridge-music/">
+                    <div className="catCards">
+                        <img src={bridge} alt="" />
+                        <p >Thank Youdgghfffffffffffffffffff</p> 
+                    </div>
+                </Link>
+
+                <Link to="/category/classics/">
+                    <div className="catCards">
+                        <img src={cassette } alt="" />
+                        <p >Thank Youdgghfffffffffffffffffff</p> 
+                    </div>
+                </Link>
 
             </Slider>
         {/* <Row className="categoryBox">
