@@ -15,7 +15,7 @@
   }
   .categoryBox::-webkit-scrollbar-thumb {
     background-color: transparent;
-    border-bottom: 3px solid rgb(15, 14, 14);
+    border-bottom: 3px solid transparent;
     margin-bottom: 300px;
     
   } .categoryBox #catCards .card{border: none!important;background: transparent;}

@@ -6,7 +6,7 @@
 }
 nav{float: left;width: 100%;}
 .logo img{width: 8rem;} 
-.logo{margin-right: auto;}
+.logo{margin-right: auto!important;}
 
 .navbar-brand{width: 50%;}
 .navbar-brand h3{font-size: 30px;float: left;color: rgb(201, 202, 202);font-weight: 400;}

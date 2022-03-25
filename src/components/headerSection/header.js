@@ -55,7 +55,4 @@ Header.defaultProps = {
 	subtitle: ``,
 }
 
-
-
-
 export default Header
