@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Row, Col } from 'react-bootstrap';
 import Drawer from './drawer';
 //import logo1 from '../../images/logo11.png';
-import InstallPwa from '../installButton/InstallApp';
+import InstallPwa from '../InstallApp';
 import { useEffect } from "react";
 import { useState } from "react";
 
