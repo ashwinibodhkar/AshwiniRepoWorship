@@ -87,42 +87,43 @@ export default function BlogIndex({ data }) {
 					</Row>
 				</Container> */}
 				{/* <Row>
-					<Col className="px-0 py-3">
+					<Col >
 						<NewArrivals/>
 					</Col>
 				</Row> */}
 
 				{/* category section */}
 				<Container>
+				<section>
 					<Row>
-						<Col className="pt-5 text-white">
+						<Col className=" text-white">
 							<h2>Category</h2>
 						</Col>
 					</Row>
 				
-				<Row>
-					<Col className="px-0 py-3">
+				<Row style={{overflow:'auto'}}>
+					<Col >
 						<Category />
 					</Col>
 				</Row>
-				</Container>
+				</section>
 				{/* trending section */}
-				<Container>
+				<section>
 					<Row>
-						<Col className="pt-4 text-white">
+						<Col className=" text-white">
 							<h2>Trending songs</h2>
 						</Col>
 					</Row>
-				</Container>
+				</section>
 				<Row>
 					<Col>
 						<Trending />
 					</Col>
 				</Row>
 				{/* artist testimony section */}
-				<Container>
+				<section>
 					<Row>
-						<Col xs={8} className="pt-4 px-0 text-white">
+						<Col xs={8} className=" text-white">
 							<h2>About Artist</h2>
 						</Col>
 						<Col xs={4} className="text-right align-self-center">
@@ -134,7 +135,7 @@ export default function BlogIndex({ data }) {
 							</Link>
 						</Col>
 					</Row>
-				</Container>
+				</section>
 				<Row>
 					<Col>
 						<AboutArtist />
@@ -142,9 +143,9 @@ export default function BlogIndex({ data }) {
 				</Row>
 
 				{/* Artist section */}
-				<Container>
+				<section>
 					<Row>
-						<Col xs={8} className="pt-4 px-0 text-white">
+						<Col xs={8} className=" text-white">
 							<h2>Songs By Artist</h2>
 						</Col>
 						<Col xs={4} className="text-right align-self-center">
@@ -164,11 +165,11 @@ export default function BlogIndex({ data }) {
 
 					{/* all songs */}
 					<Row>
-						<Col className="pt-5 text-white">
+						<Col className=" text-white">
 							<h2>Some Tracks For You</h2>
 						</Col>
 					</Row>
-					<Row className="songList pt-5 pb-3 ">
+					<Row className="songList ">
 						{data.allMarkdownRemark.edges.map(({ node }) => (
 							<Col xs="12" md="3" className="mb-2 ">
 								<Card
@@ -177,7 +178,7 @@ export default function BlogIndex({ data }) {
 									data-aos-duration="300"
 								>
 									<Row>
-										<Col xs={5} md={5} className="align-self-center pl-0">
+										<Col xs={5} md={5} className="align-self-center ">
 											<Img
 												fluid={
 													node.frontmatter.featureImage.childImageSharp.fluid
@@ -203,6 +204,7 @@ export default function BlogIndex({ data }) {
 						</Col>
 					</Row>
 					
+				</section>
 				</Container>
 				<Iconsbar />
 			</Container>

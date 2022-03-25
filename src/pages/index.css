@@ -1,4 +1,4 @@
-.bgPage{background: #02000F;padding-bottom: 60px;}
+.bgPage{background: #0c0f12;padding-bottom: 60px;}
 .bgPage h2{font-size: 26px;font-weight: bolder;color: #fff; }
 .bannerInstall{border-radius: 5px;font-size: 18px;z-index: 1;color: #fff;background: lightseagreen;}
 .bannerInstall button{float: right;background-color: #e3ee2d; }
@@ -9,7 +9,7 @@
 .songList .card .card-title{color: #ddd;font-weight: bolder;font-size: 14px;}
 .songList .card .card-title:hover{color: rgb(202, 189, 11);}
 .songList .card .card-body a{text-decoration: none;}
+section{padding-top: 1.2rem;}
 
 
-
-body{background: #02000F;}
+body{background: #0c0f12;}

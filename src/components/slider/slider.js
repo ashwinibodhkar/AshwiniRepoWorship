@@ -2,11 +2,12 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap'
 import slide1 from "../../images/slide21.jpg";
-import slide2 from "../../images/slide11.jpg";
+import slide2 from "../../images/christmas-thumbnail.png";
 // import slide2 from "../../images/slide21.jpg";
 import slide3 from "../../images/testimoniesLink1.jpg";
 import slide4 from "../../images/slide41.jpg";
 import slide5 from "../../images/slide51.jpg";
+
 import ProgressiveImage from '../ProgressiveImage';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
@@ -53,7 +54,7 @@ const settings = {
   className: "center",
   centerMode: true,
   infinite: true,
-  centerPadding: "20%",
+  centerPadding: "12%",
   slidesToShow: 1,
   autoplay: true,
   speed: 2000,
