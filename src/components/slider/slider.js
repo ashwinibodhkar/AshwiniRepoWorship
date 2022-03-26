@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap'
-import slide1 from "../../images/slide21.jpg";
+import slide1 from "../../images/12.png";
 import slide2 from "../../images/christmas-thumbnail.png";
 // import slide2 from "../../images/slide21.jpg";
 import slide3 from "../../images/testimoniesLink1.jpg";
@@ -25,19 +25,19 @@ const slider = () => (
     <div>
       <Slider {...settings}>
           <div className='mom'>
-            <img src={slide3} alt="" />
-          </div>
-          <div className='mom'>
-          <img src={slide4} alt="" />
-          </div>
-          <div className='mom'>
-          <img src={slide5} alt="" />
+            <img src={slide1} alt="" />
           </div>
           <div className='mom'>
           <img src={slide1} alt="" />
           </div>
           <div className='mom'>
-          <img src={slide2} alt="" />
+          <img src={slide1} alt="" />
+          </div>
+          <div className='mom'>
+          <img src={slide1} alt="" />
+          </div>
+          <div className='mom'>
+          <img src={slide1} alt="" />
           </div>
           
         </Slider>
