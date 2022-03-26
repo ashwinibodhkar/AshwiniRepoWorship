@@ -14,8 +14,8 @@
 .songList h6{font-size: 13px;}
 section{padding-top: 42px;}
 section h6{font-size: 14px;}
- a{text-decoration: none;}
- a:hover{text-decoration: none;}
+ a{text-decoration: none;color: rgb(225, 230, 230);}
+ a:hover{text-decoration: none;color: rgb(225, 230, 230);}
 .allSongsIndexBtn button{background:linear-gradient(45deg,#3b1822,#032240,#60065e);border: 2px solid #0f0f0f;color: #f6f6f6;border-radius: 10px;padding: 10px 57px;}
 .allSongsIndexBtn button:hover{border: 2px solid #fff;}
 body{background: #0c0f12;font-family: Roboto,sans-serif;}
