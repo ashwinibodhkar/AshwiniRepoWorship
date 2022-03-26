@@ -47,35 +47,40 @@ export default function NewArrivals() {
                 <Link to="/Teri-Adradhna-Bridge-Music/">
                     <div className="catCards">
                         <img src={Aaradhna} alt="" />
-                        <p >Aradhna</p> 
+                        <h6>Teri Aradhna Ho</h6> 
+                        <p>Bridge Music</p>
                     </div>
                 </Link>
 
                 <Link to="/Gaaoon-Hallelujah-Nations-of-Worship/">
                     <div className="catCards">
                         <img src={Gaoon} alt="" />
-                        <p >Hallelujah</p> 
+                        <h6>Gaaoon Hallelujah</h6> 
+                        <p> Nations of Worship</p>
                     </div>
                 </Link>
 
                 <Link to="/Papa-Bridge-music/">
                     <div className="catCards">
                         <img src={Papa} alt="" />
-                        <p >Papa</p> 
+                        <h6>Papa</h6> 
+                        <p>Bridge Music</p>
                     </div>
                 </Link>
 
                 <Link to="/Zehenaseeb-yeshua-ministries/">
                     <div className="catCards">
                         <img src={Zehnaseeb} alt="" />
-                        <p >Zehenaseeb</p> 
+                        <h6>Zehenaseeb</h6> 
+                        <p>yeshua ministries</p>
                     </div>
                 </Link>
 
                 <Link to="/Yeshu-mil-gaya-Sheldon-Bangera/">
                     <div className="catCards">
                         <img src={YeshuMilGaya} alt="" />
-                        <p >Yeshu mil gaya</p> 
+                        <h6>Yeshu mil gaya</h6>
+                        <p>Sheldon Bangera</p> 
                     </div>
                 </Link>
                

@@ -10,7 +10,7 @@ import freedom from "../../images/freedom1.png"
 import bridge from "../../images/bridge.jpg"
 import cassette from "../../images/cassette.jpg"
 import Slider from "react-slick";
-import {  FaAngleDoubleRight} from "react-icons/fa"
+
 import "./indexCategory.css"
 
 
@@ -21,42 +21,42 @@ const category = () => (
                 <Link to="/category/thanks/">
                     <div className="catCards">
                         <img src={ThankYou} alt="" />
-                        <p >Thank Youdgghfffffffffffffffffff</p> 
+                        <h6>Thank Youdgghfffffffffffffffffff</h6> 
                     </div>
                 </Link>
 
                 <Link to="/category/dance/">
                     <div className="catCards">
                         <img src={dance} alt="" />
-                        <p >Dance</p> 
+                        <h6>Dance</h6> 
                     </div>
                 </Link>
 
                 <Link to="/category/worship">
                     <div className="catCards">
                         <img src={easter} alt="" />
-                        <p >Thank Youdgghfffffffffffffffffff</p> 
+                        <h6>Thank Youdgghfffffffffffffffffff</h6> 
                     </div>
                 </Link>
 
                 <Link to="/category/freedom/">
                     <div className="catCards">
                         <img src={freedom} alt="" />
-                        <p >Thank Youdgghfffffffffffffffffff</p> 
+                        <h6>Thank Youdgghfffffffffffffffffff</h6> 
                     </div>
                 </Link>
 
                 <Link to="/category/bridge-music/">
                     <div className="catCards">
                         <img src={bridge} alt="" />
-                        <p >Thank Youdgghfffffffffffffffffff</p> 
+                        <h6>Thank Youdgghfffffffffffffffffff</h6> 
                     </div>
                 </Link>
 
                 <Link to="/category/classics/">
                     <div className="catCards">
                         <img src={cassette } alt="" />
-                        <p >Thank Youdgghfffffffffffffffffff</p> 
+                        <h6>Thank Youdgghfffffffffffffffffff</h6> 
                     </div>
                 </Link>
 

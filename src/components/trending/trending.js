@@ -20,35 +20,40 @@ const category = () => (
                 <Link to="/category/thanks/">
                     <div className="catCards">
                         <img src={Pyarkaru} alt="" />
-                        <p >Pyar karu</p> 
+                        <h6>Pyar karu</h6> 
+                        <p>Shelly Reddy</p>
                     </div>
                 </Link>
 
                 <Link to="/chattan">
                     <div className="catCards">
                         <img src={chattan} alt="" />
-                        <p >chattan</p> 
+                        <h6>chattan</h6> 
+                        <p>Bridge Music</p>
                     </div>
                 </Link>
 
                 <Link to="/Maazha-Yeshu-Mark-Tribhuvan">
                     <div className="catCards">
                         <img src={mazayeshu} alt="" />
-                        <p >Maazha Yeshu</p> 
+                        <h6>Maazha Yeshu</h6> 
+                        <p>Mark Tribhuvan</p>
                     </div>
                 </Link>
 
                 <Link to="/Sang%20Tere%20by%20Bridge%20Music">
                     <div className="catCards">
                         <img src={sangtere} alt="" />
-                        <p >sang tere</p> 
+                        <h6>sang tere</h6> 
+                        <p>Bridge Music</p>
                     </div>
                 </Link>
 
                 <Link to="/category/bridge-music/">
                     <div className="catCards">
                         <img src={rajKare} alt="" />
-                        <p >raj Kare</p> 
+                        <h6>raj Kare</h6> 
+                        <p>Jaago Music</p>
                     </div>
                 </Link>
 

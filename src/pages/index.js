@@ -162,7 +162,7 @@ export default function BlogIndex({ data }) {
 				{/* Artist section */}
 				<section>
 					<Row>
-						<Col  className=" text-white">
+						<Col  className=" pb-3 text-white">
 							<h2>Songs By Artist</h2>
 						</Col>
 						<Col style={{textAlign:'right', color:"#a4a4a4",margin:'auto'}}>
@@ -182,7 +182,7 @@ export default function BlogIndex({ data }) {
 					{/* all songs */}
 					<section>
 					<Row>
-						<Col className=" text-white">
+						<Col className=" pb-3 ">
 							<h2>Some Tracks For You</h2>
 						</Col>
 					</Row>
@@ -190,12 +190,12 @@ export default function BlogIndex({ data }) {
 						{data.allMarkdownRemark.edges.map(({ node }) => (
 							<Col xs="12" md="3" className="mb-2 ">
 								<Card
-									data-aos="zoom-in"
-									data-aos-delay="20"
-									data-aos-duration="300"
+									// data-aos="zoom-in"
+									// data-aos-delay="20"
+									// data-aos-duration="300"
 								>
 									<Row>
-										<Col xs={5} md={5} className="align-self-center ">
+										<Col xs={5} md={5} className="px-0 align-self-center ">
 											<Img
 												fluid={
 													node.frontmatter.featureImage.childImageSharp.fluid
@@ -205,19 +205,20 @@ export default function BlogIndex({ data }) {
 										<Col xs={7} md={7} className="align-self-center">
 											<Link to={node.fields.slug}>
 												<Card.Title>{node.frontmatter.title}</Card.Title>
+												
+												<h6 className="mb-2 text-muted">
+													{node.frontmatter.artist}
+												</h6>
 											</Link>
-											<Card.Subtitle className="mb-2 text-muted">
-												{node.frontmatter.artist}
-											</Card.Subtitle>
 										</Col>
 									</Row>
 								</Card>
 							</Col>
 						))}
 					</Row>
-					<Row className="allSongsBtn pb-5 text-center">
+					<Row className="allSongsIndexBtn pb-5 text-center">
 						<Col>
-							<Button><Link style={{color: 'white'}} to="/allsongs">Goto All Songs</Link></Button>
+							<Button><Link style={{color: 'white',paddingTop:0,textDecoration:'none'}} to="/allsongs">Goto All Songs</Link></Button>
 						</Col>
 					</Row>
 					

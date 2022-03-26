@@ -7,6 +7,7 @@ import ThankYou from "../../images/nach.jpg"
 import dance from "../../../content/image/cameron-mendes.jpg";
 import easter from "../../../content/image/kinneth.jpg"
 import freedom from "../../../content/image/amit.jpg"
+import mark from "../../../content/image/mark.jpg"
 import Slider from "react-slick";
 
 
@@ -43,6 +44,13 @@ const artist = () => (
                 <div className="artistCards">
                     <img src={freedom} alt="" />
                     <p >Amit Kamble</p> 
+                </div>
+            </Link>
+
+            <Link to="/category/freedom/">
+                <div className="artistCards">
+                    <img src={mark} alt="" />
+                    <p >Mark Tribhuvan</p> 
                 </div>
             </Link>
 
@@ -91,7 +99,7 @@ const settings = {
     className: "center",
       infinite: false,
       centerPadding: "60px",
-      slidesToShow: 4,
+      slidesToShow: 5,
       swipeToSlide: true,
       afterChange: function(index) {
         console.log(
@@ -102,7 +110,7 @@ const settings = {
         {
             breakpoint: 824,
             settings: {
-              slidesToShow: 2,
+              slidesToShow: 3,
               slidesToScroll: 1,
               infinite: false,
               dots: true
