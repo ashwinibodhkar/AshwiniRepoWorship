@@ -87,7 +87,9 @@ export default function BlogIndex({ data }) {
 								<h2>Exclusive Songs</h2>
 							</Col>
 							<Col style={{textAlign:'right', color:"#a4a4a4", margin:'auto'}}>
-								<h6>See More</h6>
+								<Link to="/allsongs">
+									<h6>See More</h6>
+								</Link>
 							</Col>
 						</Row>
 					
@@ -105,7 +107,9 @@ export default function BlogIndex({ data }) {
 							<h2>Category</h2>
 						</Col>
 						<Col style={{textAlign:'right', color:"#a4a4a4",margin:'auto'}}>
-							<h6>See More</h6>
+							<Link to="/category"> 
+								<h6>See More</h6>
+							</Link>
 						</Col>
 					</Row>
 				
@@ -121,6 +125,11 @@ export default function BlogIndex({ data }) {
 						<Col className=" text-white">
 							<h2>Trending songs</h2>
 						</Col>
+						<Col style={{textAlign:'right', color:"#a4a4a4",margin:'auto'}}>
+							<Link to="/category"> 
+								<h6>See More</h6>
+							</Link>
+						</Col>
 					</Row>
 				</section>
 				<Row>
@@ -129,7 +138,7 @@ export default function BlogIndex({ data }) {
 					</Col>
 				</Row>
 				{/* artist testimony section */}
-				<section>
+				{/* <section>
 					<Row>
 						<Col xs={8} className=" text-white">
 							<h2>About Artist</h2>
@@ -148,30 +157,30 @@ export default function BlogIndex({ data }) {
 					<Col>
 						<AboutArtist />
 					</Col>
-				</Row>
+				</Row> */}
 
 				{/* Artist section */}
 				<section>
 					<Row>
-						<Col xs={8} className=" text-white">
+						<Col  className=" text-white">
 							<h2>Songs By Artist</h2>
 						</Col>
-						<Col xs={4} className="text-right align-self-center">
-							<Link to="/songsbyartist">
-								<FaAngleDoubleRight
-									size={22}
-									color={"#fff"}
-								></FaAngleDoubleRight>
+						<Col style={{textAlign:'right', color:"#a4a4a4",margin:'auto'}}>
+							<Link to="/songsbyartist"> 
+								<h6>See More</h6>
 							</Link>
 						</Col>
+						
 					</Row>
 					<Row>
 						<Col>
 							<Artist />
 						</Col>
 					</Row>
+					</section>
 
 					{/* all songs */}
+					<section>
 					<Row>
 						<Col className=" text-white">
 							<h2>Some Tracks For You</h2>
