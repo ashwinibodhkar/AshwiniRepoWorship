@@ -178,10 +178,7 @@ export default function BlogIndex({ data }) {
 						</Col>
 					</Row>
 					</section>
-				</Container>
-			</Container>
-			<Container fluid className="bgPage" style={{background:"#012720eb"}}>
-				<Container >
+				
 					{/* all songs */}
 					<section>
 					<Row>
