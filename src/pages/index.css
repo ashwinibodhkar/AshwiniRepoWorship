@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
-.bgPage{background: #0c0f12;padding-bottom: 60px;}
-.bgPage h2{font-size: 24px;color: #fff;font-weight: bold; }
+.bgPage{background: #1d1d1f;padding-bottom: 60px;}
+.bgPage h2{font-size: 24px;color: #fff;margin-bottom: 20px;}
 .bannerInstall{border-radius: 5px;font-size: 18px;z-index: 1;color: #fff;background: lightseagreen;}
 .bannerInstall button{float: right;background-color: #e3ee2d; }
 .bannerInstall .alert{margin-bottom: 0;}
@@ -16,12 +16,12 @@ section{padding-top: 42px;}
 section h6{font-size: 14px;}
  a{text-decoration: none;color: rgb(225, 230, 230);}
  a:hover{text-decoration: none;color: rgb(225, 230, 230);}
-.allSongsIndexBtn button{background:linear-gradient(45deg,#3b1822,#032240,#60065e);border: 2px solid #0f0f0f;color: #f6f6f6;border-radius: 10px;padding: 10px 57px;}
+.allSongsIndexBtn button{background:linear-gradient(45deg,#179a79,#25b490,#29c49d);border: 2px solid #0f0f0f;color: #f6f6f6;border-radius: 10px;padding: 10px 57px;}
 .allSongsIndexBtn button:hover{border: 2px solid #fff;}
-body{background: #0c0f12;font-family: Roboto,sans-serif;}
+body{background: #1d1d1f;font-family: "Roboto",sans-serif;font-weight: 600;}
 
 @media only screen and (max-width: 912px) {
-    .bgPage h2{font-size: 22px;}
+    .bgPage h2{font-size: 20px;}
     section{padding-top: 28px;}
     section h6{font-size: 12px;}
   }

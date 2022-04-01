@@ -1,7 +1,7 @@
 .catCards{padding: 0 1.2rem;}
 .catCards img{width: 100%;border-radius: 10px;}
 .catCards h6{
-  font-size: 15px;
+  font-size: 14px;
   color: rgb(198 197 197);
   padding: 0.5rem 0 0;
   margin: 0;
@@ -13,7 +13,7 @@
 }
 
  .slick-slide a{padding: 0;}
-
+ .slick-next,.slick-prev{top: 40%;}
  .catCards p{font-size: 13px;color: #6c757d;text-transform: capitalize;}
   @media only screen and (max-width: 912px) {
     .catCards{padding: 0 0.45rem;}
