@@ -402,7 +402,7 @@ export default function Template({ data, location }) {
 					</Col>
 				</Row>
 
-{buttons}
+
 <Snackbar
         anchorOrigin={{ vertical, horizontal }}
         open={open}

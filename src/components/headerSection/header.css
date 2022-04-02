@@ -1,9 +1,8 @@
 .headPart{
     padding: 20px 0 20px 0px;
     background-color: #1e1c1c;
-    position: sticky;
-    top: 0;
-    z-index: 9999;  
+    
+   
 }
 nav{float: left;width: 100%;}
 .logo img{width: 8rem;} 

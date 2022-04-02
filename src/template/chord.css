@@ -31,10 +31,10 @@
 }
 .bgTitle h6{font-size: 16px; overflow: hidden;
   text-overflow: clip; white-space: nowrap;}
-.bgTitle{background:transparent;width: 100%;height: 50px;color: transparent;}
-.bgTitle.active{background-image: linear-gradient(150deg,#29F908,#26A104);position: sticky;top: 0px;z-index: 1;text-transform: capitalize;color: #fff;}
+.bgTitle{background:transparent;width: 100%;color: transparent;}
+.bgTitle.active{ height: 50px;   border-radius: 0 0 14px 14px;background-image: linear-gradient(150deg,#1b790c,#299f08);position: sticky;top: 0px;z-index: 1;text-transform: capitalize;color: #fff;}
 .bgTitle .key{color: transparent;}
-.bgTitle.active .key{font-weight: bolder;font-size: 1.3em;color:#6ff769;}
+.bgTitle.active .key{font-size: 1.3em;color:#f8fbf8;}
 .BgContainerChord{position: relative;}
 .topFeature a{color: #fff;text-decoration: none;}
 .topFeature a:hover{color: aqua;}
@@ -46,7 +46,7 @@
     z-index: 1;
     color: #fff; 
     /* background:#B44A56 ; */
-    background-image: linear-gradient(150deg,#29F908,#26A104);
+    background-image: linear-gradient(150deg,#1b790c,#299f08);
     margin: auto; 
     margin-bottom: 10px;
     padding-bottom: 5px;
@@ -91,7 +91,7 @@ button{
   @media (max-width: 648px) { 
     
     
-    .bottomStickyBar{margin-bottom: 0;width: 100%;font-size: 10px;position: fixed;bottom: 0;}
+    .bottomStickyBar{margin-bottom: 0;width: 100%;font-size: 10px;position: fixed;bottom: 0;    border-radius: 14px 14px 0 0;}
     .bottomStickyBar p{margin-bottom: 0;line-height: 1;}  
     .chordImg .imgText h1{font-size: 38px;}
     .chordImg .imgText p{font-size: 20px;}
