@@ -591,7 +591,7 @@ export default function Template({ data, location }) {
 							</Row>
 
 							{/* navigation up down button */}
-							<Link to="#top">
+							{/* <Link to="#top">
 								<Row className="upButton">
 									<Col>
 										<Button>
@@ -599,9 +599,9 @@ export default function Template({ data, location }) {
 										</Button>
 									</Col>
 								</Row>
-							</Link>
+							</Link> */}
 
-							<Link to="#vid">
+							{/* <Link to="#vid">
 								<Row className="DownButton">
 									<Col>
 										<Button>
@@ -609,7 +609,7 @@ export default function Template({ data, location }) {
 										</Button>
 									</Col>
 								</Row>
-							</Link>
+							</Link> */}
 						</Col>
 					</Row>
 				</Container>

@@ -9,7 +9,8 @@
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;}
+  text-overflow: ellipsis;
+  font-weight: lighter;}
  .slick-slide a{padding: 0;text-decoration: none;}
   @media only screen and (max-width: 912px) {
     .artistCards{padding: 0 0.45rem;}

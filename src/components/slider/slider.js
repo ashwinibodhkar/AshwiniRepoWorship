@@ -22,7 +22,7 @@ const slider = () => (
  
   
     
-    <div>
+    <div className="slider">
       <Slider {...settings}>
           <div className='mom'>
             <img src={slide1} alt="" />

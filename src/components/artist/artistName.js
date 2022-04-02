@@ -112,8 +112,8 @@ const settings = {
             settings: {
               slidesToShow: 3,
               slidesToScroll: 1,
-              infinite: false,
-              dots: true
+              infinite: false
+              
             }
           }
     ]

@@ -16,7 +16,7 @@ section{padding-top: 42px;}
 section h6{font-size: 14px;}
  a{text-decoration: none;color: rgb(225, 230, 230);}
  a:hover{text-decoration: none;color: rgb(225, 230, 230);}
-.allSongsIndexBtn button{background:linear-gradient(45deg,#179a79,#25b490,#29c49d);border: 2px solid #0f0f0f;color: #f6f6f6;border-radius: 10px;padding: 10px 57px;}
+.allSongsIndexBtn button{background:linear-gradient(150deg,#29F908,#26A104);border: 2px solid #0f0f0f;color: #f6f6f6;border-radius: 10px;padding: 10px 57px;}
 .allSongsIndexBtn button:hover{border: 2px solid #fff;}
 body{background-image:linear-gradient(-75deg,#050606,#2e2e30);
   background-repeat: no-repeat;
